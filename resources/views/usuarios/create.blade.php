@@ -38,7 +38,7 @@
                         </div>
 
                         <div class="input-box">
-                            <label form="email" >Email</label>
+                            <label form="email">Email</label>
                             <input id="email" type="email" name="email" placeholder="Digite seu email"><!--required -->
                         </div>
 
