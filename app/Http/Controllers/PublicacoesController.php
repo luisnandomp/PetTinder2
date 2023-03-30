@@ -8,27 +8,24 @@ class PublicacoesController extends Controller
 {
     public function index()
     {
-        $usuarios = Usuario::all();
-        return view ('usuarios.index', compact('usuarios'));
+        $publicacoes = Publicacao::all();
+        return view ('publicacoes.index', compact('publicacoes'));
     }
 
     public function create()
     {
-        return view ('usuarios.create');
+        return view ('publicacoes.create');
     }
 
     public function store(Request $dados)
     {
-        $usuario = new Usuario($dados->all());
+        $publicacao = new Publicacao($dados->all());
 
         $dados->validate([
-            'primeiro_nome' => 'required',
-            'sobrenome' => 'required',
-            'email' => 'required',
-            'tel' => 'required',
-            'senha' => 'required',
-            'confirmsenha' => 'required',
-            'sexo' => 'required'
+            'descricao' => 'required',
+            'foto' => 'required',
+            'id_usuario' => 'required',
+            'id_animal' => 'required'
         ]);
 
         $publicacao = Publicacao::create($dados->all());
@@ -40,7 +37,7 @@ class PublicacoesController extends Controller
         return view('publicacoes.show', compact('publicacao'));
     }
 
-    public function edit(Usuario $publicacao)
+    public function edit(Publicacao $publicacao)
     {
         return view('publicacoes.edit', compact('publicacao'));
     }
