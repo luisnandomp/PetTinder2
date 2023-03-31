@@ -13,10 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cadastroanimal', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+        //
     }
 
     /**
@@ -26,6 +23,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cadastroanimal');
+        //
     }
 };
