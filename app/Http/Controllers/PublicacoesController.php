@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Publicacao;
 
 class PublicacoesController extends Controller
 {
@@ -25,7 +26,8 @@ class PublicacoesController extends Controller
             'descricao' => 'required',
             'foto' => 'required',
             'id_usuario' => 'required',
-            'id_animal' => 'required'
+            'id_animal' => 'required',
+            'created_at' => 'required'
         ]);
 
         $publicacao = Publicacao::create($dados->all());

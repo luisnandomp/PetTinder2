@@ -14,6 +14,8 @@ class Publicacao extends Model
     protected $fillable = [
         'foto',
         'descricao',
+        'id_usuario',
+        'id_animal',
         'created_at'
     ];
 }

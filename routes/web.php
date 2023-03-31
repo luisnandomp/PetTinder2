@@ -25,6 +25,7 @@ Route::get('/Usuarios/{usuario}/editar', [UsuariosController::class, 'edit'])->n
 Route::delete('Usuarios/{usuario}',[UsuariosController::class, 'destroy'])->name('usuarios.destroy');
 
 
+Route::get('/publicacao/lista', [PublicacoesController::class, 'index'])->name('publicacoes.index');
 Route::get('/publicacao/novo', [PublicacoesController::class, 'create'])->name('publicacoes.create');
 Route::get('/publicacoes/{publicacao}', [PublicacoesController::class, 'show'])->name('publicacoes.show');
 Route::put('/publicacoes/{publicacao}/update', [PublicacoesController::class, 'update'])->name('publicacoes.update');
