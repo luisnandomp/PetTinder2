@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\PublicacoesController;
+use App\Http\Controllers\AnimaisController;
+
 
 // ---------------------- TELAS PADRÃO DO SITE -----------------------
 Route::get('/', [SiteController::class, 'padrao'])->name('layout.padrao');
@@ -30,5 +32,12 @@ Route::get('/publicacoes/{publicacao}', [PublicacoesController::class, 'show'])-
 Route::put('/publicacoes/{publicacao}/update', [PublicacoesController::class, 'update'])->name('publicacoes.update');
 Route::get('/publicacoes/{publicacao}/editar', [PublicacoesController::class, 'edit'])->name('publicacoes.edit');
 Route::delete('publicacoes/{publicacao}',[PublicacoesController::class, 'destroy'])->name('publicacoes.destroy');
+
+Route::get('/animais/novo', [AnimaisController::class, 'create'])->name('animais.create');
+Route::get('/animais/{animal}', [AnimaisController::class, 'show'])->name('animais.show');
+Route::put('/animais/{animal}/update', [AnimaisController::class, 'update'])->name('animais.update');
+Route::get('/animais/{animal}/editar', [AnimaisController::class, 'edit'])->name('animais.edit');
+Route::delete('animais/{animal}',[AnimaisController::class, 'destroy'])->name('animais.destroy');
+
 
 
