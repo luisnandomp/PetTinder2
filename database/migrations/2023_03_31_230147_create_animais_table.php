@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('raca', 155);
             $table->string('porte', 100);
-            $table->number('idade', 5);
+            $table->integer('idade');
             $table->string('cor', 18);
             $table->string('personalidade', 255);
             $table->string('comorbidade', 255);
