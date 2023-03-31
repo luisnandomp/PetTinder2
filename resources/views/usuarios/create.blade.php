@@ -28,33 +28,51 @@
                     @csrf
                     <div class="input-group">
                         <div class="input-box">
-                            <label form="primeiro-nome" >Primeiro nome </label>
-                            <input id="primeiro-nome" type="text" name="primeiro_nome" placeholder="Digite seu primeiro nome"> <!--required -->
+                            <label form="primeiro_nome" >Primeiro nome </label>
+                            <input id="primeiro_nome" type="text" name="primeiro_nome" placeholder="Digite seu primeiro nome"> <!--required -->
+                        @error('pirmeiro_nome')
+                            {{$message }}
+                        @enderror
                         </div>
 
                         <div class="input-box">
                             <label form="sobrenome" >Sobrenome</label>
                             <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome"><!--required -->
+                            @error('sobrenome')
+                                {{$message }}
+                            @enderror
                         </div>
 
                         <div class="input-box">
                             <label form="email">Email</label>
                             <input id="email" type="email" name="email" placeholder="Digite seu email"><!--required -->
+                            @error('email')
+                                {{$message }}
+                            @enderror
                         </div>
 
                         <div class="input-box">
                             <label form="tel" >Celular</label>
                             <input id="tel" type="tel" name="tel" placeholder ="(xx)xxx-xxxx"><!--required -->
+                            @error('tel')
+                                {{$message }}
+                            @enderror
                         </div>
 
                         <div class="input-box">
                             <label form="senha" >Senha</label>
                             <input id="senha" type="password" name="senha" placeholder ="Digite sua senha"><!--required -->
+                            @error('senha')
+                                {{$message }}
+                            @enderror
                         </div>
 
                         <div class="input-box">
                             <label form="confirmsenha" >Confirma sua Senha</label>
                             <input id="confirmsenha" type="password" name="confirmsenha" placeholder ="Digite sua senha"><!--required -->
+                            @error('confirmsenha')
+                                {{$message }}
+                            @enderror
                         </div>
 
                     </div>

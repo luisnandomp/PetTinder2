@@ -30,6 +30,14 @@ class UsuariosController extends Controller
             'senha' => 'required',
             'confirmsenha' => 'required',
             'sexo' => 'required'
+        ], [
+            'primeiro_nome.riquired' => "É Obrigatorio o preenchemento do Primeiro nome!",
+            'sobrenome.riquired' => "É Obrigatorio o preenchemento do Sobrenome",
+            'email.riquired' => "É Obrigatorio o preenchemento do E-mail!",
+            'tel.riquired' => "É Obrigatorio o preenchemento do Celular!",
+            'senha.riquired' => "É Obrigatorio o preenchemento da senha!",
+            'confirmsenha.riquired' => "É Obrigatorio o preenchemento da Confirmação de senha!",
+            'sexo.riquired' => "É Obrigatorio o preenchemento do sexo!"
         ]);
 
         $usuario = Usuario::create($dados->all());
