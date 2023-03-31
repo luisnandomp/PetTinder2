@@ -23,21 +23,21 @@ class UsuariosController extends Controller
         $usuario = new Usuario($dados->all());
 
         $dados->validate([
-            'primeiro_nome' => 'required',
-            'sobrenome' => 'required',
-            'email' => 'required',
-            'tel' => 'required',
-            'senha' => 'required',
-            'confirmsenha' => 'required',
+            'primeiro_nome' => 'required|string',
+            'sobrenome' => 'required|string',
+            'email' => 'required|email',
+            'tel' => 'required|string|same:field',
+            'senha' => 'required|string',
+            'confirmsenha' => 'required|string',
             'sexo' => 'required'
         ], [
-            'primeiro_nome.riquired' => "É Obrigatorio o preenchemento do Primeiro nome!",
-            'sobrenome.riquired' => "É Obrigatorio o preenchemento do Sobrenome",
-            'email.riquired' => "É Obrigatorio o preenchemento do E-mail!",
-            'tel.riquired' => "É Obrigatorio o preenchemento do Celular!",
-            'senha.riquired' => "É Obrigatorio o preenchemento da senha!",
-            'confirmsenha.riquired' => "É Obrigatorio o preenchemento da Confirmação de senha!",
-            'sexo.riquired' => "É Obrigatorio o preenchemento do sexo!"
+            'primeiro_nome.required' => "Informe seu Nome",
+            'sobrenome.required' => "Informe seu Sobrenome",
+            'email.required' => "Informe seu E-mail!",
+            'tel.required' => "Informe seu Celular!",
+            'senha.required' => "Informe sua senha!",
+            'confirmsenha.required' => "Confirme sua senha!",
+            'sexo.required' => "Escolha seu sexo!"
         ]);
 
         $usuario = Usuario::create($dados->all());
