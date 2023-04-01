@@ -8,46 +8,30 @@
         @vite(['resources/scss/app.scss'])
     </head>
     <body>
-        <form action="{{ route('publicacoes.update', $usuario->id) }}" method="POST">
-            <h1 align="center">Edite aqui o Seu lindo e cheiroso Usuáriozinho {{ $usuario->id }}</h1>
+        <form action="{{ route('publicacoes.update', $publicacao->id) }}" method="POST">
+            <h1 align="center">Edite aqui o Seu lindo e cheiroso Usuáriozinho {{ $publicacao->id }}</h1>
 
             @csrf
             @method('PUT')
 
             <div>
-              <label>Nome</label>
-            <input type="string" name="primeiro_nome" value="{{ $usuario->primeiro_nome }}">
+              <label>Descrição</label>
+            <input type="string" name="descricao" value="{{ $publicacao->descricao }}">
             </div>
 
             <div>
-              <label for="">sobrenome</label>
-              <input type="string" name="sobrenome"value="{{ $usuario->sobrenome }}">
+              <label for="">Foto</label>
+              <input type="string" name="foto"value="{{ $publicacao->foto }}">
             </div>
 
             <div>
-              <label for="">email</label>
-              <input type="string" name="email" value="{{ $usuario->email }}">
+              <label for="">ID_usuário</label>
+              <input type="string" name="id_usuario" value="{{ $publicacao->id_usuario }}">
             </div>
             <div>
-                <label for="">Celular</label>
-                <input type="tel" name="tel" value="{{ $usuario->tel }}">
+                <label for="">id_animal</label>
+                <input type="string" name="id_animal" value="{{ $publicacao->id_animal }}">
               </div>
-              <div>
-                <label for="">Senha</label>
-                <input type="password" name="senha" value="{{ $usuario->senha }}">
-              </div>
-              <div>
-                <label for="">confirmsenha</label>
-                <input type="password" name="confirmsenha" value="{{ $usuario->confirmsenha }}">
-              </div>
-            <div>
-                <label >Sexo</label>
-                <select name="sexo">
-                    <option name="sexo" value="macho" {{ $usuario->sexo == 'macho' ? 'selected' : '' }}>Macho</option>
-                    <option name="sexo" value="femea" {{ $usuario->sexo == 'femea' ? 'selected' : '' }}>Femêa</option>
-                </select>
-              </div>
-            </div>
 
             <div>
               <button type="submit">Atualizar Usuário</button>
