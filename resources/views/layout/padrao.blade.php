@@ -61,7 +61,7 @@
       <div class="row">
         <div class="col" >
           <div class="d-grid gap-2">
-            <a href="{{route('sites.adotar')}}" class="btn btn-primary" type="submit">QUERO ADOTAR</a>
+            <a href="{{route('animais.create')}}" class="btn btn-primary" type="submit">QUERO ADOTAR</a>
           </div>
         </div>
         <div class="col">

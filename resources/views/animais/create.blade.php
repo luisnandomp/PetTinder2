@@ -28,9 +28,9 @@
                     @csrf
                     <div class="input-group">
                         <div class="input-box">
-                            <label form="primeiro_nome" >Primeiro nome </label>
-                            <input id="primeiro_nome" type="text" name="primeiro_nome" placeholder="Digite seu primeiro nome"> <!--required -->
-                        @error('pirmeiro_nome')
+                            <label form="raca_animal" >Raça </label>
+                            <input id="raca_animal" type="text" name="raca_animal" placeholder="Raça do pet"> <!--required -->
+                        @error('raca_animal')
                             {{$message }}
                         @enderror
                         </div>
