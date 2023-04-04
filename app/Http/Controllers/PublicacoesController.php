@@ -27,7 +27,11 @@ class PublicacoesController extends Controller
             'foto' => 'required',
             'id_usuario' => 'required',
             'id_animal' => 'required',
-            'created_at' => 'required'
+        ],[
+            'descricao.required' => "Informe uma descrição",
+            'foto.required' => "Informe uma foto",
+            'id_usuario.required' => "Informe um usuário",
+            'id_animal.required' => "Informe um animal",
         ]);
 
         $publicacao = Publicacao::create($dados->all());
@@ -51,7 +55,7 @@ class PublicacoesController extends Controller
         return redirect()->route('publicacoes.show', $publicacao->id);
     }
 
-    public function destroy(Publicacao $publicacao)//(Jacare $jacare)
+    public function destroy(Publicacao $publicacao)
     {
        $publicacao->delete();
 

@@ -17,7 +17,6 @@
                     <th>ID</th>
                     <th>Descrição</th>
                     <th>Foto</th>
-                    <th>Id_Usuário</th>
                     @foreach ($publicacoes as $publicacao)
                         <tr>
                             <td align="center">{{ $publicacao->id }}</td>

@@ -17,14 +17,14 @@
                 <form action="#">
                     <div class="form-header">
                         <div class="title">
-                            <h1>Cadastre-se </h1>
+                            <h1>Cadastre o Seu Pet</h1>
                         </div>
                         <div class="login-button">
-                            <button><a href="{{Route('usuarios.login')}}">Entrar</a></button>
+                            <button><a href="{{Route('animais.create')}}">Entrar</a></button>
                         </div>
                     </div>
                 </form>
-                <form action="{{route('usuarios.store')}}" method="POST">
+                <form action="{{route('animais.store')}}" method="POST">
                     @csrf
                     <div class="input-group">
                         <div class="input-box">
@@ -36,41 +36,41 @@
                         </div>
 
                         <div class="input-box">
-                            <label form="sobrenome" >Sobrenome</label>
-                            <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome"><!--required -->
-                            @error('sobrenome')
+                            <label form="porte" >Porte </label>
+                            <input id="porte" type="text" name="porte" placeholder="Digite o Porte"><!--required -->
+                            @error('porte')
                                 {{$message }}
                             @enderror
                         </div>
 
                         <div class="input-box">
-                            <label form="email">Email</label>
-                            <input id="email" type="email" name="email" placeholder="Digite seu email"><!--required -->
-                            @error('email')
+                            <label form="idade">Idade</label>
+                            <input id="idade" type="idade" name="idade" placeholder="Digite a idade"><!--required -->
+                            @error('idade')
                                 {{$message }}
                             @enderror
                         </div>
 
                         <div class="input-box">
-                            <label form="tel" >Celular</label>
-                            <input id="tel" type="tel" name="tel" placeholder ="(xx)xxx-xxxx"><!--required -->
-                            @error('tel')
+                            <label form="cor" >Cor</label>
+                            <input id="cor" type="cor" name="cor" placeholder ="Digite a Cor"><!--required -->
+                            @error('cor')
                                 {{$message }}
                             @enderror
                         </div>
 
                         <div class="input-box">
-                            <label form="senha" >Senha</label>
-                            <input id="senha" type="password" name="senha" placeholder ="Digite sua senha"><!--required -->
-                            @error('senha')
+                            <label form="personalidade" >Personalidade</label>
+                            <input id="personalidade" type="personalidade" name="personalidade" placeholder ="Digite a personalidade"><!--required -->
+                            @error('personalidade')
                                 {{$message }}
                             @enderror
                         </div>
 
                         <div class="input-box">
-                            <label form="confirmsenha" >Confirma sua Senha</label>
-                            <input id="confirmsenha" type="password" name="confirmsenha" placeholder ="Digite sua senha"><!--required -->
-                            @error('confirmsenha')
+                            <label form="comorbidade" >Comorbidade</label>
+                            <input id="comorbidade" type="comorbidade" name="comorbidade" placeholder ="Digite a Comorbidade"><!--required -->
+                            @error('comorbidade')
                                 {{$message }}
                             @enderror
                         </div>
@@ -90,11 +90,78 @@
                         </div>
 
                         <div class="gender-input">
-                            <input type="radio" id="masculino" name="sexo" value="macho">
+                            <input type="radio" id="masculino" name="sexo" value="masculino">
                             <label for="masculino">Masculino</label>
                     </div>
                         </div>
                     </div>
+
+                        <div class="input-box">
+                            <label form="apelido" >Apelido</label>
+                            <input id="apelido" type="apelido" name="apelido" placeholder ="Digite o apelido"><!--required -->
+                            @error('apelido')
+                                {{$message }}
+                            @enderror
+                        </div>
+
+                        <div class="input-box">
+                            <label form="foto" >Foto </label>
+                            <input id="foto" type="text" name="foto" placeholder="Informe a Foto"><!--required -->
+                            @error('foto')
+                                {{$message }}
+                            @enderror
+                        </div>
+
+                        <div class="input-box">
+                            <label form="vacina" >Vacina </label>
+                            <input id="vacina" type="text" name="vacina" placeholder="Digite a vacina"><!--required -->
+                            @error('vacina')
+                                {{$message }}
+                            @enderror
+                        </div>
+
+                        <div class="gender-inputs">
+
+                            <div class="gender-title">
+                                <h6>Castração</h6>
+                            </div>
+
+                            <div class="gender-group">
+                            <div class="gender-input">
+                                    <input type="radio" id="sim" name="castracao" value="sim">
+                                    <label for="sim">Sim</label>
+                            </div>
+
+                            <div class="gender-input">
+                                <input type="radio" id="nao" name="castracao" value="nao">
+                                <label for="nao">Não</label>
+                        </div>
+
+                        <div class="input-box">
+                            <label form="localidade" >Localidade</label>
+                            <input id="localidade" type="localidade" name="localidade" placeholder ="Digite a localidade"><!--required -->
+                            @error('localidade')
+                                {{$message }}
+                            @enderror
+                        </div>
+
+                        <div class="input-box">
+                            <label form="observacao" >Observação</label>
+                            <input id="lobservacao" type="observacao" name="observacao" placeholder ="Digite uma observação"><!--required -->
+                            @error('observacao')
+                                {{$message }}
+                            @enderror
+                        </div>
+
+                        <div class="input-box">
+                            <label form="data_cadastro" >Data De Cadastro</label>
+                            <input id="data_cadastro" type="data_cadastro" name="data_cadastro" placeholder ="Digite a data"><!--required -->
+                            @error('data_cadastro')
+                                {{$message }}
+                            @enderror
+                        </div>
+
+
                     <br>
                     <div class="continue-button" text="center">
                         <button>Continuar</button>

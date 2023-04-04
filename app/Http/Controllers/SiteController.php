@@ -12,7 +12,7 @@ class SiteController extends Controller
 
     public function divulga()
     {
-        return view ('sites.divulga');
+        return view ('publicacoes.create');
     }
 
     public function adotar()

@@ -24,12 +24,12 @@
                         </div>
                     </div>
                 </form>
-                <form action="{{route('usuarios.store')}}" method="POST">
+                <form action="{{route('publicacoes.store')}}" method="POST">
                     @csrf
                     <div class="input-group">
                         <div class="input-box">
                             <label form="descricao" >Descrição</label>
-                            <input id="descricao" type="text" name="descricao" placeholder="Digite uma descrição para publicação"> <!--required -->
+                            <input id="descricao" type="text" name="descricao" placeholder="Digite uma descrição"> <!--required -->
                         @error('descricao')
                             {{$message }}
                         @enderror
@@ -45,7 +45,7 @@
 
                         <div class="input-box">
                             <label form="id_animal">Id_animal</label>
-                            <input id="id_animal" type="id_animal" name="id_animal" placeholder="Escolha um Animal"><!--required -->
+                            <input id="id_animal" type="number" name="id_animal" placeholder="Escolha um Animal"><!--required -->
                             @error('id_animal')
                                 {{$message }}
                             @enderror
@@ -53,7 +53,7 @@
 
                         <div class="input-box">
                             <label form="id_usuario" >Id_usuario</label>
-                            <input id="id_usuario" type="id_usuario" name="id_usuario" placeholder ="escolha um usuário"><!--required -->
+                            <input id="id_usuario" type="number" name="id_usuario" placeholder ="escolha um usuário"><!--required -->
                             @error('id_usuario')
                                 {{$message }}
                             @enderror
