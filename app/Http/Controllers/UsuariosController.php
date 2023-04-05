@@ -26,9 +26,9 @@ class UsuariosController extends Controller
             'primeiro_nome' => 'required|string',
             'sobrenome' => 'required|string',
             'email' => 'required|email',
-            'tel' => 'required|string|same:field',
+            'tel' => 'required|string',
             'senha' => 'required|string',
-            'confirmsenha' => 'required|string',
+            'confirmsenha' => 'required',
             'sexo' => 'required'
         ], [
             'primeiro_nome.required' => "Informe seu Nome",

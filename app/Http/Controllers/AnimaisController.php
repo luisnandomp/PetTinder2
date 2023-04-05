@@ -7,12 +7,10 @@ use App\Models\Animal;
 
 class AnimaisController extends Controller
 {
-
-
     public function index()
     {
         $animais = Animal::all();
-        return view ('animais.index', compact('animais'));
+        return view ('animais.index', compact('animais')); //(tirar as barras quando estiver a view pronta!)
     }
 
     public function create()
@@ -47,11 +45,34 @@ class AnimaisController extends Controller
             'vacina.required' => "Informe a vacina",
             'castracao.required' => "Informe a castração",
             'localidade.required' => "Informe a localidade",
-            'data_cadastro' => "Informe a Data",
+            'data_cadastro.required' => "Informe a Data",
         ]);
 
         $animal = Animal::create($dados->all());
         return redirect()->route('animais.index');
     }
 
+    public function show(Animal $animal)
+    {
+        return view('animais.show', compact('animal'));
+    }
+
+    public function edit(Animal $animal)
+    {
+        return view('animais.edit', compact('animal'));
+    }
+
+    public function update(Request $dados, Animal $animal)
+    {
+        $animal->update($dados->all());
+
+        return redirect()->route('animais.show', $animal->id);
+    }
+
+    public function destroy(Animal $animal)
+    {
+       $animal->delete();
+
+       return redirect()->route('animais.index');
+    }
 }

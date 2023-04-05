@@ -26,6 +26,7 @@ Route::put('/Usuarios/{usuario}/update', [UsuariosController::class, 'update'])-
 Route::get('/Usuarios/{usuario}/editar', [UsuariosController::class, 'edit'])->name('usuarios.edit');
 Route::delete('Usuarios/{usuario}',[UsuariosController::class, 'destroy'])->name('usuarios.destroy');
 
+// ---------------------- PUBLICAÇÕES AQUI --------------------------------------------
 
 Route::get('/publicacao/lista', [PublicacoesController::class, 'index'])->name('publicacoes.index');
 Route::get('/publicacao/novo', [PublicacoesController::class, 'create'])->name('publicacoes.create');
@@ -34,6 +35,9 @@ Route::get('/publicacoes/{publicacao}', [PublicacoesController::class, 'show'])-
 Route::put('/publicacoes/{publicacao}/update', [PublicacoesController::class, 'update'])->name('publicacoes.update');
 Route::get('/publicacoes/{publicacao}/editar', [PublicacoesController::class, 'edit'])->name('publicacoes.edit');
 Route::delete('publicacoes/{publicacao}',[PublicacoesController::class, 'destroy'])->name('publicacoes.destroy');
+
+// ---------------------- ANIMAIS AQUI --------------------------------------------
+Route::get('/animais/lista', [AnimaisController::class, 'index'])->name('animais.index');
 
 Route::get('/animais/novo', [AnimaisController::class, 'create'])->name('animais.create');
 Route::post('/animais', [AnimaisController::class, 'store'])->name('animais.store');

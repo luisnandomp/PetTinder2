@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,8 +28,8 @@
                     @csrf
                     <div class="input-group">
                         <div class="input-box">
-                            <label form="raca_animal" >Raça </label>
-                            <input id="raca_animal" type="text" name="raca_animal" placeholder="Raça do pet"> <!--required -->
+                            <label form="raca" >Raça </label>
+                            <input id="raca" type="text" name="raca" placeholder="Raça do pet"> <!--required -->
                         @error('raca_animal')
                             {{$message }}
                         @enderror
@@ -45,7 +45,7 @@
 
                         <div class="input-box">
                             <label form="idade">Idade</label>
-                            <input id="idade" type="idade" name="idade" placeholder="Digite a idade"><!--required -->
+                            <input id="idade" type="number" name="idade" placeholder="Digite a idade"><!--required -->
                             @error('idade')
                                 {{$message }}
                             @enderror
@@ -53,7 +53,7 @@
 
                         <div class="input-box">
                             <label form="cor" >Cor</label>
-                            <input id="cor" type="cor" name="cor" placeholder ="Digite a Cor"><!--required -->
+                            <input id="cor" type="text" name="cor" placeholder ="Digite a Cor"><!--required -->
                             @error('cor')
                                 {{$message }}
                             @enderror
@@ -61,7 +61,7 @@
 
                         <div class="input-box">
                             <label form="personalidade" >Personalidade</label>
-                            <input id="personalidade" type="personalidade" name="personalidade" placeholder ="Digite a personalidade"><!--required -->
+                            <input id="personalidade" type="text" name="personalidade" placeholder ="Digite a personalidade"><!--required -->
                             @error('personalidade')
                                 {{$message }}
                             @enderror
@@ -69,7 +69,7 @@
 
                         <div class="input-box">
                             <label form="comorbidade" >Comorbidade</label>
-                            <input id="comorbidade" type="comorbidade" name="comorbidade" placeholder ="Digite a Comorbidade"><!--required -->
+                            <input id="comorbidade" type="text" name="comorbidade" placeholder ="Digite a Comorbidade"><!--required -->
                             @error('comorbidade')
                                 {{$message }}
                             @enderror
@@ -85,12 +85,12 @@
 
                         <div class="gender-group">
                         <div class="gender-input">
-                                <input type="radio" id="feminino" name="sexo" value="feminino">
+                                <input type="radio" id="feminino" name="genero" value="feminino">
                                 <label for="feminino">Feminino</label>
                         </div>
 
                         <div class="gender-input">
-                            <input type="radio" id="masculino" name="sexo" value="masculino">
+                            <input type="radio" id="masculino" name="genero" value="masculino">
                             <label for="masculino">Masculino</label>
                     </div>
                         </div>
@@ -98,7 +98,7 @@
 
                         <div class="input-box">
                             <label form="apelido" >Apelido</label>
-                            <input id="apelido" type="apelido" name="apelido" placeholder ="Digite o apelido"><!--required -->
+                            <input id="apelido" type="text" name="apelido" placeholder ="Digite o apelido"><!--required -->
                             @error('apelido')
                                 {{$message }}
                             @enderror
@@ -139,7 +139,7 @@
 
                         <div class="input-box">
                             <label form="localidade" >Localidade</label>
-                            <input id="localidade" type="localidade" name="localidade" placeholder ="Digite a localidade"><!--required -->
+                            <input id="localidade" type="text" name="localidade" placeholder ="Digite a localidade"><!--required -->
                             @error('localidade')
                                 {{$message }}
                             @enderror
@@ -147,7 +147,7 @@
 
                         <div class="input-box">
                             <label form="observacao" >Observação</label>
-                            <input id="lobservacao" type="observacao" name="observacao" placeholder ="Digite uma observação"><!--required -->
+                            <input id="lobservacao" type="text" name="observacao" placeholder ="Digite uma observação"><!--required -->
                             @error('observacao')
                                 {{$message }}
                             @enderror
@@ -155,7 +155,7 @@
 
                         <div class="input-box">
                             <label form="data_cadastro" >Data De Cadastro</label>
-                            <input id="data_cadastro" type="data_cadastro" name="data_cadastro" placeholder ="Digite a data"><!--required -->
+                            <input id="data_cadastro" type="date" name="data_cadastro" placeholder ="Digite a data"><!--required -->
                             @error('data_cadastro')
                                 {{$message }}
                             @enderror
