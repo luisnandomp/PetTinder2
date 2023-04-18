@@ -66,7 +66,7 @@ class UsuariosController extends Controller
         return redirect()->route('usuarios.show', $usuario->id);
     }
 
-    public function destroy(Usuario $usuario)//(Jacare $jacare)
+    public function destroy(Usuario $usuario)
     {
        $usuario->delete();
 

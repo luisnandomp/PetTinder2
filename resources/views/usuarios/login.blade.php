@@ -11,7 +11,7 @@
     <body>
         <div class="contaider">
             <div class="form-image">
-                <img src="{{ asset('imagens/dog.png')}}">
+                <img src="{{ asset('imagens/cachorro.png')}}">
             </div>
             <div class="form">
                 <form action="#">

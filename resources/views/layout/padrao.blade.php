@@ -50,13 +50,8 @@
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <div class="carousel-inner" >
-          <div class="carousel-item active">
-            <img src="imagens/Banner colorido e divertido para campanha de adoção de animais.png" class="d-block w-100" alt="20">
-          </div>
 
-      </div>
-      <br> <br>
+       <hr>
 
       <div class="row">
         <div class="col" >
@@ -70,6 +65,14 @@
           </div>
         </div>
       </div>
+      <br>
+      <br>
+      <div class="carousel-inner" >
+        <div class="carousel-item active">
+          <img src="imagens/Banner colorido e divertido para campanha de adoção de animais.png" class="d-block w-100" alt="20">
+        </div>
+
+    </div>
     <br>
     <br>
     <hr>
