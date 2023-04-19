@@ -61,7 +61,7 @@ body {
 
 li.nav-item a.nav-link:hover {
     font: 28px normal;
-    color: rgb(235, 131, 12);
+    color: #eb830c;
 }
 
 .text-center{
@@ -70,3 +70,10 @@ li.nav-item a.nav-link:hover {
 }
 
 
+.img-fluid rounded-start {
+   height: 50px;
+}
+
+.navbar container-fluid{
+    background-color: #eb830c;
+}

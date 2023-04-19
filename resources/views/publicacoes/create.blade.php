@@ -11,7 +11,7 @@
     <body>
         <div class="contaider">
             <div class="form-image">
-                <img src="{{ asset('imagens/undraw_pet_adoption_-2-qkw.svg')}}">
+                <img src="{{ asset('imagens/dogfofis.png') }}" class="dogfofis" alt="...">
             </div>
             <div class="form">
                 <form action="#">
@@ -65,6 +65,10 @@
                 </form>
             </div>
         </div>
-
+        <style>
+            .dogfofis{
+                height: 50;
+            }
+        </style>
     </body>
 </html>
