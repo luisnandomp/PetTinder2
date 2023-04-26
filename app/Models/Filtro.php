@@ -11,6 +11,6 @@ class filtro extends Model
     protected $table = 'filtro';
 
     protected $fillable = [
-      
+
     ];
 }
