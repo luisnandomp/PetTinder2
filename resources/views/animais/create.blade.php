@@ -10,9 +10,9 @@
     </head>
     <body>
         <div class="contaider">
-            <div class="form-image">
-                <img src="{{ asset('imagens/undraw_pet_adoption_-2-qkw.svg')}}">
-            </div>
+           
+                <img src="{{ asset('imagens/etp.png')}}" class="form-image">
+            
             <div class="form">
                 <form action="#">
                     <div class="form-header">

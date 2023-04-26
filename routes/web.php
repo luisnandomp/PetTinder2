@@ -5,6 +5,7 @@ use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\PublicacoesController;
 use App\Http\Controllers\AnimaisController;
+use App\Http\Controllers\FiltroController;
 
 
 // ---------------------- TELAS PADRÃO DO SITE -----------------------
@@ -47,4 +48,9 @@ Route::get('/animais/{animal}/editar', [AnimaisController::class, 'edit'])->name
 Route::delete('animais/{animal}',[AnimaisController::class, 'destroy'])->name('animais.destroy');
 
 
+// -------------------- Filtro de animais -----------------------------------------
 
+Route::get('/filtro/adocao', [FiltroController::class, 'index'])->name('filtro.index');
+
+Route::get('/filtro', [FiltroController::class, 'create'])->name('filtro.create');
+ 
