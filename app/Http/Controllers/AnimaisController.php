@@ -66,7 +66,7 @@ class AnimaisController extends Controller
     {
         $animal->update($dados->all());
 
-        return redirect()->route('animais.show', $animal->id);
+        return redirect()->route('animais.showanimais.create', $animal->id);
     }
 
     public function destroy(Animal $animal)

@@ -10,12 +10,12 @@ class FiltroController extends Controller
 {
     public function index()
     {
-        return view ('filtro.index');
+        return view('filtro.index');
     }
 
     public function create()
     {
-        return view ('filtro.create');
+        return view('filtro.create');
     }
 
 }
