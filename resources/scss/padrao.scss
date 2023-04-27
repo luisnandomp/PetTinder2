@@ -1,7 +1,12 @@
+@import 'bootstrap';
+@import 'navbar';
+
 body{
     background-color:#fff;
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
-
 
 .btn-success {
     margin-right: 7px;
@@ -29,10 +34,6 @@ body{
     margin-left: 170px;
     font-size: 23px;
 
-}
-
-body {
-    border: 15px solid white;
 }
 
 .btn-primary{
@@ -76,4 +77,8 @@ li.nav-item a.nav-link:hover {
 
 .navbar container-fluid{
     background-color: #eb830c;
+}
+
+.site-bg{
+    background-color: #fff0df;
 }

@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 class SiteController extends Controller
 {
     public function padrao(){
-        return view ('layout.padrao');
+        return view('sites.home');
     }
 
     public function divulga()
     {
-        return view ('publicacoes.create');
+        return view('publicacoes.create');
     }
 
     public function adotar()
