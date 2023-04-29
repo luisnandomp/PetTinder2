@@ -11,44 +11,11 @@
         @vite(['resources/scss/padrao.scss'])
     </head>
     <body>
+        @include('layout.template.navbar')
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
         </script>
-
-
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <img class="navbar-brand" src="{{ asset('imagens/logo_sem_fundo.png') }}">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Quem somos</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Patrocínio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Contato</a>
-                        </li>
-
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <a href="{{ route('usuarios.create') }}"><button type="button"
-                                class="btn btn-success">Cadastrar-se</button></a>
-
-                        <a href="{{ Route('usuarios.login') }}"> <button type="button"
-                                class="btn btn-info">Entrar</button></a>
-                    </form>
-                </div>
-            </div>
-        </nav>
-        <span class="border ">
+        <div class="border ">
             <div class="container overflow-hidden text-center"  >
             <div class="row gy-2"  >
               <div class="col-4" >
@@ -84,7 +51,7 @@
                   </select>
               </div>
             </div>
-          </div></span>
+          </div></div>
 
 
 
@@ -116,7 +83,6 @@
                  </div>
                 </div>
                 </div>
-
 
     </body>
 </html>

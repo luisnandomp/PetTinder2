@@ -21,4 +21,8 @@ class Usuario extends Model
         'sexo',
     ];
 
+    public function publicacoes()
+    {
+        return $this->hasMany(Publicacao::class, 'usuario_id');
+    }
 }

@@ -4,7 +4,7 @@
     <div class="acoes-usuario my-3 row">
         <div class="col">
             <div class="d-grid gap-2">
-                <a href="{{ route('animais.create') }}" class="btn btn-primary" type="submit">QUERO ADOTAR</a>
+                <a href="{{ route('publicacoes.buscar') }}" class="btn btn-primary" type="submit">QUERO ADOTAR</a>
             </div>
         </div>
 

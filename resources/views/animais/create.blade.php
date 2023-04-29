@@ -10,9 +10,9 @@
     </head>
     <body>
         <div class="contaider">
-           
+
                 <img src="{{ asset('imagens/etp.png')}}" class="form-image">
-            
+
             <div class="form">
                 <form action="#">
                     <div class="form-header">

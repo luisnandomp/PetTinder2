@@ -8,7 +8,6 @@
         @vite(['resources/scss/app.scss'])
     </head>
     <body>
-
         <div>
             <h1 align="center">Lista de Animais</h1><br> <br>
 

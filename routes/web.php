@@ -6,10 +6,15 @@ use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\PublicacoesController;
 use App\Http\Controllers\AnimaisController;
 use App\Http\Controllers\FiltroController;
+use App\Http\Controllers\AuthController;
+
+
+// ---------------------- AUTENTICADOR -----------------------
+
 
 
 // ---------------------- TELAS PADRÃO DO SITE -----------------------
-Route::get('/', [SiteController::class, 'padrao'])->name('layout.padrao');
+Route::get('/', [SiteController::class, 'padrao'])->name('layout.padrao'); //tela inicial da pagina
 Route::get('/divulgacao', [SiteController::class, 'divulga'])->name('sites.divulga');
 Route::get('/adotar', [SiteController::class, 'adotar'])->name('sites.adotar');
 
@@ -30,6 +35,7 @@ Route::delete('Usuarios/{usuario}',[UsuariosController::class, 'destroy'])->name
 // ---------------------- PUBLICAÇÕES AQUI --------------------------------------------
 
 Route::get('/publicacao/lista', [PublicacoesController::class, 'index'])->name('publicacoes.index'); // tela onde vai mostrar todas as publicações
+Route::any('/publicacao/busca', [PublicacoesController::class, 'buscar'])->name('publicacoes.buscar'); // tela onde vai mostrar todas as publicações
 Route::get('/publicacao/novo', [PublicacoesController::class, 'create'])->name('publicacoes.create');//tela para cadastrar uma publicação
 Route::post('/publicacoes', [PublicacoesController::class, 'store'])->name('publicacoes.store');
 Route::get('/publicacoes/{publicacao}', [PublicacoesController::class, 'show'])->name('publicacoes.show'); //tela de mostrar cada publicação unicamente

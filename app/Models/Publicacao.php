@@ -18,4 +18,14 @@ class Publicacao extends Model
         'id_animal',
         'created_at'
     ];
+
+    public function animal()
+    {
+        return $this->belongsTo(Animal::class, 'id_animal');
+    }
+
+    public function usuario()
+    {
+        return $this->belongsTo(Usuario::class, 'id_usuario');
+    }
 }

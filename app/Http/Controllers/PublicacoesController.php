@@ -13,6 +13,28 @@ class PublicacoesController extends Controller
         return view ('publicacoes.index', compact('publicacoes'));
     }
 
+    public function buscar(Request $request)
+    {
+        $request->validate([
+            'porte' => 'nullable|in:pequeno,medio,grande',
+            'sexo' => 'nullable|in:masculino,feminino'
+        ]);
+
+        $publicacoes = Publicacao::when($request->porte, function($query, $porte){
+            return $query->whereHas('animal', function($query) use ($porte){
+                return $query->where('porte', $porte);
+            });
+        })
+        ->when($request->sexo, function($query, $sexo) {
+            return $query->whereHas('animal', function($query) use ($sexo){
+                return $query->where('genero', $sexo);
+            });
+        })
+        ->paginate();
+
+        return view('publicacoes.busca', compact('publicacoes'));
+    }
+
     public function create()
     {
         return view ('publicacoes.create');
