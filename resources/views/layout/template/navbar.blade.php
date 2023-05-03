@@ -24,7 +24,7 @@
                 <a href="{{ route('usuarios.create') }}"><button type="button"
                         class="btn btn-success">Cadastrar-se</button></a>
 
-                <a href="{{ Route('usuarios.login') }}"> <button type="button"
+                <a href="{{ Route('auth.login') }}"> <button type="button"
                         class="btn btn-info">Entrar</button></a>
             </form>
         </div>
