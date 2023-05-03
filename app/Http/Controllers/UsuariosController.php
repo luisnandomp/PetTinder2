@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Usuario;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UsuariosController extends Controller
 {
@@ -27,8 +28,7 @@ class UsuariosController extends Controller
             'sobrenome' => 'required|string',
             'email' => 'required|email',
             'tel' => 'required|string',
-            'senha' => 'required|string',
-            'confirmsenha' => 'required',
+            'senha' => 'required|string|confirmed',
             'sexo' => 'required'
         ], [
             'primeiro_nome.required' => "Informe seu Nome",
@@ -36,17 +36,14 @@ class UsuariosController extends Controller
             'email.required' => "Informe seu E-mail!",
             'tel.required' => "Informe seu Celular!",
             'senha.required' => "Informe sua senha!",
-            'confirmsenha.required' => "Confirme sua senha!",
             'sexo.required' => "Escolha seu sexo!"
         ]);
 
-        $usuario = Usuario::create($dados->all());
-        return redirect()->route('usuarios.index');
-    }
+        $dados = $dados->all();
+        $dados['senha'] = Hash::make($dados['senha']);
 
-    public function login()
-    {
-        return view ('usuarios.login');
+        $usuario = Usuario::create($dados);
+        return redirect()->route('usuarios.index');
     }
 
     public function show(Usuario $usuario)

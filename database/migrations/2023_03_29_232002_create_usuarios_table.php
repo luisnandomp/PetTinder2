@@ -19,8 +19,7 @@ return new class extends Migration
             $table->string('sobrenome', 100);
             $table->string('email', 155);
             $table->string('tel', 18);
-            $table->string('senha', 16);
-            $table->string('confirmsenha', 16);
+            $table->string('senha', 255);
             $table->string('sexo', 8);
             $table->timestamps();
         });

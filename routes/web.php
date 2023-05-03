@@ -13,8 +13,10 @@ use App\Http\Controllers\AuthController;
 Route::middleware(['web'])->group(function () {
 
 // -------------------- Filtro de animais -----------------------------------------
-Route::any('/publicacao/busca', [PublicacoesController::class, 'buscar'])->name('publicacoes.buscar'); // tela onde vai ser o filtro
-
+    Route::any('/publicacao/busca', [PublicacoesController::class, 'buscar'])->name('publicacoes.buscar'); // tela onde vai ser o filtro
+    Route::get('/entrar', [AuthController::class, 'entrar'])->name('login'); //tela de login do usuário
+    Route::post('/entrar', [AuthController::class, 'login_store'])->name('login_store'); //tela de login do usuário
+    Route::get('/sair', [AuthController::class, 'logout'])->name('sair');
 
 // ---------------------- TELAS PADRÃO DO SITE -----------------------
     Route::get('/', [SiteController::class, 'padrao'])->name('layout.padrao'); //tela inicial da pagina
@@ -28,11 +30,10 @@ Route::any('/publicacao/busca', [PublicacoesController::class, 'buscar'])->name(
 
 Route::middleware(['auth:usr'])->group(function () {
 // ---------------------- USUÁRIOS AQUI --------------------------------------------
-    Route::get('/usuario/login', [AuthController::class, 'login'])->name('auth.login'); //tela de login do usuário
 
     Route::get('/usuarios/lista', [UsuariosController::class, 'index'])->name('usuarios.index');//tela onde veremos todos os usuários cadastrados
     Route::get('/usuario/novo', [UsuariosController::class, 'create'])->name('usuarios.create');//tela onde vamos cadastrar os usuários
-    Route::post('/usuarios', [UsuariosControll0er::class, 'store'])->name('usuarios.store');
+    Route::post('/usuarios', [UsuariosController::class, 'store'])->name('usuarios.store');
     Route::get('/Usuarios/{usuario}', [UsuariosController::class, 'show'])->name('usuarios.show'); // tela onde vai exibir o perfil de cada usuário
     Route::put('/Usuarios/{usuario}/update', [UsuariosController::class, 'update'])->name('usuarios.update');
     Route::get('/Usuarios/{usuario}/editar', [UsuariosController::class, 'edit'])->name('usuarios.edit');// tela onde vamos editar cada perfil de usuário

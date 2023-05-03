@@ -14,7 +14,9 @@
                 <img src="{{ asset('imagens/cachorro.png')}}">
             </div>
             <div class="form">
-                <form action="#">
+                <form action="{{ route('login_store') }}" method="POST">
+                    @csrf
+
                     <div class="form-header">
                         <div class="title">
                             <h1>Acessar</h1>
@@ -33,7 +35,7 @@
                     </div>
                     <br>
                     <div class="continue-button" text="center">
-                        <button id="login"><a href="{{Route('layout.padrao')}}"> Continuar</a></button>
+                        <input type="submit" value="Continuar">
                     </div>
                     <br>
                     <div class="continue-button" text="center">

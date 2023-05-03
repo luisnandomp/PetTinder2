@@ -20,7 +20,7 @@
                             <h1>Cadastre-se </h1>
                         </div>
                         <div class="login-button">
-                            <button><a href="{{Route('usuarios.login')}}">Entrar</a></button>
+                            <button><a href="{{Route('login')}}">Entrar</a></button>
                         </div>
                     </div>
                 </form>
@@ -68,9 +68,9 @@
                         </div>
 
                         <div class="input-box">
-                            <label form="confirmsenha" >Confirma sua Senha</label>
-                            <input id="confirmsenha" type="password" name="confirmsenha" placeholder ="Digite sua senha"><!--required -->
-                            @error('confirmsenha')
+                            <label form="senha_confirmation" >Confirma sua Senha</label>
+                            <input id="senha_confirmation" type="password" name="senha_confirmation" placeholder ="Digite sua senha"><!--required -->
+                            @error('senha_confirmation')
                                 {{$message }}
                             @enderror
                         </div>
