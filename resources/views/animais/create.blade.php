@@ -9,15 +9,15 @@
         @vite(['resources/scss/formularios.scss'])
     </head>
     <body>
-        <div class="contaider">
+        <div class="contaider1">
 
-                <img src="{{ asset('imagens/etp.png')}}" class="form-image">
+                <img src="{{ asset('imagens/publicacao.png')}}" class="form-image">
 
             <div class="form">
                 <form action="#">
                     <div class="form-header">
                         <div class="title">
-                            <h1>Cadastre o Seu Pet</h1>
+                            <h2>Cadastre o Seu Pet</h2>
                         </div>
                         <div class="login-button">
                             <button><a href="{{Route('animais.create')}}">Entrar</a></button>
@@ -34,14 +34,22 @@
                             {{$message }}
                         @enderror
                         </div>
-
                         <div class="input-box">
-                            <label form="porte" >Porte </label>
-                            <input id="porte" type="text" name="porte" placeholder="Digite o Porte"><!--required -->
-                            @error('porte')
-                                {{$message }}
-                            @enderror
+                        <label form="porte" >Porte</label>
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option selected>Escolha um Porte</option>
+                            <option value="Grande">Grande</option>
+                            <option value="Médio">Médio</option>
+                            <option value="Pequeno">Pequeno</option>
+                          </select>
                         </div>
+                            <!-- <div class="input-box">
+                                <label form="porte" >Porte </label>
+                                <input id="porte" type="text" name="porte" placeholder="Digite o Porte">
+                                @error('porte')
+                                    {{$message }}
+                                @enderror
+                            </div> -->
 
                         <div class="input-box">
                             <label form="idade">Idade</label>
@@ -60,12 +68,22 @@
                         </div>
 
                         <div class="input-box">
+                            <label form="Personalidade" >Personalidade</label>
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                <option selected>Escolha uma Personalidade que defina seu PET</option>
+                                <option value="Calmo">Calmo</option>
+                                <option value="temperamental">Temperamental</option>
+                                <option value="estressado">Estressado</option>
+                                <option value="timido">Timido</option>
+                              </select>
+                            </div>
+                        <!-- <div class="input-box">
                             <label form="personalidade" >Personalidade</label>
-                            <input id="personalidade" type="text" name="personalidade" placeholder ="Digite a personalidade"><!--required -->
+                            <input id="personalidade" type="text" name="personalidade" placeholder ="Digite a personalidade"
                             @error('personalidade')
                                 {{$message }}
                             @enderror
-                        </div>
+                        </div> -->
 
                         <div class="input-box">
                             <label form="comorbidade" >Comorbidade</label>
@@ -94,7 +112,7 @@
                             <label for="masculino">Masculino</label>
                     </div>
                         </div>
-                    </div>
+
 
                         <div class="input-box">
                             <label form="apelido" >Apelido</label>
@@ -160,7 +178,7 @@
                                 {{$message }}
                             @enderror
                         </div>
-
+                            </div>
 
                     <br>
                     <div class="continue-button" text="center">

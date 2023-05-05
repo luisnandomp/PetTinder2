@@ -41,7 +41,6 @@ Route::middleware(['auth:usr'])->group(function () {
 // ---------------------- PUBLICAÇÕES AQUI --------------------------------------------
 
     Route::get('/publicacao/lista', [PublicacoesController::class, 'index'])->name('publicacoes.index'); // tela onde vai mostrar todas as publicações
-
     Route::get('/publicacao/novo', [PublicacoesController::class, 'create'])->name('publicacoes.create');//tela para cadastrar uma publicação
     Route::post('/publicacoes', [PublicacoesController::class, 'store'])->name('publicacoes.store');
     Route::get('/publicacoes/{publicacao}', [PublicacoesController::class, 'show'])->name('publicacoes.show'); //tela de mostrar cada publicação unicamente

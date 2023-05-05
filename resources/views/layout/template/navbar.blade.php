@@ -26,7 +26,7 @@
 
                 @auth
                     <a href="{{ Route('sair') }}"> <button type="button"
-                    class="btn btn-danger">Entrar</button></a>
+                    class="btn btn-danger">Sair</button></a>
                 @endauth
 
                 @guest
