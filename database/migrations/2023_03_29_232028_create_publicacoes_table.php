@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('publicacoes', function (Blueprint $table) {
             $table->id();
-            $table->string('foto', 255);
+            $table->string('foto');
             $table->string('descricao', 155);
             $table->integer('id_usuario');
             $table->integer('id_animal');

@@ -19,6 +19,11 @@ class Publicacao extends Model
         'created_at'
     ];
 
+
+    public function foto(){
+        return $this->BelongsTo(Animal::class);
+    }
+
     public function animal()
     {
         return $this->belongsTo(Animal::class, 'id_animal');

@@ -10,13 +10,18 @@ class SiteController extends Controller
         return view('sites.home');
     }
 
-    public function divulga()
+    public function quem()
     {
-        return view('publicacoes.create');
+        return view('sites.patrocinio');
     }
 
-    public function adotar()
+    public function patrocinio()
     {
-        return view('sites.adotar');
+        return view('sites.patrocinio');
+    }
+
+    public function contato()
+    {
+        return view('sites.contato');
     }
 }

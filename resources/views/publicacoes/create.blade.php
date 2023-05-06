@@ -37,7 +37,7 @@
 
                         <div class="input-box">
                             <label form="foto" >Foto</label>
-                            <input id="foto" type="text" name="foto" placeholder="Coloque uma foto"><!--required -->
+                            <input id="foto" type="file" name="foto" placeholder="Coloque uma foto"><!--required -->
                             @error('foto')
                                 {{$message }}
                             @enderror

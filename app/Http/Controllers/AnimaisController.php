@@ -24,7 +24,7 @@ class AnimaisController extends Controller
 
         $dados->validate([
             'raca' => 'required',
-            'porte' => 'required',
+            'porte' => 'required|in:pequeno,medio,grande',
             'idade' => 'required',
             'cor' => 'required',
             'comorbidade' => 'required',

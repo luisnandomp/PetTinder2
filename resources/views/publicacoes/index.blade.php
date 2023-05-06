@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Lista dos Usuarios</title>
-        @vite(['resources/scss/app.scss'])
-    </head>
-    <body>
+@extends('layout.padrao')
 
+@section('conteudo')
         <div>
             <h1 align="center">Lista de Publicações</h1><br> <br>
 
@@ -21,7 +13,9 @@
                         <tr>
                             <td align="center">{{ $publicacao->id }}</td>
                             <td>{{ $publicacao->descricao }}</td>
-                            <td>{{ $publicacao->foto }}</td>
+                            <td>
+                                <img src="{{ $publicacao->foto }}" alt="">
+                                </td>
                             <td>
                                 <form method="POST" action="{{ route('publicacoes.destroy', $publicacao->id) }}">
                                     @csrf
@@ -43,6 +37,5 @@
                 </div>
 
         </div>
-    </body>
-</html>
+@endsection
 

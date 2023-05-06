@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Usuário unico</title>
-        @vite(['resources/scss/app.scss'])
-    </head>
-    <body>
+@extends('layout.padrao')
+
+@section('conteudo')
         <div>
             <h1>Vizualização dos Usuário</h1><br> <br>
 
@@ -21,7 +14,5 @@
 
           <button type="button"><a href="{{route('usuarios.index')}}">voltar para lista de Usuários</a></button>
 
-
         </div>
-    </body>
-</html>
+@endsection

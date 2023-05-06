@@ -17,11 +17,17 @@ Route::middleware(['web'])->group(function () {
     Route::get('/entrar', [AuthController::class, 'entrar'])->name('login'); //tela de login do usuário
     Route::post('/entrar', [AuthController::class, 'login_store'])->name('login_store'); //tela de login do usuário
     Route::get('/sair', [AuthController::class, 'logout'])->name('sair');
-
+    Route::get('/usuario/novo', [UsuariosController::class, 'create'])->name('usuarios.create');//tela onde vamos cadastrar os usuários
+    Route::post('/usuarios', [UsuariosController::class, 'store'])->name('usuarios.store');
+    Route::get('/usuarios/lista', [UsuariosController::class, 'index'])->name('usuarios.index');//tela onde veremos todos os usuários cadastrados
 // ---------------------- TELAS PADRÃO DO SITE -----------------------
     Route::get('/', [SiteController::class, 'padrao'])->name('layout.padrao'); //tela inicial da pagina
-    Route::get('/divulgacao', [SiteController::class, 'divulga'])->name('sites.divulga');
-    Route::get('/adotar', [SiteController::class, 'adotar'])->name('sites.adotar');
+    Route::get('/quem-somos', [SiteController::class, 'quem'])->name('sites.quem');
+    Route::get('/patrocinio', [SiteController::class, 'patrocinio'])->name('sites.patrocinio');
+    Route::get('/contato', [SiteController::class, 'contato'])->name('sites.contato');
+
+
+
 });
 
 
@@ -31,13 +37,13 @@ Route::middleware(['web'])->group(function () {
 Route::middleware(['auth:usr'])->group(function () {
 // ---------------------- USUÁRIOS AQUI --------------------------------------------
 
-    Route::get('/usuarios/lista', [UsuariosController::class, 'index'])->name('usuarios.index');//tela onde veremos todos os usuários cadastrados
-    Route::get('/usuario/novo', [UsuariosController::class, 'create'])->name('usuarios.create');//tela onde vamos cadastrar os usuários
-    Route::post('/usuarios', [UsuariosController::class, 'store'])->name('usuarios.store');
-    Route::get('/Usuarios/{usuario}', [UsuariosController::class, 'show'])->name('usuarios.show'); // tela onde vai exibir o perfil de cada usuário
-    Route::put('/Usuarios/{usuario}/update', [UsuariosController::class, 'update'])->name('usuarios.update');
-    Route::get('/Usuarios/{usuario}/editar', [UsuariosController::class, 'edit'])->name('usuarios.edit');// tela onde vamos editar cada perfil de usuário
-    Route::delete('Usuarios/{usuario}',[UsuariosController::class, 'destroy'])->name('usuarios.destroy');
+
+
+Route::get('/Usuarios/{usuario}', [UsuariosController::class, 'show'])->name('usuarios.show'); // tela onde vai exibir o perfil de cada usuário
+Route::put('/Usuarios/{usuario}/update', [UsuariosController::class, 'update'])->name('usuarios.update');
+Route::get('/Usuarios/{usuario}/editar', [UsuariosController::class, 'edit'])->name('usuarios.edit');// tela onde vamos editar cada perfil de usuário
+Route::delete('Usuarios/{usuario}',[UsuariosController::class, 'destroy'])->name('usuarios.destroy');
+
 // ---------------------- PUBLICAÇÕES AQUI --------------------------------------------
 
     Route::get('/publicacao/lista', [PublicacoesController::class, 'index'])->name('publicacoes.index'); // tela onde vai mostrar todas as publicações
@@ -59,6 +65,3 @@ Route::middleware(['auth:usr'])->group(function () {
     Route::delete('animais/{animal}',[AnimaisController::class, 'destroy'])->name('animais.destroy'); // botão de deletar
 
 });
-
-
-
