@@ -3,7 +3,6 @@
 @section('conteudo')
         <div>
             <h1 align="center">Lista de Publicações</h1><br> <br>
-
             <div>
                 <table border="0" width="98%">
                     <th>ID</th>

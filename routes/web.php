@@ -18,15 +18,14 @@ Route::middleware(['web'])->group(function () {
     Route::post('/entrar', [AuthController::class, 'login_store'])->name('login_store'); //tela de login do usuário
     Route::get('/sair', [AuthController::class, 'logout'])->name('sair');
     Route::get('/usuario/novo', [UsuariosController::class, 'create'])->name('usuarios.create');//tela onde vamos cadastrar os usuários
-    Route::post('/usuarios', [UsuariosController::class, 'store'])->name('usuarios.store');
+    Route::post('/usuarios', [UsuariosController::class, 'store'])->name('usuarios.store');//onde vamos armazenar todos os usuários (banco)
     Route::get('/usuarios/lista', [UsuariosController::class, 'index'])->name('usuarios.index');//tela onde veremos todos os usuários cadastrados
+
 // ---------------------- TELAS PADRÃO DO SITE -----------------------
     Route::get('/', [SiteController::class, 'padrao'])->name('layout.padrao'); //tela inicial da pagina
-    Route::get('/quem-somos', [SiteController::class, 'quem'])->name('sites.quem');
-    Route::get('/patrocinio', [SiteController::class, 'patrocinio'])->name('sites.patrocinio');
-    Route::get('/contato', [SiteController::class, 'contato'])->name('sites.contato');
-
-
+    Route::get('/quem-somos', [SiteController::class, 'quem'])->name('sites.quem');// tela de quem somos
+    Route::get('/patrocinio', [SiteController::class, 'patrocinio'])->name('sites.patrocinio'); //tela de patrocinios
+    Route::get('/contato', [SiteController::class, 'contato'])->name('sites.contato');// tela de contato
 
 });
 
