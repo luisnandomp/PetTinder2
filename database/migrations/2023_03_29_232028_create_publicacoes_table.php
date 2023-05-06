@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('foto');
             $table->string('descricao', 155);
-            $table->integer('id_usuario');
-            $table->integer('id_animal');
+            $table->bigInteger('id_usuario')->unsigned();
+            $table->bigInteger('id_animal')->unsigned();
             $table->timestamps();
         });
     }

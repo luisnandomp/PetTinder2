@@ -12,8 +12,11 @@
             <h1>Vizualização das publicações</h1><br> <br>
 
             <ul>
+                <li>{{ $publicacao->usuario->primeiro_nome }}</li>
                 <li><strong>Descrição: </strong> {{$publicacao->descricao}} </li>
-                <li> <strong>foto: </strong>{{$publicacao->foto}}</li>
+                <li> <strong>foto: </strong>
+                    <img width="100px" src="/storage/{{ $publicacao->foto }}" alt="">
+                </li>
                 <li><strong>id_usuario: </strong>{{$publicacao->id_usuario}}</li>
                 <li><strong>Id_animal: </strong>{{$publicacao->id_animal}}</li>
             </ul>
