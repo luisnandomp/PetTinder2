@@ -40,23 +40,37 @@ class PublicacoesController extends Controller
         return view ('publicacoes.create');
     }
 
-    public function store(Request $dados)
+    public function store(Request $requisicao)
     {
-        $publicacao = new Publicacao($dados->all());
-
-        $dados->validate([
+        $requisicao->validate([
             'descricao' => 'required',
-            'foto' => 'required',
-            'id_usuario' => 'required',
+            'foto' => 'required|image|mimes:png,jpg,jpeg,gif',
             'id_animal' => 'required',
         ],[
             'descricao.required' => "Informe uma descrição",
             'foto.required' => "Informe uma foto",
-            'id_usuario.required' => "Informe um usuário",
             'id_animal.required' => "Informe um animal",
         ]);
 
-        $publicacao = Publicacao::create($dados->all());
+        $dados = $requisicao->except('id_usuario', 'id_animal');
+
+        $dados['foto'] = '';
+
+        if($requisicao->hasFile('foto')){
+            $arquivo = $requisicao->file('foto')->store('publicacoes', ['disk' => 'public']);
+
+            if($arquivo){
+                $dados['foto'] = $arquivo;
+            }
+        }
+
+        $publicacao = new Publicacao($dados);
+
+        $publicacao->usuario()->associate($requisicao->user());
+        $publicacao->animal()->associate($requisicao->id_animal);
+
+        $publicacao->save();
+
         return redirect()->route('publicacoes.index');
     }
 
