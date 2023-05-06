@@ -12,7 +12,7 @@ class SiteController extends Controller
 
     public function quem()
     {
-        return view('sites.patrocinio');
+        return view('sites.quem');
     }
 
     public function patrocinio()
