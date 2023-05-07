@@ -103,11 +103,12 @@ footer{
  .row-footer{
     display: flex;
     flex-wrap: wrap;
+    margin-left: 25%;
  }
 
  .footer-col{
     width: 25%;
-    padding: 0 15px;
+    
 
  }
  .footer-col h4{
@@ -154,4 +155,12 @@ body{
 
 footer{
     text-align: center;
+    
 }
+
+.logo{
+    border-radius: 25px;
+    width: 50%;
+}
+
+

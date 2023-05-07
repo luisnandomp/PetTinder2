@@ -17,7 +17,11 @@ class PublicacoesController extends Controller
     {
         $request->validate([
             'porte' => 'nullable|in:pequeno,medio,grande',
-            'sexo' => 'nullable|in:masculino,feminino'
+            'sexo' => 'nullable|in:masculino,feminino',
+            'castracao' => 'nullable|in:Sim,Não',
+            'comorbidade' => 'nullable|in:Sim,Não',
+            'vacina' => 'nullable|in:Sim,Não'
+
         ]);
 
         $publicacoes = Publicacao::when($request->porte, function($query, $porte){
@@ -30,6 +34,25 @@ class PublicacoesController extends Controller
                 return $query->where('genero', $sexo);
             });
         })
+
+        ->when($request->castracao, function($query, $castracao) {
+            return $query->whereHas('animal', function($query) use ($castracao){
+                return $query->where('castracao', $castracao);
+            });
+        })
+
+        ->when($request->comorbidade, function($query, $comorbidade) {
+            return $query->whereHas('animal', function($query) use ($comorbidade){
+                return $query->where('comorbidade', $comorbidade);
+            });
+        })
+
+        ->when($request->vacina, function($query, $vacina) {
+            return $query->whereHas('animal', function($query) use ($vacina){
+                return $query->where('vacina', $vacina);
+            });
+        })
+
         ->paginate();
 
         return view('publicacoes.busca', compact('publicacoes'));

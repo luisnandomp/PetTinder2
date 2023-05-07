@@ -24,25 +24,29 @@
                 </div>
 
                 <div class="col-4">
-                    <input type="submit" class="btn btn-primary" value="Pesquisar">
+                    <select name="Castrado" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option value='' selected>Castrado</option>
+                        <option value="masculino">Sim</option>
+                        <option value="feminino">Não</option>
+                    </select>
                 </div>
 
-                {{-- <div class="col-4">
-                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+
+                <div class="col-4">
+                    <select name="Comorbidade" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option value='' selected>Comorbidade</option>
+                        <option value="masculino">Sim</option>
+                        <option value="feminino">Não</option>
                     </select>
                 </div>
+
                 <div class="col-4">
-                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select name="sexo" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option value='' selected>Vacina</option>
+                        <option value="masculino">Sim</option>
+                        <option value="feminino">Não</option>
                     </select>
-                </div> --}}
+                </div>
             </div>
         </div>
     </form>
