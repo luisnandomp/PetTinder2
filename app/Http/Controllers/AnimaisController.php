@@ -18,18 +18,17 @@ class AnimaisController extends Controller
         return view ('animais.create');
     }
 
-    public function store(Request $dados)
-    {
-        $animal = new Animal($dados->all());
+    public function store(Request $requisicao)
+    {;
 
-        $dados->validate([
+        $requisicao->validate([
             'raca' => 'required',
             'porte' => 'required|in:pequeno,medio,grande',
             'idade' => 'required',
             'cor' => 'required',
-            'comorbidade' => 'required',
+            'comorbidade' => 'required|in:sim,nao,naosei',
             'genero' => 'required',
-            'foto' => 'required',
+            'foto' => 'required|image|mimes:png,jpg,jpeg,gif',
             'vacina' => 'required',
             'castracao' => 'required',
             'localidade' => 'required',
@@ -48,7 +47,19 @@ class AnimaisController extends Controller
             'data_cadastro.required' => "Informe a Data",
         ]);
 
-        $animal = Animal::create($dados->all());
+        $dados['foto'] = '';
+
+        if($requisicao->hasFile('foto')){
+            $arquivo = $requisicao->file('foto')->store('animais', ['disk' => 'public']);
+
+            if($arquivo){
+                $dados['foto'] = $arquivo;
+            }
+        }
+        $animal = new Animal($dados);
+
+        $animal->save();
+
         return redirect()->route('animais.index');
     }
 

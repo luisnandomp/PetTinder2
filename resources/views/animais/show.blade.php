@@ -20,7 +20,7 @@
                 <li><strong>comorbidade: </strong>{{$animal->comorbidade}}</li>
                 <li><strong>genero: </strong>{{$animal->genero}}</li>
                 <li><strong>apelido: </strong>{{$animal->apelido}}</li>
-                <li><strong>foto: </strong>{{$animal->foto}}</li>
+                <li><strong>foto:</strong><img width="100px" src="/storage/{{ $animal->foto }}" alt=""></li>
                 <li><strong>vacina: </strong>{{$animal->vacina}}</li>
                 <li><strong>castracao: </strong>{{$animal->castracao}}</li>
                 <li><strong>localidade: </strong>{{$animal->localidade}}</li>

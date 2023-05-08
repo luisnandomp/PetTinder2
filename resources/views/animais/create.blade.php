@@ -87,11 +87,25 @@
 
                         <div class="input-box">
                             <label form="comorbidade" >Comorbidade</label>
-                            <input id="comorbidade" type="text" name="comorbidade" placeholder ="Digite a Comorbidade"><!--required -->
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                <option selected disabled>Seu PET tem alguma comorbidade?</option>
+                                <option value="sim">Sim</option>
+                                <option value="nao">Não</option>
+                                <option value="naosei">Não Sei</option>
+                              </select>
+                            </div>
+
+
+                            <!--
+                        <div class="input-box">
+                            <label form="comorbidade" >Comorbidade</label>
+                            <input id="comorbidade" type="text" name="comorbidade" placeholder ="Digite a Comorbidade">
                             @error('comorbidade')
                                 {{$message }}
                             @enderror
                         </div>
+                    -->
+
 
                     </div>
 
@@ -122,14 +136,23 @@
                             @enderror
                         </div>
 
+
                         <div class="input-box">
-                            <label form="foto" >Foto </label>
-                            <input id="foto" type="text" name="foto" placeholder="Informe a Foto"><!--required -->
+                            <label form="foto" >Foto</label>
+                            <input id="foto" type="file" name="foto" placeholder="Coloque uma foto">
                             @error('foto')
                                 {{$message }}
                             @enderror
                         </div>
 
+<!--                        <div class="input-box">
+                            <label form="foto" >Foto </label>
+                            <input id="foto" type="text" name="foto" placeholder="Informe a Foto">
+                            @error('foto')
+                                {{$message }}
+                            @enderror
+                        </div>
+                    -->
                         <div class="input-box">
                             <label form="vacina" >Vacina </label>
                             <input id="vacina" type="text" name="vacina" placeholder="Digite a vacina"><!--required -->

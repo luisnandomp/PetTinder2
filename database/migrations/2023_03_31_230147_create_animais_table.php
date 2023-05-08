@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('comorbidade', 255);
             $table->string('genero', 15);
             $table->string('apelido', 50);
-            $table->string('foto', 255);
+            $table->string('foto');
             $table->string('vacina', 255);
             $table->string('castracao', 8);
             $table->string('localidade', 8);

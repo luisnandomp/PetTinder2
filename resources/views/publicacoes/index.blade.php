@@ -13,7 +13,7 @@
                             <td align="center">{{ $publicacao->id }}</td>
                             <td>{{ $publicacao->descricao }}</td>
                             <td>
-                                <img src="{{ $publicacao->foto }}" alt="">
+                                <img width="100px" src="/storage/{{ $publicacao->foto }}" alt="">
                                 </td>
                             <td>
                                 <form method="POST" action="{{ route('publicacoes.destroy', $publicacao->id) }}">
