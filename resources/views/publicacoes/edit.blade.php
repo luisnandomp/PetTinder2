@@ -13,7 +13,9 @@
             </div>
 
             <div>
-              <label for="">Foto</label>
+                <label for="">Foto(s): </label>
+                <img width="100px" src="/storage/{{ $publicacao->foto }}" alt=""> <br>
+                <label for="">Adicionar Foto</label> <br>
               <input type="file" name="foto"value="{{ $publicacao->foto }}">
             </div>
 

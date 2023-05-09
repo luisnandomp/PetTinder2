@@ -109,6 +109,7 @@ class PublicacoesController extends Controller
 
     public function update(Request $dados, Publicacao $publicacao)
     {
+
         $publicacao->update($dados->all());
 
         return redirect()->route('publicacoes.show', $publicacao->id);
