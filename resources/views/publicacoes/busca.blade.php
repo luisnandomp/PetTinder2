@@ -49,6 +49,7 @@
                 </div>
             </div>
         </div>
+                <div> <input type="submit" class="btn btn-primary" value="Pesquisar"> </div>
     </form>
 
     @foreach ($publicacoes as $publicacao)
