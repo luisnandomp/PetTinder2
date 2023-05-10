@@ -18,10 +18,9 @@ class PublicacoesController extends Controller
         $request->validate([
             'porte' => 'nullable|in:pequeno,medio,grande',
             'sexo' => 'nullable|in:masculino,feminino',
-            'castracao' => 'nullable|in:Sim,Não',
-            'comorbidade' => 'nullable|in:Sim,Não',
-            'vacina' => 'nullable|in:Sim,Não'
-
+            'castracao' => 'nullable|in:sim,nao',
+            'comorbidade' => 'nullable|in:sim,nao',
+            'vacina' => 'nullable|in:sim,nao'
         ]);
 
         $publicacoes = Publicacao::when($request->porte, function($query, $porte){
