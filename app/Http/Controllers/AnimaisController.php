@@ -25,9 +25,11 @@ class AnimaisController extends Controller
             'porte' => 'required|in:pequeno,medio,grande',
             'idade' => 'required',
             'cor' => 'required',
+            'personalidade' => 'required|in:calmo,temperamental,estressado,timido',
             'comorbidade' => 'required|in:sim,nao,naosei',
             'genero' => 'required',
-            'foto' => /*'required|image|mimes:png,jpg,jpeg,gif',*/'',
+            'foto' => 'required|image|mimes:png,jpg,jpeg,gif',
+            'apelido' => 'required',
             'vacina' => 'required|in:sim,nao',
             'castracao' => 'required',
             'localidade' => 'required',
@@ -46,6 +48,8 @@ class AnimaisController extends Controller
             'data_cadastro.required' => "Informe a Data",
         ]);
 
+        $dados = $requisicao->all();
+
         $dados['foto'] = '';
 
         if($requisicao->hasFile('foto')){
@@ -57,8 +61,6 @@ class AnimaisController extends Controller
             }
 
         }
-
-        $dados = $requisicao->all();
 
         $animal = new Animal($dados);
 

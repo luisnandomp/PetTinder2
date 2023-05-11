@@ -84,7 +84,6 @@ class PublicacoesController extends Controller
             if($arquivo){
                 $dados['foto'] = $arquivo;
             }
-            return dd($dados);
         }
 
         $publicacao = new Publicacao($dados);

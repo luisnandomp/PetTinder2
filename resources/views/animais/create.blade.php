@@ -29,25 +29,28 @@
                     <div class="input-group">
                         <div class="input-box">
                             <label form="raca" >Raça </label>
-                            <input id="raca" type="text" name="raca" placeholder="Raça do pet" {{ old('raca') }}> <!--required -->
-                            @error('raca_animal')
+                            <input id="raca" type="text" name="raca" placeholder="Raça do pet" value="{{ old('raca') }}"> <!--required -->
+                            @error('raca')
                                 {{$message }}
                             @enderror
                         </div>
 
                         <div class="input-box">
                         <label form="porte" >Porte</label>
-                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <select name="porte" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                                 <option selected>Escolha um Porte</option>
-                                <option value="Grande">Grande</option>
-                                <option value="Médio">Médio</option>
-                                <option value="Pequeno">Pequeno</option>
+                                <option value="grande">Grande</option>
+                                <option value="medio">Médio</option>
+                                <option value="pequeno">Pequeno</option>
                             </select>
+                            @error('porte')
+                                {{$message }}
+                            @enderror
                         </div>
 
                         <div class="input-box">
                             <label form="idade">Idade</label>
-                            <input id="idade" type="number" name="idade" placeholder="Digite a idade" {{ old('idade') }}><!--required -->
+                            <input id="idade" type="number" name="idade" placeholder="Digite a idade" value="{{ old('idade') }}"><!--required -->
                             @error('idade')
                                 {{$message }}
                             @enderror
@@ -55,7 +58,7 @@
 
                         <div class="input-box">
                             <label form="cor" >Cor</label>
-                            <input id="cor" type="text" name="cor" placeholder ="Digite a Cor" {{ old('cor') }}><!--required -->
+                            <input id="cor" type="text" name="cor" placeholder ="Digite a Cor" value="{{ old('cor') }}"><!--required -->
                             @error('cor')
                                 {{$message }}
                             @enderror
@@ -63,24 +66,31 @@
 
                         <div class="input-box">
                             <label form="Personalidade" >Personalidade</label>
-                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <select name="personalidade" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                                 <option selected>Escolha uma Personalidade que defina seu PET</option>
-                                <option value="Calmo">Calmo</option>
+                                <option value="calmo">Calmo</option>
                                 <option value="temperamental">Temperamental</option>
                                 <option value="estressado">Estressado</option>
                                 <option value="timido">Timido</option>
                             </select>
+                            @error('personalidade')
+                                {{$message }}
+                            @enderror
                         </div>
+
                         <div class="input-group">
                             <div class="input-box">
                                 <label form="comorbidade" >Comorbidade</label>
-                                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                                    <option selected disabled>Seu PET tem alguma comorbidade?</option>
+                                <select name="comorbidade" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option selected>Seu PET tem alguma comorbidade?</option>
                                     <option value="sim">Sim</option>
                                     <option value="nao">Não</option>
                                     <option value="naosei">Não Sei</option>
                                 </select>
                             </div>
+                            @error('comorbidade')
+                                {{$message }}
+                            @enderror
                         </div>
 
                     <div class="gender-inputs">
@@ -98,12 +108,15 @@
                                 <label for="masculino">Masculino</label>
                             </div>
                         </div>
+                        @error('genero')
+                                {{$message }}
+                        @enderror
                     </div>
 
 
                         <div class="input-box">
                             <label form="apelido" >Apelido</label>
-                            <input id="apelido" type="text" name="apelido" placeholder ="Digite o apelido" {{ old('apelido') }}><!--required -->
+                            <input id="apelido" type="text" name="apelido" placeholder ="Digite o apelido" value="{{ old('apelido') }}"><!--required -->
                             @error('apelido')
                                 {{$message }}
                             @enderror
@@ -134,6 +147,9 @@
                                     <label for="Não">Não</label>
                                 </div>
                             </div>
+                            @error('vacina')
+                                {{$message }}
+                            @enderror
                         </div>
 
                         <div class="gender-inputs">
@@ -149,12 +165,15 @@
                                     <input class="select" type="radio" id="nao" name="castracao" value="nao">
                                     <label for="nao">Não</label>
                                 </div>
+                                @error('castracao')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
 
                         <div class="input-box">
                             <label form="localidade" >Localidade</label>
-                            <input id="localidade" type="text" name="localidade" placeholder ="Digite a localidade" {{ old('localidade') }}><!--required -->
+                            <input id="localidade" type="text" name="localidade" placeholder ="Digite a localidade" value="{{ old('localidade') }}"><!--required -->
                             @error('localidade')
                                 {{$message }}
                             @enderror
@@ -162,7 +181,7 @@
 
                         <div class="input-box">
                             <label form="observacao" >Observação</label>
-                            <input id="lobservacao" type="text" name="observacao" placeholder ="Digite uma observação {{ old('observacao') }}"><!--required -->
+                            <input id="lobservacao" type="text" name="observacao" placeholder ="Digite uma observação" value="{{ old('observacao') }}"><!--required -->
                             @error('observacao')
                                 {{$message }}
                             @enderror
