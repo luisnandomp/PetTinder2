@@ -10,7 +10,7 @@
     <body>
 
         <div>
-            <h1 align="center">Lista de Usuarios</h1><br> <br>
+            <h1 aling="center">Lista de Usuarios</h1><br> <br>
 
             <div>
                 <table border="0" width="98%">
@@ -20,7 +20,7 @@
                     <th></th>
                     @foreach ($usuarios as $usuario)
                         <tr>
-                            <td align="center">{{ $usuario->id }}</td>
+                            <td aling="center">{{ $usuario->id }}</td>
                             <td>{{ $usuario->primeiro_nome }}</td>
                             <td>{{ $usuario->tel }}</td>
                             <td>
