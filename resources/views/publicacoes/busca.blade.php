@@ -81,6 +81,7 @@
                     <div class="card-body">
                       <h5 class="card-title">{{ $publicacao->animal->apelido }}</h5>
                       <p class="card-text">{{ $publicacao->usuario->primeiro_nome }}</p>
+                      <p class="card-text">{{ $publicacao->animal->porte }}</p>
                       <a href="#" class="btn btn-primary">Meu Perfil</a>
                     </div>
                   </div>
