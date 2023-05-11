@@ -29,7 +29,7 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">O QUE DEVE SER FEITO AO ADOTAR?</h5>
-                            <p class="card-text">Ao adotar um animal de estimação, é fundamental proporcionar um
+                            <p class="card-texxt" >Ao adotar um animal de estimação, é fundamental proporcionar um
                                 ambiente amoroso e seguro para que ele possa viver uma vida feliz e saudável.</p>
                         </div>
                     </div>
