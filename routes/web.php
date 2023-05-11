@@ -35,9 +35,6 @@ Route::middleware(['web'])->group(function () {
 
 Route::middleware(['auth:usr'])->group(function () {
 // ---------------------- USUÁRIOS AQUI --------------------------------------------
-
-
-
 Route::get('/Usuarios/{usuario}', [UsuariosController::class, 'show'])->name('usuarios.show'); // tela onde vai exibir o perfil de cada usuário
 Route::put('/Usuarios/{usuario}/update', [UsuariosController::class, 'update'])->name('usuarios.update');
 Route::get('/Usuarios/{usuario}/editar', [UsuariosController::class, 'edit'])->name('usuarios.edit');// tela onde vamos editar cada perfil de usuário
