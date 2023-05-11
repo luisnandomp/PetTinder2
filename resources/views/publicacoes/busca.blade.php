@@ -13,6 +13,10 @@
                         <option value="medio">Porte Médio</option>
                         <option value="grande">Porte Grande</option>
                     </select>
+
+                    @error('porte')
+                        {{ $message }}
+                    @enderror
                 </div>
 
                 <div class="col-4">
@@ -21,49 +25,59 @@
                         <option value="masculino">Macho</option>
                         <option value="feminino">Femea</option>
                     </select>
+
+                    @error('sexo')
+                        {{ $message }}
+                    @enderror
                 </div>
 
                 <div class="col-4">
-                    <select name="Castrado" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <select name="castracao" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                         <option value='' selected>Castrado</option>
-                        <option value="masculino">Sim</option>
-                        <option value="feminino">Não</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
                     </select>
+
+                    @error('porte')
+                        {{ $message }}
+                    @enderror
                 </div>
 
 
                 <div class="col-4">
-                    <select name="Comorbidade" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <select name="comorbidade" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                         <option value='' selected>Comorbidade</option>
-                        <option value="masculino">Sim</option>
-                        <option value="feminino">Não</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
                     </select>
+
+                    @error('comorbidade')
+                        {{ $message }}
+                    @enderror
                 </div>
 
                 <div class="col-4">
-                    <select name="sexo" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <select name="vacina" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                         <option value='' selected>Vacina</option>
-                        <option value="masculino">Sim</option>
-                        <option value="feminino">Não</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
                     </select>
+
+                    @error('vacina')
+                        {{ $message }}
+                    @enderror
                 </div>
             </div>
         </div>
-                <div> <input type="submit" class="btn btn-primary" value="Pesquisar"> </div>
+        <div> <input type="submit" class="btn btn-primary" value="Pesquisar"> </div>
     </form>
 
-    @foreach ($publicacoes as $publicacao)
-       <!-- <div class="border p-4 rounded">
-           <h1>{{ $publicacao->animal->apelido }}</h1>
-           <h1>{{ $publicacao->usuario->primeiro_nome }}</h1>
-        </div>
-    -->
-
-
-        <div class="row">
-            <div class="col">
-                <div class="card" style="width: 18rem;">
+    <div class="row g-3 justify-content-center my-3 p-4">
+        @foreach ($publicacoes as $publicacao)
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card shadow-sm">
                     <img src="..." class="card-img-top" alt="...">
+
                     <div class="card-body">
                       <h5 class="card-title">{{ $publicacao->animal->apelido }}</h5>
                       <p class="card-text">{{ $publicacao->usuario->primeiro_nome }}</p>
@@ -71,19 +85,8 @@
                     </div>
                   </div>
             </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">{{ $publicacao->animal->apelido }}</h5>
-                      <p class="card-text">{{ $publicacao->usuario->primeiro_nome }}</p>
-                      <a href="#" class="btn btn-primary">Meu Perfil</a>
-                    </div>
-                  </div>
-            </div>
-          </div>
-
-    @endforeach
+        @endforeach
+    </div>
 
     {{ $publicacoes->links() }}
 @endsection
