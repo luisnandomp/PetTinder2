@@ -76,11 +76,14 @@
         @foreach ($publicacoes as $publicacao)
             <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                 <div class="card shadow-sm">
-                    <img src="..." class="card-img-top" alt="...">
+
+
+                    <img src="{{ asset('imagens/dogfofis.png') }}" class="dogfofis" alt="...">
 
                     <div class="card-body">
                       <h5 class="card-title">{{ $publicacao->animal->apelido }}</h5>
                       <p class="card-text">{{ $publicacao->usuario->primeiro_nome }}</p>
+                      <p class="card-text">{{ $publicacao->animal->porte }}</p>
                       <a href="#" class="btn btn-primary">Meu Perfil</a>
                     </div>
                   </div>
