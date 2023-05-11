@@ -19,8 +19,7 @@ class AnimaisController extends Controller
     }
 
     public function store(Request $requisicao)
-    {;
-
+    {
         $requisicao->validate([
             'raca' => 'required',
             'porte' => 'required|in:pequeno,medio,grande',
@@ -28,8 +27,8 @@ class AnimaisController extends Controller
             'cor' => 'required',
             'comorbidade' => 'required|in:sim,nao,naosei',
             'genero' => 'required',
-            'foto' => 'required|image|mimes:png,jpg,jpeg,gif',
-            'vacina' => 'required',
+            'foto' => /*'required|image|mimes:png,jpg,jpeg,gif',*/'',
+            'vacina' => 'required|in:sim,nao',
             'castracao' => 'required',
             'localidade' => 'required',
             'data_cadastro' => 'required',
@@ -54,8 +53,13 @@ class AnimaisController extends Controller
 
             if($arquivo){
                 $dados['foto'] = $arquivo;
+
             }
+
         }
+
+        $dados = $requisicao->all();
+
         $animal = new Animal($dados);
 
         $animal->save();

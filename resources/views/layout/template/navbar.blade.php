@@ -21,15 +21,20 @@
 
             </ul>
             <form class="d-flex" role="search">
-                <a href="{{ route('usuarios.create') }}"><button type="button"
-                        class="btn btn-success">Cadastrar-se</button></a>
+
 
                 @auth
+                <a href="{{ route('usuarios.show', Auth::user()->id) }}"><button type="button"
+                    class="btn btn-success">Meu Perfil</button></a>
+
                     <a href="{{ Route('sair') }}"> <button type="button"
                     class="btn btn-danger">Sair</button></a>
                 @endauth
 
                 @guest
+                <a href="{{ route('usuarios.create') }}"><button type="button"
+                    class="btn btn-success">Cadastrar-se</button></a>
+
                     <a href="{{ Route('login') }}"> <button type="button"
                         class="btn btn-info">Entrar</button></a>
                 @endguest
