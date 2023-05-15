@@ -29,7 +29,7 @@
                         </div>
                         <div class="input-box">
                             <label form="senha" >Senha</label>
-                            <input id="senha" type="text" name="senha" placeholder="Digite a senha" required>
+                            <input id="senha" type="password" name="senha" placeholder="Digite a senha" required>
                         </div>
 
                     </div>
