@@ -9,12 +9,14 @@
     
 }
 
-.titulo{
-    font-family: 'Roboto', sem serifa;
-    color:#000000e6;
+.titulo, .subtitulo{
+    font-family: 'Patua One', cursiva;
+    color:#e39013e6;
     margin-top: 0;
     letter-spacing: .05em;
     font-weight: 400;
+    font-weight: bold;
+    
     
 }
 
@@ -29,12 +31,13 @@
 .imagem{
     width: 50%;
     height: auto;
-    border-radius: 5%;
+    border-radius: 10%;
 }
 
-.conte{
-    font-size: 40 px;
-    font-family: 'Roboto', sem serifa;
+.conte, .conte2{
+    font-size: 25px;
+    font-family: 'Fira Sans', sem serifa;
     font-weight: 300;
+    letter-spacing: .05em;
     
 }
