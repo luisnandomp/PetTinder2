@@ -25,7 +25,6 @@ class Animal extends Model
         'castracao',
         'localidade',
         'observacao',
-        'data_cadastro',
     ];
 
 }

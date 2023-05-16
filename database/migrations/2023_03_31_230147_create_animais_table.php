@@ -28,7 +28,6 @@ return new class extends Migration
             $table->string('castracao', 8);
             $table->string('localidade', 100);
             $table->string('observacao', 255);
-            $table->date('data_cadastro');
             $table->timestamps();
         });
     }

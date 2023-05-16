@@ -33,7 +33,6 @@ class AnimaisController extends Controller
             'vacina' => 'required|in:sim,nao',
             'castracao' => 'required',
             'localidade' => 'required',
-            'data_cadastro' => 'required',
         ],[
             'raca.required' => "Informe uma raça",
             'porte.required' => "Informe o porte",
@@ -45,7 +44,6 @@ class AnimaisController extends Controller
             'vacina.required' => "Informe a vacina",
             'castracao.required' => "Informe a castração",
             'localidade.required' => "Informe a localidade",
-            'data_cadastro.required' => "Informe a Data",
         ]);
 
         $dados = $requisicao->all();
@@ -66,7 +64,7 @@ class AnimaisController extends Controller
 
         $animal->save();
 
-        return redirect()->route('animais.index');
+        return redirect()->route('animais.show', compact('animal'));
     }
 
     public function show(Animal $animal)

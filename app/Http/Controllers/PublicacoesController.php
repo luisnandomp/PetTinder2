@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Publicacao;
+use App\Models\Animal;
 
 class PublicacoesController extends Controller
 {
@@ -57,9 +58,11 @@ class PublicacoesController extends Controller
         return view('publicacoes.busca', compact('publicacoes'));
     }
 
-    public function create()
+    public function create(Animal $animal, Publicacao $publicacao)
     {
-        return view ('publicacoes.create');
+        /*$publicacao = Publicacao::all();*/
+        $animais = Animal::all();
+        return view ('publicacoes.create', compact('animais'));  /*, 'publicacao' */
     }
 
     public function store(Request $requisicao)

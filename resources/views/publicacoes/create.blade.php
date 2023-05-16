@@ -44,13 +44,30 @@
                             @enderror
                         </div>
 
-                        <div class="input-box">
-                            <label form="id_animal">Animal</label>
-                            <input id="id_animal" type="number" name="id_animal" placeholder="Escolha um Animal"><!--required -->
-                            @error('id_animal')
-                                {{$message }}
-                            @enderror
+
+                        <div class="input-group">
+                            @foreach ($animais as $animal)
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="id_animal" id="id_animal" value="{{$animal->id}}" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+
+                                    {{$animal->apelido}}
+                                    {{$animal->idade}}
+                                </label>
+                            </div>
+                            @endforeach
                         </div>
+
+
+
+                      <!--  <div class="input-box">
+                                <label form="id_animal">Animal</label>
+                                <input id="id_animal" type="number" name="id_animal" placeholder="Escolha um Animal">
+                            @error('id_animal')
+                            {{$message }}
+                            @enderror
+                            </div>
+                    -->
 
 
                     <br>

@@ -187,13 +187,6 @@
                             @enderror
                         </div>
 
-                        <div class="input-box">
-                            <label form="data_cadastro" >Data De Cadastro</label>
-                            <input id="data_cadastro" type="date" name="data_cadastro" placeholder ="Digite a data"><!--required -->
-                            @error('data_cadastro')
-                                {{$message }}
-                            @enderror
-                        </div>
                         <div class="continue-button" text="center">
                             <button type="submit">Continuar</button>
                         </div>

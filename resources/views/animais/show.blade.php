@@ -29,7 +29,7 @@
             </ul>
 
           <button type="button"><a href="{{route('animais.index')}}">voltar para lista de Animais</a></button>
-
+          <button type="button"><a href="{{route('animais.create')}}">Cadastrar outro animal</a></button>
 
         </div>
     </body>
