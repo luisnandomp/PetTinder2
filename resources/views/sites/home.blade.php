@@ -7,12 +7,13 @@
                 <a href="{{ route('publicacoes.buscar') }}" class="btn btn-primary" type="submit">QUERO ADOTAR</a>
             </div>
         </div>
-
-        <div class="col">
-            <div class="d-grid gap-2">
-                <a href="{{ route('publicacoes.create')}}" class="btn btn-primary" type="submit">QUERO DIVULGAR</a>
+        @auth
+            <div class="col">
+                <div class="d-grid gap-2">
+                    <a href="{{ route('publicacoes.create')}}" class="btn btn-primary" type="submit">QUERO DIVULGAR</a>
+                </div>
             </div>
-        </div>
+        @endauth
     </div>
 
     <div class="banner mb-3">

@@ -34,6 +34,7 @@
             </div> <br>
                 <div>
                     <button type="button"><a href="{{route('layout.padrao')}}">Voltar para o incio</a></button>
+                    <button type="button" class="btn btn-success"><a href="{{route('publicacoes.create')}}">Cadastrar um novo Aninaml</a></button>
                 </div>
 
         </div>
