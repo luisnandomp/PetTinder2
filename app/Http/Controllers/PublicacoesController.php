@@ -14,6 +14,10 @@ class PublicacoesController extends Controller
         return view ('publicacoes.index', compact('publicacoes'));
     }
 
+
+
+
+
     public function buscar(Request $request)
     {
         $request->validate([
@@ -58,12 +62,20 @@ class PublicacoesController extends Controller
         return view('publicacoes.busca', compact('publicacoes'));
     }
 
+
+
+
+
     public function create(Animal $animal, Publicacao $publicacao)
     {
         /*$publicacao = Publicacao::all();*/
         $animais = Animal::all();
         return view ('publicacoes.create', compact('animais'));  /*, 'publicacao' */
     }
+
+
+
+
 
     public function store(Request $requisicao)
     {
@@ -96,18 +108,30 @@ class PublicacoesController extends Controller
 
         $publicacao->save();
 
-        return redirect()->route('publicacoes.index');
+        return redirect()->route('publicacoes.show', $publicacao->id);
     }
 
-    public function show(Publicacao $publicacao)
+
+
+
+
+    public function show(Publicacao $publicacao, Animal $animal)
     {
-        return view('publicacoes.show', compact('publicacao'));
+        $animal = Animal::all();
+        return view('publicacoes.show', compact('publicacao', 'animal'));
     }
+
+
+
+
 
     public function edit(Publicacao $publicacao)
     {
         return view('publicacoes.edit', compact('publicacao'));
     }
+
+
+
 
     public function update(Request $dados, Publicacao $publicacao)
     {
@@ -116,6 +140,10 @@ class PublicacoesController extends Controller
 
         return redirect()->route('publicacoes.show', $publicacao->id);
     }
+
+
+
+
 
     public function destroy(Publicacao $publicacao)
     {
