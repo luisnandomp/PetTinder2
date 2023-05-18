@@ -57,4 +57,8 @@
         </div>
     </div>
 
+    <div>
+        <h1>Adote!</h1>
+    </div>
+
     @endsection

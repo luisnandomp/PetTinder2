@@ -1,15 +1,34 @@
+.quem-somos{
+    background-color: #ffc65a;
+    padding: 15px;
+}
+
 .row{
     margin-bottom: 1%;
 }
 
 .lindos{
-    width: 50%;
-    height: 40%;
+    width: 70%;
     border-radius: 3%;
+    background-color: #fff99e;
+    padding: 25px;
 }
 
 .objetivo{
     font-size: 25px;
     font-weight: 400;
+}
 
+.imagem{
+    flex: 1;
+}
+
+.conteudo{
+    flex: 1;
+    text-align: start;
+
+    & h1{
+        color: #fff99e;
+        font-size: 3rem;
+    }
 }
