@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Publicacao;
 use Illuminate\Http\Request;
 
 class SiteController extends Controller
@@ -23,5 +24,16 @@ class SiteController extends Controller
     public function contato()
     {
         return view('sites.contato');
+    }
+
+    public function publicacoes()
+    {
+        $publicacoes = Publicacao::all();
+        return view('sites.publicacoes', compact('publicacoes'));
+    }
+
+    public function publicacao(Publicacao $publicacao)
+    {
+        return view('sites.publicacao', compact('publicacao'));
     }
 }

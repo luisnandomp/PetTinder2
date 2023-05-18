@@ -22,7 +22,7 @@ class Usuario extends Authenticatable
 
     public function publicacoes()
     {
-        return $this->hasMany(Publicacao::class, 'usuario_id');
+        return $this->hasMany(Publicacao::class, 'id_usuario');
     }
 
     public function getAuthPassword()

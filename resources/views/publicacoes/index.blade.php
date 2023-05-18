@@ -24,8 +24,10 @@
                                     <input type="submit" value="EXCLUIR">
                                     </form>
                                 <a href="{{route('publicacoes.show', $publicacao->id)}}" role="button">Ver</a>
-                                <a href="{{route('publicacoes.edit', $publicacao->id)}}" role="button">Editar</a>
 
+                                @can('editar', $publicacao)
+                                    <a href="{{route('publicacoes.edit', $publicacao->id)}}" role="button">Editar</a>
+                                @endcan
                             </td>
                         </tr>
                     @endforeach

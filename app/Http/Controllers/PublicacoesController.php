@@ -5,18 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Publicacao;
 use App\Models\Animal;
+use Illuminate\Support\Facades\Auth;
 
 class PublicacoesController extends Controller
 {
     public function index()
     {
-        $publicacoes = Publicacao::all();
+        $usuario = Auth::user();
+        $publicacoes = $usuario->publicacoes()->paginate();
+
         return view ('publicacoes.index', compact('publicacoes'));
     }
-
-
-
-
 
     public function buscar(Request $request)
     {
@@ -66,8 +65,9 @@ class PublicacoesController extends Controller
 
 
 
-    public function create(Animal $animal, Publicacao $publicacao)
+    public function create(Animal $animal)
     {
+        $this->authorize('criar', Publicacao::class);
         /*$publicacao = Publicacao::all();*/
         $animais = Animal::all();
         return view ('publicacoes.create', compact('animais'));  /*, 'publicacao' */
@@ -118,12 +118,13 @@ class PublicacoesController extends Controller
 
     public function edit(Publicacao $publicacao)
     {
+        $this->authorize('editar', $publicacao);
         return view('publicacoes.edit', compact('publicacao'));
     }
 
     public function update(Request $dados, Publicacao $publicacao)
     {
-
+        $this->authorize('editar', $publicacao);
         $publicacao->update($dados->all());
 
         return redirect()->route('publicacoes.show', $publicacao->id);
