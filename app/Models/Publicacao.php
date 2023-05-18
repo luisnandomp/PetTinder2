@@ -19,10 +19,6 @@ class Publicacao extends Model
     ];
 
 
-    public function foto(){
-
-    }
-
     public function animal()
     {
         return $this->belongsTo(Animal::class, 'id_animal');

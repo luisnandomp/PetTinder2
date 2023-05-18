@@ -19,7 +19,7 @@
                 </li>
 
                 <li> <strong>foto do Animal:</strong>
-                    <img width="100px" src="{{$animal->foto}}">
+                    <img width="100px" src="/storage/{{ $publicacao->animal->foto }}">
                 </li>
                 <li><strong>id_usuario: </strong>{{$publicacao->id_usuario}}</li>
                 <li><strong>Id_animal: </strong>{{$publicacao->id_animal}}</li>

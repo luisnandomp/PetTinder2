@@ -111,27 +111,15 @@ class PublicacoesController extends Controller
         return redirect()->route('publicacoes.show', $publicacao->id);
     }
 
-
-
-
-
-    public function show(Publicacao $publicacao, Animal $animal)
+    public function show(Publicacao $publicacao)
     {
-        $animal = Animal::all();
-        return view('publicacoes.show', compact('publicacao', 'animal'));
+        return view('publicacoes.show', compact('publicacao'));
     }
-
-
-
-
 
     public function edit(Publicacao $publicacao)
     {
         return view('publicacoes.edit', compact('publicacao'));
     }
-
-
-
 
     public function update(Request $dados, Publicacao $publicacao)
     {
