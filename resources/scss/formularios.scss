@@ -104,7 +104,9 @@ body{
     display: flex;
     flex-direction: column;
     margin-bottom: 1.1rem;
+    width: 100%;
 }
+
 .input-box input{
     margin: 0.6rem 0;
     padding: 0.8 rem 1.0 rem;
@@ -174,6 +176,11 @@ body{
     font-weight: 500px;
     color: #fff;
 
+}
+
+textarea{
+    width: 100%;
+    padding: 10px;
 }
 
 @media screen and (max-width: 1330px){

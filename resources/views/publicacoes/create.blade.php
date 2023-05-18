@@ -45,16 +45,19 @@
                         </div>
 
 
+                        <p class="lead">Selecione um animal</p>
                         <div class="input-group">
                             @foreach ($animais as $animal)
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="id_animal" id="id_animal" value="{{$animal->id}}" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
-
-                                    {{$animal->apelido}}
-                                    {{$animal->idade}}
-                                </label>
-                            </div>
+                                <div class="d-flex flex-column flex-row justify-content-center align-items-center gap-2">
+                                    <img width="100px" src="/storage/{{ $animal->foto }}">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="id_animal" id="id_animal" value="{{$animal->id}}" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            {{$animal->apelido}}
+                                            {{$animal->idade}}
+                                        </label>
+                                    </div>
+                                </div>
                             @endforeach
                         </div>
 
