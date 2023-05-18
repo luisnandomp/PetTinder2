@@ -25,17 +25,17 @@
                     <div class="input-group">
                         <div class="input-box">
                             <label form="email" >Usuário </label>
-                            <input id="email" type="email" name="email" placeholder="Digite o usuário" required>
+                            <input id="email" class="form-control" type="email" name="email" placeholder="Digite o usuário" required>
                         </div>
                         <div class="input-box">
                             <label form="senha" >Senha</label>
-                            <input id="senha" type="password" name="senha" placeholder="Digite a senha" required>
+                            <input id="senha" class="form-control" type="password" name="senha" placeholder="Digite a senha" required>
                         </div>
 
                     </div>
                     <br>
                     <div class="continue-button" text="center">
-                        <input type="submit" value="Continuar">
+                        <input type="submit" value="Entrar">
                     </div>
                     <br>
                     <div class="continue-button" text="center">

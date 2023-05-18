@@ -91,11 +91,14 @@ body{
     justify-content: space-between ;
     padding: 1rem 0;
 }
+
 .input-box{
     display: flex;
     flex-direction: column;
     margin-bottom: 1.1rem;
+    width: 100%;
 }
+
 .input-box input{
     margin: 0.6rem 0;
     padding: 0.8 rem 1.0 rem;
@@ -143,28 +146,31 @@ body{
     color:#000000c0 ;
 }
 
-.continue-button  button{
-    height: 20px;
-    width: 80%;
+.continue-button  button, .continue-button input[type='submit']{
+    width: 100%;
     margin-top:2.5 rem ;
     border: none;
     background-color: #ffe457;
     padding: 0.62 rem;
     border-radius: 5px;
     cursor: pointer;
-
+    padding: 10px 20px;
 }
 
-.continue-button  button:hover{
+.continue-button  button:hover, .continue-button input[type='submit']:hover{
     background-color: #ffd500;
 }
 
-.continue-button  button a{
+.continue-button  button a, .continue-button input[type='submit']{
     text-decoration: none;
     font-size: 0.93rem;
     font-weight: 500px;
     color: #fff;
+}
 
+.form-control{
+    padding: 9px;
+    width: 100%;
 }
 
 @media screen and (max-width: 1330px){
