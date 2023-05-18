@@ -12,7 +12,7 @@
      <div class="col">
         <div class="p-3" >
             <ul >
-                <div >
+                <div class="conteudo">
                     <h1 class="linhaum"><strong>Primeiro Nome: </strong> {{$usuario->primeiro_nome}} </h1>
                     <h1 class="linhadois"> <strong>Sobrenome: </strong>{{$usuario->sobrenome}}</h1>
                     <h1 class="linhatres"><strong>Sexo: </strong>{{$usuario->sexo}}</h1>

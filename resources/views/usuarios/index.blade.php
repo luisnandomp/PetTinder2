@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Lista dos Usuarios</title>
-        @vite(['resources/scss/app.scss'])
-    </head>
-    <body>
+@extends('layout.padrao')
 
+@section('conteudo')
         <div>
             <h1 aling="center">Lista de Usuarios</h1><br> <br>
 
@@ -42,8 +34,15 @@
                 <div>
                     <button type="button"><a href="{{route('layout.padrao')}}">Voltar para o incio</a></button>
                 </div>
-
+        <style>
+            table, th, td {
+                border: 1px solid white;
+                border-collapse: collapse;
+                }       
+            th, td {
+                 background-color: #96D4D4;
+                }
+        </style>
         </div>
-    </body>
-</html>
+        @endsection
 
