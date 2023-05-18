@@ -46,10 +46,20 @@ body{
 
 .btn-primary:hover{
    background-color: #ffa639;
-
-
-
 }
+
+.d-grid::before{
+    content: '';
+    position: absolute;
+    top:0%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #01a89e;
+}
+
+
 .text-center{
     font-size: 25PX;
 }
