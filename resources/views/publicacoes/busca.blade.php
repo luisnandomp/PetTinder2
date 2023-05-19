@@ -76,13 +76,13 @@
         @foreach ($publicacoes as $publicacao)
             <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                 <div class="card shadow-sm">
-                    <img src="/storage/{{ $publicacao->foto }}" class="card-img-top" alt="...">
+                    <img height="250px" src="/storage/{{ $publicacao->foto }}" class="card-img-top" alt="...">
 
                     <div class="card-body">
                       <h5 class="card-title">{{ $publicacao->animal->apelido }}</h5>
                       <p class="card-text">{{ $publicacao->usuario->primeiro_nome }}</p>
                       <p class="card-text">{{ $publicacao->animal->porte }}</p>
-                      <a href="#" class="btn btn-primary">Meu Perfil</a>
+                      <a href="{{route('animais.show', $publicacao->animal->id)}}" class="btn btn-primary">Meu Perfil</a>
                     </div>
                   </div>
             </div>

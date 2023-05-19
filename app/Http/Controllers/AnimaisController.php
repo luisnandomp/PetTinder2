@@ -15,6 +15,7 @@ class AnimaisController extends Controller
 
     public function create()
     {
+        $this->authorize('criar', Publicacao::class);
         return view ('animais.create');
     }
 
@@ -74,11 +75,13 @@ class AnimaisController extends Controller
 
     public function edit(Animal $animal)
     {
+        $this->authorize('editar', $animal);
         return view('animais.edit', compact('animal'));
     }
 
     public function update(Request $dados, Animal $animal)
     {
+        $this->authorize('editar', $animal);
         $animal->update($dados->all());
 
         return redirect()->route('animais.showanimais.create', $animal->id);
