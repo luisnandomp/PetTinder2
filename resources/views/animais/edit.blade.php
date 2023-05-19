@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Tela de edição dos Animais </title>
-        @vite(['resources/scss/app.scss'])
-    </head>
-    <body>
+@extends('layout.padrao')
+
+@section('conteudo')
         <form action="{{ route('animais.update', $animal->id) }}" method="POST">
             <h1 align="center">Edite aqui o Seu lindo e cheiroso Animalzinho {{ $animal->id }}</h1>
 
@@ -117,5 +110,4 @@
               <button type="submit">Atualizar Animal</button>
             </div>
           </form>
-    </body>
-</html>
+@endsection
