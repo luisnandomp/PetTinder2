@@ -2,12 +2,8 @@
 
 
 @section('conteudo')
-       
-            <h1>Vizualização dos Animais</h1><br> <br>
 
-
-    
-<h1>Vizualização dos Animais</h1><br> <br>
+<h1>Perfil de seus animais cadastrados</h1><br> <br>
 
 <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
@@ -32,9 +28,7 @@
                 <li><strong>localidade: </strong>{{$animal->localidade}}</li>
                 <li><strong>observacao: </strong>{{$animal->observacao}}</li>
                 
-            </ul></p>
-        <p class="card-text"><small class="text-body-secondary"><button type="button" class="btn btn-success"><a href="{{route('animais.index')}}">voltar para lista de Animais</a></button>
-          <button type="button"><a href="{{route('animais.create')}}" class="btn btn-success">Cadastrar outro animal</a></button></small></p>
+            </ul></small></p>
       </div>
     </div>
   </div>
@@ -43,7 +37,7 @@
         
           
 
-          <button type="button"><a href="{{route('animais.index')}}">voltar para lista de Animais</a></button>
-          <button type="button"><a href="{{route('animais.create')}}">Cadastrar outro animal</a></button>
+          <button type="button" class="btn btn-success"><a href="{{route('animais.index')}}">voltar para lista de Animais</a></button>
+          <button type="button" class="btn btn-success"><a href="{{route('animais.create')}}">Cadastrar outro animal</a></button>
 
 @endsection
