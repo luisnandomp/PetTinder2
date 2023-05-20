@@ -20,13 +20,10 @@
                     <h1 class="linhacinco"><strong>Celular: </strong>{{$usuario->tel}}</h1>
                 </div>
                 <button type="button"><a href="{{route('usuarios.index')}}">voltar para lista de Usuários</a></button>
+                <button type="button"><a href="{{route('animais.create')}}">Cadastrar um novo animal</a></button>
             </ul>
         </div>
       </div>
     </div>
 </div>
-
-
-
-
 @endsection
