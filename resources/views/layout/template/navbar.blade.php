@@ -19,6 +19,7 @@
                     <a class="nav-link active" aria-current="page" href="{{route('publicacoes.buscar')}}">Quero Adotar</a>
                 </li>
 
+                
             </ul>
             <form class="d-flex" role="search">
 

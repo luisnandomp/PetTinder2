@@ -28,8 +28,8 @@
                 <li><strong>observacao: </strong>{{$animal->observacao}}</li>
                 
             </ul></p>
-        <p class="card-text"><small class="text-body-secondary"><button type="button"><a href="{{route('animais.index')}}">voltar para lista de Animais</a></button>
-          <button type="button"><a href="{{route('animais.create')}}">Cadastrar outro animal</a></button></small></p>
+        <p class="card-text"><small class="text-body-secondary"><button type="button" class="btn btn-success"><a href="{{route('animais.index')}}">voltar para lista de Animais</a></button>
+          <button type="button"><a href="{{route('animais.create')}}" class="btn btn-success">Cadastrar outro animal</a></button></small></p>
       </div>
     </div>
   </div>

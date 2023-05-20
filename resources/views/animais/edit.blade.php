@@ -7,7 +7,7 @@
         <title>Tela de edição dos Animais </title>
         @vite(['resources/scss/app.scss'])
     </head>
-    <body>
+    <body >
         <form action="{{ route('animais.update', $animal->id) }}" method="POST">
             <h1 align="center">Edite aqui o Seu lindo e cheiroso Animalzinho {{ $animal->id }}</h1>
 
@@ -117,5 +117,11 @@
               <button type="submit">Atualizar Animal</button>
             </div>
           </form>
+
+<style>
+    body{
+        background-color: #FFFACD;
+    }
+</style>
     </body>
 </html>
