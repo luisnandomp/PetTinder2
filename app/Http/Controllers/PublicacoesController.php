@@ -57,7 +57,6 @@ class PublicacoesController extends Controller
         })
 
         ->paginate();
-
         return view('publicacoes.busca', compact('publicacoes'));
     }
 
@@ -129,10 +128,6 @@ class PublicacoesController extends Controller
 
         return redirect()->route('publicacoes.show', $publicacao->id);
     }
-
-
-
-
 
     public function destroy(Publicacao $publicacao)
     {

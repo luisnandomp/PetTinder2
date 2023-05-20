@@ -1,6 +1,11 @@
 @extends('layout.padrao')
 
+
 @section('conteudo')
+       
+            <h1>Vizualização dos Animais</h1><br> <br>
+
+
     
 <h1>Vizualização dos Animais</h1><br> <br>
 
@@ -38,5 +43,7 @@
         
           
 
-   
+          <button type="button"><a href="{{route('animais.index')}}">voltar para lista de Animais</a></button>
+          <button type="button"><a href="{{route('animais.create')}}">Cadastrar outro animal</a></button>
+
 @endsection

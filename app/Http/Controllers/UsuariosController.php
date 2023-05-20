@@ -16,6 +16,7 @@ class UsuariosController extends Controller
 
     public function create()
     {
+        $this->authorize('criar', Usuario::class);
         return view ('usuarios.create');
     }
 
@@ -53,6 +54,7 @@ class UsuariosController extends Controller
 
     public function edit(Usuario $usuario)
     {
+        $this->authorize('editar', $usuario);
         return view('usuarios.edit', compact('usuario'));
     }
 
@@ -63,7 +65,7 @@ class UsuariosController extends Controller
 
         $usuario = Usuario::create($dados);
 
-
+        $this->authorize('editar', $usuario);
         return redirect()->route('usuarios.show', $usuario->id);
     }
 
