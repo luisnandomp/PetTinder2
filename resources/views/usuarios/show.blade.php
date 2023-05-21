@@ -7,10 +7,16 @@
     <div class="row gx-5">
         <div class="col">
             <img src="{{ asset('./imagens/gatoazul.avif') }}" class="dogfofiss" alt="...">
+            @foreach ($animais as $animal)
 
+                <p><strong>raca: </strong> {{$animal->raca}} </p>
+                <p> <strong>porte: </strong>{{$animal->porte}}</p>
+                <p><strong>apelido: </strong>{{$animal->apelido}}</p>
+                <p><strong>foto:</strong><img width="100px" src="/storage/{{ $animal->foto }}" alt=""></p>
+            @endforeach
         </div>
      <div class="col">
-        <div class="p-3" >
+        <div class="p-3">
             <ul >
                 <div class="conteudo">
                     <h1 class="linhaum"><strong>Primeiro Nome: </strong> {{$usuario->primeiro_nome}} </h1>
