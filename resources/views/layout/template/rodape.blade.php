@@ -35,7 +35,7 @@
 </footer>
 
     <!-- Footer -->
-    <footer class="text-center text-lg-start text-white" style="background-color: #45526e">
+    <footer class="text-center text-lg-start text-white" style="background-color: #6e86b9">
       <!-- Grid container -->
       <div class="container p-4 pb-0">
         <!-- Section: Links -->
@@ -43,16 +43,7 @@
           <!--Grid row-->
           <div class="row">
             <!-- Grid column -->
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">
-                Company name
-              </h6>
-              <p>
-                Here you can use rows and columns to organize your footer
-                content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit.
-              </p>
-            </div>
+
             <!-- Grid column -->
 
             <hr class="w-100 clearfix d-md-none" />
@@ -61,17 +52,11 @@
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
               <p>
-                <a class="text-white">MDBootstrap</a>
+                <a class="text-white">Este projeto foi feito especialmente para você, que
+                    está
+                    em busca de um "Match" com seu futuro companheiro</a>
               </p>
-              <p>
-                <a class="text-white">MDWordPress</a>
-              </p>
-              <p>
-                <a class="text-white">BrandFlow</a>
-              </p>
-              <p>
-                <a class="text-white">Bootstrap Angular</a>
-              </p>
+
             </div>
             <!-- Grid column -->
 
@@ -101,11 +86,10 @@
 
             <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-              <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-              <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-              <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-              <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+              <h6 class="text-uppercase mb-4 font-weight-bold">Contatos</h6>
+              <p><i class="fas fa-home mr-3"></i> PetTinder@gmail.com</p>
+              <p><i class="fas fa-phone mr-3"></i> (+55) 18 99122- 4090</p>
+
             </div>
             <!-- Grid column -->
           </div>
@@ -138,31 +122,16 @@
                  class="btn btn-outline-light btn-floating m-1"
                  class="text-white"
                  role="button"
-                 ><i class="fab fa-facebook-f"></i
+                 ><i class="fa fa-facebook"></i
                 ></a>
 
-              <!-- Twitter -->
-              <a
-                 class="btn btn-outline-light btn-floating m-1"
-                 class="text-white"
-                 role="button"
-                 ><i class="fab fa-twitter"></i
-                ></a>
-
-              <!-- Google -->
-              <a
-                 class="btn btn-outline-light btn-floating m-1"
-                 class="text-white"
-                 role="button"
-                 ><i class="fab fa-google"></i
-                ></a>
 
               <!-- Instagram -->
               <a
                  class="btn btn-outline-light btn-floating m-1"
                  class="text-white"
                  role="button"
-                 ><i class="fab fa-instagram"></i
+                 ><i class="fa fa-instagram"></i
                 ></a>
             </div>
             <!-- Grid column -->

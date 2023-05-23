@@ -39,7 +39,7 @@
         </div>
 
         <div class="col">
-            <div class="card shadow-sm border-0 mb-3">
+            <div class="card shadow-sm border-0 mb-33">
                 <div class="row g-0">
                     <div class="col-md-4">
                         <img src="{{ asset('imagens/dog.card.png') }}" class="img-fluid rounded-start" alt="...">
@@ -56,7 +56,9 @@
             </div>
         </div>
     </div>
-
+        <div>
+            <h1>PUBLICACÕES RECENTES</h1>
+        </div>
     <div>
         <div class="inicial">
             <div class="row g-3 justify-content-center my-3 p-4">
@@ -65,10 +67,10 @@
                         <div class="card shadow-sm">
                             <img height="250px" src="/storage/{{ $publicacao->foto }}" class="card-img-top" alt="...">
 
-                            <div class="card-body">
-                              <h5 class="card-title">{{ $publicacao->animal->apelido }}</h5>
-                              <p class="card-text">{{ $publicacao->usuario->primeiro_nome }}</p>
-                              <p class="card-text">{{ $publicacao->animal->porte }}</p>
+                            <div class="card-home">
+                              <h5 class="card-title">Descrição: {{ $publicacao->animal->apelido }}</h5>
+                              <h5 class="card-text">Porte: {{ $publicacao->animal->porte }}</h5>
+                              <h5 class="card-text">Personalidade: {{ $publicacao->animal->personalidade }}</h5>
                               <a href="{{route('animais.show', $publicacao->animal->id)}}" class="btn btn-primary">Meu Perfil</a>
                             </div>
                           </div>
