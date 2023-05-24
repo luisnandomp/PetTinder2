@@ -19,7 +19,7 @@
                     <h1 class="linhacinco"><strong>Celular: </strong>{{$usuario->tel}}</h1>
                 </div>
                 <button type="button"><a href="{{route('usuarios.index')}}">voltar para lista de Usuários</a></button>
-                <button type="button"><a href="{{route('animais.create')}}">Cadastrar um novo animal</a></button>
+                <button type="button"><a href="{{route('publicacoes.create')}}">Fazer uma Divulgação</a></button>
                 <a class="btn btn-primary" href="{{route('animais.index')}}">Veja seus animais cadastrados</a>
             </ul>
         </div>

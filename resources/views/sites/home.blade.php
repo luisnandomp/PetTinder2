@@ -10,7 +10,7 @@
         @auth
             <div class="col">
                 <div class="d-grid gap-2">
-                    <a href="{{ route('publicacoes.create')}}" class="btn btn-primary" type="submit">QUERO DIVULGAR</a>
+                    <a href="{{ route('animais.create')}}" class="btn btn-primary" type="submit">CADASTRAR UM ANIMAL</a>
                 </div>
             </div>
         @endauth
