@@ -69,9 +69,12 @@
                 </div>
             </div>
         </div>
-        <div> <input type="submit" class="btn btn-primary" value="Pesquisar"> </div>
+        <div>
+            <input type="submit" class="btn btn-primary" value="Pesquisar">
+        </div>
     </form>
 
+    <a align="right"" href="{{route('animais.create')}}" class="btn btn-primary teste">Cadastre um Animal</a>
     <div class="row g-3 justify-content-center my-3 p-4">
         @foreach ($publicacoes as $publicacao)
             <div class="col-12 col-md-6 col-lg-4 col-xl-3">
