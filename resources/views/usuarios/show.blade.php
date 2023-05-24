@@ -7,12 +7,6 @@
     <div class="row gx-5">
         <div class="col">
             <img src="{{ asset('./imagens/gatoazul.avif') }}" class="dogfofiss" alt="...">
-            @foreach ($animais as $animal)
-                <p><strong>raca: </strong> {{$animal->raca}} </p>
-                <p> <strong>porte: </strong>{{$animal->porte}}</p>
-                <p><strong>apelido: </strong>{{$animal->apelido}}</p>
-                <p><strong>foto:</strong><img width="100px" src="/storage/{{ $animal->foto }}" alt=""></p>
-            @endforeach
         </div>
      <div class="col">
         <div class="p-3">
@@ -26,6 +20,7 @@
                 </div>
                 <button type="button"><a href="{{route('usuarios.index')}}">voltar para lista de Usuários</a></button>
                 <button type="button"><a href="{{route('animais.create')}}">Cadastrar um novo animal</a></button>
+                <a class="btn btn-primary" href="{{route('animais.index')}}">Veja seus animais cadastrados</a>
             </ul>
         </div>
       </div>

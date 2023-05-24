@@ -16,8 +16,8 @@ class UsuariosController extends Controller
 
     public function create()
     {
-        $this->authorize('criar', Usuario::class);
         return view ('usuarios.create');
+        $this->authorize('criar', Usuario::class);
     }
 
     public function store(Request $dados)

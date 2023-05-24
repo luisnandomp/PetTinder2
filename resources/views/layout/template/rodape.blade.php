@@ -122,8 +122,9 @@
                  class="btn btn-outline-light btn-floating m-1"
                  class="text-white"
                  role="button"
-                 ><i class="fa fa-facebook"></i
+                 href="https://www.facebook.com/profile.php?id=100091902143208"><i class="fa fa-facebook"></i
                 ></a>
+
 
 
               <!-- Instagram -->
@@ -131,6 +132,7 @@
                  class="btn btn-outline-light btn-floating m-1"
                  class="text-white"
                  role="button"
+                 href="https://www.instagram.com/pett_inder/"
                  ><i class="fa fa-instagram"></i
                 ></a>
             </div>

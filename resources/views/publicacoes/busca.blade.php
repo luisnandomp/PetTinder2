@@ -74,8 +74,8 @@
         </div>
     </form>
 
-    <a align="right"" href="{{route('animais.create')}}" class="btn btn-primary teste">Cadastre um Animal</a>
     <div class="row g-3 justify-content-center my-3 p-4">
+        <a href="{{route('animais.create')}}" class="btn btn-primary teste">Cadastre um Animal Novo</a>
         @foreach ($publicacoes as $publicacao)
             <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                 <div class="card shadow-sm">

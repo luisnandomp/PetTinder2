@@ -49,7 +49,7 @@
                         <div class="input-group">
                             @foreach ($animais as $animal)
                                 <div class="d-flex flex-column flex-row justify-content-center align-items-center gap-2">
-                                    <img width="100px" src="/storage/{{ $animal->foto }}">
+                                    <img height="100px" src="/storage/{{ $animal->foto }}">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="id_animal" id="id_animal" value="{{$animal->id}}" checked>
                                         <label class="form-check-label" for="flexRadioDefault2">

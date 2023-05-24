@@ -19,7 +19,7 @@
             </ul>
 
           <button type="button" class="btn btn-info"><a href="{{route('publicacoes.index')}}">voltar para lista das publicações</a></button>
-          <button type="button" class="btn btn-success"><a href="{{route('publicacoes.create')}}">Cadastrar um novo Aninaml</a></button>
+          <button type="button" class="btn btn-success"><a href="{{route('publicacoes.create')}}">Fazer uma nova Publicação</a></button>
 
 
         </div>
