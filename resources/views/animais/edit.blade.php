@@ -2,11 +2,11 @@
 
 @section('conteudo')
         <form action="{{ route('animais.update', $animal->id) }}" method="POST">
-            <h1 align="center">Edite aqui o Seu lindo e cheiroso Animalzinho {{ $animal->id }}</h1>
+            <h1 aling="center">Edite aqui o Seu lindo e cheiroso Animalzinho {{ $animal->id }}</h1>
 
             @csrf
             @method('PUT')
-
+                
             <div class="input-group">
                 <div class="input-box">
                     <label form="raca" >Raça </label>
