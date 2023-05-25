@@ -6,7 +6,7 @@
 
             @csrf
             @method('PUT')
-                
+
             <div class="input-group">
                 <div class="input-box">
                     <label form="raca" >Raça </label>
@@ -64,10 +64,18 @@
                     <input id="apelido" type="text" name="apelido" value="{{ $animal->apelido }}"><!--required -->
                 </div>
 
+
                 <div class="input-box">
-                    <label form="foto" >Foto </label>
-                    <input id="foto" type="text" name="foto" value="{{ $animal->foto }}"><!--required -->
+                    <label for="">Foto(s): </label>
+                    <img width="75px" height="75px" src="/storage/{{ $animal->foto }}" alt=""> <br>
+                    <label for="">Adicionar Foto</label> <br>
+                  <input type="file" name=" foto" value="{{ $animal->foto }}">
                 </div>
+
+                {{-- <div class="input-box">
+                    <label form="foto" >Foto </label>
+                    <input id="foto" type="file" name="foto" value="{{ $animal->foto }}"><!--required -->
+                </div> --}}
 
                 <div class="input-box">
                     <label form="vacina" >Vacina </label>
@@ -100,12 +108,6 @@
                     <label form="observacao" >Observação</label>
                     <input id="lobservacao" type="text" name="observacao" value="{{ $animal->observacao }}"><!--required -->
                 </div>
-
-                <div class="input-box">
-                    <label form="data_cadastro" >Data De Cadastro</label>
-                    <input id="data_cadastro" type="date" name="data_cadastro" value="{{ $animal->data_cadastro }}"><!--required -->
-                </div>
-
             <div>
               <button type="submit">Atualizar Animal</button>
             </div>
