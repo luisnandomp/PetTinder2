@@ -14,19 +14,20 @@
       <div class="card-body">
         <h5 class="card-title"></h5>
         <p class="card-text"><ul>
-                <li><strong>raca: </strong> {{$animal->raca}} </li>
-                <li> <strong>porte: </strong>{{$animal->porte}}</li>
-                <li><strong>idade: </strong>{{$animal->idade}}</li>
-                <li><strong>cor: </strong>{{$animal->cor}}</li>
-                <li><strong>personalidade: </strong>{{$animal->personalidade}}</li>
-                <li><strong>comorbidade: </strong>{{$animal->comorbidade}}</li>
-                <li><strong>genero: </strong>{{$animal->genero}}</li>
-                <li><strong>apelido: </strong>{{$animal->apelido}}</li>
-                <li><strong>vacina: </strong>{{$animal->vacina}}</li>
-                <li><strong>castracao: </strong>{{$animal->castracao}}</li>
-                <li><strong>localidade: </strong>{{$animal->localidade}}</li>
-                <li><strong>observacao: </strong>{{$animal->observacao}}</li>
-
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Raça: </strong> {{$animal->raca}} </li>
+                <li class="list-group-item"><strong>Porte: </strong>{{$animal->porte}}</li>
+                <li class="list-group-item"><strong>Idade: </strong>{{$animal->idade}}</li>
+                <li class="list-group-item"><strong>Cor: </strong>{{$animal->cor}}</li>
+                <li class="list-group-item"><strong>Personalidade: </strong>{{$animal->personalidade}}</li>
+                <li class="list-group-item"><strong>Comorbidade: </strong>{{$animal->comorbidade}} </li>
+                <li class="list-group-item"><strong>Gênero: </strong>{{$animal->genero}}</li>
+                <li class="list-group-item"><strong>Apelido: </strong>{{$animal->apelido}}</li>
+                <li class="list-group-item"><strong>Vacina: </strong>{{$animal->vacina}}</li>
+                <li class="list-group-item"><strong>Castração: </strong>{{$animal->castracao}}</li>
+                <li class="list-group-item"><strong>Localidade: </strong>{{$animal->localidade}}</li>
+                <li class="list-group-item"><strong>Observação: </strong>{{$animal->observacao}}</li>
+              </ul>
             </ul></small></p>
       </div>
     </div>
