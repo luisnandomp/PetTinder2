@@ -26,6 +26,7 @@
                 </form>
                 <form action="{{route('animais.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
+                       <h2 class="titulo">Cadastre o Seu Pet</h2>
                     <div class="input-group">
                         <div class="input-box">
                             <label form="raca" >Raça </label>
