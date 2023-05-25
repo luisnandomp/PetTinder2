@@ -16,10 +16,10 @@
                     <a class="nav-link active" aria-current="page" href="{{route('sites.patrocinio')}}">Parceiros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{route('publicacoes.buscar')}}">Quero Adotar</a>
+                    <a class="nav-link active" aria-current="page" href="{{route('publicacoes.create')}}">Quero Divulgar</a>
                 </li>
 
-                
+
             </ul>
             <form class="d-flex" role="search">
 
