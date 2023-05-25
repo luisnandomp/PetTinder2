@@ -1,5 +1,5 @@
 @import 'bootstrap';
-@import 'navbar', 'quem', 'usuario', 'patrocinio';
+@import 'navbar', 'quem', 'usuario', 'patrocinio' ;
 
 body{
     background-color:#fff;
@@ -48,16 +48,7 @@ body{
    background-color: #ffa639;
 }
 
-.d-grid::before{
-    content: '';
-    position: absolute;
-    top:0%;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #01a89e;
-}
+
 
 
 .text-center{
@@ -191,4 +182,9 @@ card-texxt{
 .teste{
     align-items: right;
 }
+
+.editar{
+    background-color: #eb830c;
+}
+
 
