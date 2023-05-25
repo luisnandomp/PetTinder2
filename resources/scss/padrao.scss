@@ -1,5 +1,5 @@
 @import 'bootstrap';
-@import 'navbar', 'quem', 'usuario', 'patrocinio';
+@import 'navbar', 'quem', 'usuario', 'patrocinio' ;
 
 body{
     background-color:#fff;
@@ -48,16 +48,7 @@ body{
    background-color: #ffa639;
 }
 
-.d-grid::before{
-    content: '';
-    position: absolute;
-    top:0%;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #01a89e;
-}
+
 
 
 .text-center{
@@ -192,6 +183,14 @@ card-texxt{
     align-items: right;
 }
 
+<<<<<<< HEAD
 .text-ultima{
     font-family: Arial, Helvetica, sans-serif;
 }
+=======
+.editar{
+    background-color: #eb830c;
+}
+
+
+>>>>>>> a6475c851fd13fa4b8c916e711008595787864bc

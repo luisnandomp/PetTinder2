@@ -17,7 +17,7 @@
                 <form action="#">
                     <div class="form-header">
                         <div class="title">
-                            <h1>Cadastre-se </h1>
+                            <h1>Divulgue um animal </h1>
                         </div>
                         <div class="login-button">
                             <button><a href="{{Route('login')}}">Entrar</a></button>
@@ -74,7 +74,7 @@
 
 
                     <br>
-                    <div class="continue-button" text="center">
+                    <div  text="center" class="login-button">
                         <button>Continuar</button>
                     </div>
                 </form>

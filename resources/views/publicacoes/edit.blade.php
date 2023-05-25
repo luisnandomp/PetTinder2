@@ -1,8 +1,9 @@
 @extends('layout.padrao')
 
 @section('conteudo')
-        <form action="{{ route('publicacoes.update', $publicacao->id) }}" method="POST">
-            <h1 aling="center">Edite aqui o Seu lindo e cheiroso Usuáriozinho {{ $publicacao->id }}</h1>
+<div class="editar">
+        <form action="{{ route('publicacoes.update', $publicacao->id) }}" method="POST" >
+            <h1 aling="center" class="titulo">Edite aqui o Seu lindo e cheiroso Usuáriozinho {{ $publicacao->id }}</h1>
 
             @csrf
             @method('PUT')
@@ -32,4 +33,8 @@
               <button type="submit">Atualizar Usuário</button>
             </div>
           </form>
+
+</div>
+
+
 @endsection
