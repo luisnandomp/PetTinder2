@@ -20,8 +20,8 @@
                     <p ><strong>Celular: </strong>{{$usuario->tel}}</p>
 
                 </div>
-                <button type="button"><a href="{{route('usuarios.index')}}">voltar para lista de Usuários</a></button>
-                <button type="button"><a href="{{route('publicacoes.create')}}">Fazer uma Divulgação</a></button>
+                <button type="button" class="btn btn-primary"><a href="{{route('usuarios.index')}}">voltar para lista de Usuários</a></button>
+                <button type="button" class="btn btn-primary"><a href="{{route('publicacoes.create')}}">Fazer uma Divulgação</a></button>
                 <a class="btn btn-primary" href="{{route('animais.index')}}">Veja seus animais cadastrados</a>
 
         </div>

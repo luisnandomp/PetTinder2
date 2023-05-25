@@ -13,7 +13,7 @@
 </head>
  
   <div class="border " text-aling="center" my-0> 
-    <h1 class="titulo">  PARCEIROS:</h1>
+    
   
     
     <h3 >ASSOSIAÇÃO LAR FELIZ GUARARAPES: </h3>
