@@ -1,6 +1,7 @@
 @extends('layout.padrao')
 
 @section('conteudo')
+    <div class="tudo">
     <div class="acoes-usuario my-3 row">
         <div class="col">
             <div class="d-grid gap-2">
@@ -57,7 +58,7 @@
         </div>
     </div>
         <div>
-            <h1>PUBLICACÕES RECENTES</h1>
+            <h1 class="text-ultima">ÚLTIMAS PUBLICAÇÕES</h1>
         </div>
     <div>
         <div class="inicial">
@@ -71,12 +72,13 @@
                               <h5 class="card-title">Descrição: {{ $publicacao->animal->apelido }}</h5>
                               <h5 class="card-text">Porte: {{ $publicacao->animal->porte }}</h5>
                               <h5 class="card-text">Personalidade: {{ $publicacao->animal->personalidade }}</h5>
-                              <a href="{{route('animais.show', $publicacao->animal->id)}}" class="btn btn-primary">Meu Perfil</a>
+                              <a href="{{route('animais.show', $publicacao->animal->id)}}" class="btn btn-primary" <i class="fas fa-align-center    "></i>Meu Perfil</a>
                             </div>
                           </div>
                     </div>
                 @endforeach
             </div>
         </div>
+    </div>
     </div>
  @endsection
