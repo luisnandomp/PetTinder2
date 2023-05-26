@@ -14,9 +14,6 @@
                 <li> <strong>foto do Animal:</strong>
                     <img width="100px" src="/storage/{{ $publicacao->animal->foto }}">
                 </li>
-                <li><strong>id_usuario: </strong>{{$publicacao->id_usuario}}</li>
-                <li><strong>Id_animal: </strong>{{$publicacao->id_animal}}</li>
-            </ul>
 
           <button type="button" class="btn btn-info"><a href="{{route('publicacoes.index')}}">voltar para lista das publicações</a></button>
           <button type="button" class="btn btn-success"><a href="{{route('publicacoes.create')}}">Fazer uma nova Publicação</a></button>

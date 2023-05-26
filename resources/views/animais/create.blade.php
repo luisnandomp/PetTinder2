@@ -94,6 +94,32 @@
                             @enderror
                         </div>
 
+                        <div class="gender-inputs">
+                            <div class="gender-title">
+                                <h6>Qual é o seu PET?</h6>
+                            </div>
+                            <div class="gender-group">
+                                <div class="gender-input">
+                                        <input class="select" type="radio" id="cachorro" name="pet" value="cachorro">
+                                        <label for="cachorro">Cachorro</label>
+                                </div>
+                                <div class="gender-input">
+                                    <input class="select" type="radio" id="gato" name="pet" value="gato">
+                                    <label for="gato">Gato</label>
+                                </div>
+                                @error('pet')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
                     <div class="gender-inputs">
                         <div class="gender-title">
                             <h6>Genero</h6>
@@ -180,20 +206,10 @@
                             @enderror
                         </div>
 
-                        <div class="input-box">
-                            <label form="observacao" >Observação</label>
-                            <input id="lobservacao" type="text" name="observacao" placeholder ="Digite uma observação" value="{{ old('observacao') }}"><!--required -->
-                            @error('observacao')
-                                {{$message }}
-                            @enderror
-                        </div>
-
                         <div class="continue-button" text="center">
                             <button type="submit">Continuar</button>
                         </div>
-                            </div>
 
-                    <br>
 
                 </form>
             </div>
