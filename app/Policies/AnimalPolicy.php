@@ -13,7 +13,7 @@ class AnimalPolicy
 
     public function editar(Usuario $usuario,Animal $animal)
     {
-        if($animal->usuario){
+        if(!$animal->usuario->is($usuario)){
             return Response::deny('Você não tem permissão para editar essa publicação');
         }
 

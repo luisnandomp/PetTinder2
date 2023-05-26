@@ -191,9 +191,7 @@
                         <div class="continue-button" text="center">
                             <button type="submit">Continuar</button>
                         </div>
-                            </div>
 
-                    <br>
 
                 </form>
             </div>

@@ -7,28 +7,20 @@
             @csrf
             @method('PUT')
 
-            <div>
-              <label>Descrição</label>
-            <input type="string" name="descricao" value="{{ $publicacao->descricao }}">
+            <div class="mb-3" class="form-label">
+              <label for="exampleInputPassword1" class="form-label">Descrição</label>
+            <input type="string" name="descricao" value="{{ $publicacao->descricao }}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
 
-            <div>
-                <label for="">Foto(s): </label>
+            <div class="mb-3" class="form-label">
+                <label for="exampleInputPassword1" class="form-label">Foto(s): </label>
                 <img width="100px" src="/storage/{{ $publicacao->foto }}" alt=""> <br>
                 <label for="">Adicionar Foto</label> <br>
-              <input type="file" name="foto"value="{{ $publicacao->foto }}">
+              <input type="file" name="foto"value="{{ $publicacao->foto }}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
 
-            <div>
-              <label for="">ID_usuário</label>
-              <input type="number" name="id_usuario" value="{{ $publicacao->id_usuario }}">
-            </div>
-            <div>
-                <label for="">id_animal</label>
-                <input type="number" name="id_animal" value="{{ $publicacao->id_animal }}">
-              </div>
 
-            <div>
+            <div class="mb-3" class="form-label">
               <button type="submit">Atualizar Usuário</button>
             </div>
           </form>
