@@ -30,21 +30,19 @@ class UsuariosController extends Controller
             'email' => 'required|email',
             'tel' => 'required|string',
             'senha' => 'required|string|confirmed',
-            'sexo' => 'required'
         ], [
             'primeiro_nome.required' => "Informe seu Nome",
             'sobrenome.required' => "Informe seu Sobrenome",
             'email.required' => "Informe seu E-mail!",
             'tel.required' => "Informe seu Celular!",
-            'senha.required' => "Informe sua senha!",
-            'sexo.required' => "Escolha seu sexo!"
+            'senha.required' => "Informe sua senha!"
         ]);
 
         $dados = $dados->all();
         $dados['senha'] = Hash::make($dados['senha']);
 
         $usuario = Usuario::create($dados);
-        return redirect()->route('usuarios.index');
+        return redirect()->route('layout.padrao');
     }
 
     public function show(Usuario $usuario)
