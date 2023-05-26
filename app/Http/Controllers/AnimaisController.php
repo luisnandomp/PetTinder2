@@ -15,6 +15,7 @@ class AnimaisController extends Controller
 
     public function create()
     {
+        $usuario = Auth::user();
         $this->authorize('criar', Publicacao::class);
         return view ('animais.create');
     }
