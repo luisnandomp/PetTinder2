@@ -17,7 +17,6 @@ class Usuario extends Authenticatable
         'email',
         'tel',
         'senha',
-        'sexo',
     ];
 
     public function publicacoes()

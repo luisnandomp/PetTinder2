@@ -32,14 +32,6 @@
         <label for="">confirmsenha</label>
         <input type="password" name="confirmsenha" value="">
     </div>
-    <div>
-        <label >Sexo</label>
-        <select name="sexo">
-            <option name="sexo" value="macho" {{ $usuario->sexo == 'macho' ? 'selected' : '' }}>Macho</option>
-            <option name="sexo" value="femea" {{ $usuario->sexo == 'femea' ? 'selected' : '' }}>Femêa</option>
-        </select>
-    </div>
-
         <button type="submit">Atualizar Usuário</button>
     </div>
 </form>
