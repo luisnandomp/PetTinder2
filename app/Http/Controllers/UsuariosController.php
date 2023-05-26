@@ -16,8 +16,8 @@ class UsuariosController extends Controller
 
     public function create()
     {
-        return view ('usuarios.create');
         $this->authorize('criar', Usuario::class);
+        return view ('usuarios.create');
     }
 
     public function store(Request $dados)
@@ -71,6 +71,6 @@ class UsuariosController extends Controller
     {
        $usuario->delete();
 
-       return redirect()->route('usuarios.index');
+       return redirect()->route('layout.padrao');
     }
 }

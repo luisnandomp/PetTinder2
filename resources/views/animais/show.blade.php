@@ -21,12 +21,12 @@
                 <li class="list-group-item"><strong>Cor: </strong>{{$animal->cor}}</li>
                 <li class="list-group-item"><strong>Personalidade: </strong>{{$animal->personalidade}}</li>
                 <li class="list-group-item"><strong>Comorbidade: </strong>{{$animal->comorbidade}} </li>
+                <li class="list-group-item"><strong>Qual seu PET? </strong>{{$animal->pet}} </li>
                 <li class="list-group-item"><strong>Gênero: </strong>{{$animal->genero}}</li>
                 <li class="list-group-item"><strong>Apelido: </strong>{{$animal->apelido}}</li>
                 <li class="list-group-item"><strong>Vacina: </strong>{{$animal->vacina}}</li>
                 <li class="list-group-item"><strong>Castração: </strong>{{$animal->castracao}}</li>
                 <li class="list-group-item"><strong>Localidade: </strong>{{$animal->localidade}}</li>
-                <li class="list-group-item"><strong>Observação: </strong>{{$animal->observacao}}</li>
               </ul>
             </ul></small></p>
       </div>

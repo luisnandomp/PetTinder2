@@ -21,13 +21,14 @@ return new class extends Migration
             $table->string('cor', 18);
             $table->string('personalidade', 255);
             $table->string('comorbidade', 255);
+            $table->string('pet', 10);
             $table->string('genero', 15);
             $table->string('apelido', 50);
             $table->string('foto');
             $table->string('vacina', 3);
             $table->string('castracao', 8);
             $table->string('localidade', 100);
-            $table->string('observacao', 255);
+            $table->bigInteger('usuario_id', 100)->unsigned();
             $table->timestamps();
         });
     }

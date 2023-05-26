@@ -59,23 +59,12 @@ class PublicacoesController extends Controller
         ->paginate();
         return view('publicacoes.busca', compact('publicacoes'));
     }
-
-
-
-
-
     public function create(Animal $animal)
     {
         $this->authorize('criar', Publicacao::class);
-        /*$publicacao = Publicacao::all();*/
         $animais = Animal::all();
         return view ('publicacoes.create', compact('animais'));  /*, 'publicacao' */
     }
-
-
-
-
-
     public function store(Request $requisicao)
     {
         $requisicao->validate([
