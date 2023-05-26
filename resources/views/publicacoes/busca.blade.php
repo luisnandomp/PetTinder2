@@ -63,15 +63,17 @@
                         <option value="nao">Não</option>
                     </select>
 
+                    <div >
+                        <input type="submit" class="btn btn-primary" value="Pesquisar" class="btn">
+                    </div>
+
                     @error('vacina')
                         {{ $message }}
                     @enderror
                 </div>
             </div>
         </div>
-        <div>
-            <input type="submit" class="btn btn-primary" value="Pesquisar">
-        </div>
+        
     </form>
 
     <div class="row g-3 justify-content-center my-3 p-4">

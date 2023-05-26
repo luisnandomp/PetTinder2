@@ -6,7 +6,9 @@
 <div class="container px-4 ">
     <div class="row gx-5">
         <div class="col">
-            <img src="{{ asset('./imagens/gatoazul.avif') }}" class="dogfofiss" alt="...">
+            <center>
+                <img src="{{ asset('./imagens/gatoazul.avif') }}" class="dogfofiss" alt="...">
+</center>
         </div>
      <div class="col">
         <div class="p-3">
@@ -20,9 +22,23 @@
                     <p ><strong>Celular: </strong>{{$usuario->tel}}</p>
 
                 </div>
-                <button type="button" class="btn btn-primary"><a href="{{route('usuarios.index')}}">voltar para lista de Usuários</a></button>
-                <button type="button" class="btn btn-primary"><a href="{{route('publicacoes.create')}}">Fazer uma Divulgação</a></button>
-                <a class="btn btn-primary" href="{{route('animais.index')}}">Veja seus animais cadastrados</a>
+                
+
+                <div class="container text-center">
+                        <div class="row">
+                            <div class="col">
+                            <button type="button" class="btn btn-primary" href="{{route('usuarios.index')}}">voltar para lista de Usuários</a></button>
+                            </div>
+                            <div class="col">
+                            <button type="button" class="btn btn-primary" href="{{route('publicacoes.create')}}">Fazer uma Divulgação</a></button>
+                            </div>
+                            <div class="col">
+                            <a class="btn btn-primary" href="{{route('animais.index')}}">Veja seus animais cadastrados</a>
+
+                         </div>
+                </div>
+            </div>
+
 
         </div>
       </div>
