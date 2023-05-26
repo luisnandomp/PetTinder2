@@ -6,7 +6,9 @@
 <div class="container px-4 ">
     <div class="row gx-5">
         <div class="col">
-            <img src="{{ asset('./imagens/gatoazul.avif') }}" class="dogfofiss" alt="...">
+            <center>
+                <img src="{{ asset('./imagens/gatoazul.avif') }}" class="dogfofiss" alt="...">
+</center>
         </div>
      <div class="col">
         <div class="p-3">

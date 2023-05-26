@@ -1,12 +1,16 @@
 @extends('layout.padrao')
 
 @section('conteudo')
-        <form action="{{ route('animais.update', $animal->id) }}" method="POST">
+
+@vite(['resources/scss/publicacao.scss'])
+<div class="editar">
+
+        <form action="{{ route('animais.update', $animal->id) }}" method="POST" class="editar">
             <h1 aling="center">Edite aqui o Seu lindo e cheiroso Animalzinho {{ $animal->id }}</h1>
 
             @csrf
             @method('PUT')
-
+            
             <div class="input-group">
                 <div class="input-box">
                     <label form="raca" >Raça </label>
@@ -112,4 +116,8 @@
               <button type="submit">Atualizar Animal</button>
             </div>
           </form>
+</div>
+
+
+    
 @endsection
