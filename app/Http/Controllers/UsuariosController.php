@@ -22,8 +22,6 @@ class UsuariosController extends Controller
 
     public function store(Request $dados)
     {
-        $usuario = new Usuario($dados->all());
-
         $dados->validate([
             'primeiro_nome' => 'required|string',
             'sobrenome' => 'required|string',
@@ -42,7 +40,7 @@ class UsuariosController extends Controller
         $dados['senha'] = Hash::make($dados['senha']);
 
         $usuario = Usuario::create($dados);
-        return redirect()->route('layout.padrao');
+        return redirect()->route('login');
     }
 
     public function show(Usuario $usuario)
