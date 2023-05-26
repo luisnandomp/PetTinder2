@@ -11,7 +11,7 @@ class AnimalPolicy
 {
     use HandlesAuthorization;
 
-    public function editar(Usuario $usuario,Animal $animal)
+    public function editar(Usuario $usuario, Animal $animal)
     {
         if(!$animal->usuario->is($usuario)){
             return Response::deny('Você não tem permissão para editar essa publicação');

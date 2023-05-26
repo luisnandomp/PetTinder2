@@ -27,4 +27,8 @@ class Animal extends Model
         'observacao',
     ];
 
+    public function usuario()
+    {
+        // return $this->belongsTo(Usuario::class, 'usuario_id');
+    }
 }
