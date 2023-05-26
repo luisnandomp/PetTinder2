@@ -27,10 +27,10 @@
                 <div class="container text-center">
                         <div class="row">
                             <div class="col">
-                            <button type="button" class="btn btn-primary" href="{{route('usuarios.index')}}">voltar para lista de Usuários</a></button>
+                            <a type="button" class="btn btn-primary" href="{{route('usuarios.index')}}">voltar para lista de Usuários</a>
                             </div>
                             <div class="col">
-                            <button type="button" class="btn btn-primary" href="{{route('publicacoes.create')}}">Fazer uma Divulgação</a></button>
+                            <a type="button" class="btn btn-primary" href="{{route('publicacoes.create')}}">Fazer uma Divulgação</a>
                             </div>
                             <div class="col">
                             <a class="btn btn-primary" href="{{route('animais.index')}}">Veja seus animais cadastrados</a>
