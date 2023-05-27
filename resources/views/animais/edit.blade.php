@@ -10,7 +10,7 @@
 
             @csrf
             @method('PUT')
-            
+
             <div class="input-group">
                 <div class="input-box">
                     <label form="raca" >Raça </label>
@@ -41,15 +41,29 @@
                     <label form="comorbidade" >Comorbidade</label>
                     <input id="comorbidade" type="text" name="comorbidade" value="{{ $animal->comorbidade }}"><!--required -->
                 </div>
-
             </div>
 
-            <div class="gender-inputs">
+                <div class="gender-inputs">
+                     <div class="gender-title">
+                        <h6>Qual é o seu PET?</h6>
+                    </div>
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input class="select" type="radio" id="cachorro" name="pet" value="cachorro">
+                            <label for="cachorro">Cachorro</label>
+                        </div>
+                        <div class="gender-input">
+                            <input class="select" type="radio" id="gato" name="pet" value="gato">
+                            <label for="gato">Gato</label>
+                        </div>
+                    </div>
+                </div>
 
+
+            <div class="gender-inputs">
                 <div class="gender-title">
                     <h6>Genero</h6>
                 </div>
-
                 <div class="gender-group">
                 <div class="gender-input">
                         <input type="radio" id="feminino" name="genero" value="feminino" {{ $animal->genero == 'feminino' ? 'checked' : '' }}>
@@ -107,11 +121,6 @@
                     <label form="localidade" >Localidade</label>
                     <input id="localidade" type="text" name="localidade" value="{{ $animal->localidade }}"><!--required -->
                 </div>
-
-                <div class="input-box">
-                    <label form="observacao" >Observação</label>
-                    <input id="lobservacao" type="text" name="observacao" value="{{ $animal->observacao }}"><!--required -->
-                </div>
             <div>
               <button type="submit">Atualizar Animal</button>
             </div>
@@ -119,5 +128,5 @@
 </div>
 
 
-    
+
 @endsection

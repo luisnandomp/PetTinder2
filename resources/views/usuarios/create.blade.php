@@ -75,23 +75,6 @@
                             @enderror
                         </div>
                     </div>
-
-                    <div class="gender-inputs">
-                        <div class="gender-title">
-                            <h6>Genero</h6>
-                        </div>
-                        <div class="gender-group">
-                        <div class="gender-input">
-                                <input type="radio" id="feminino" name="sexo" value="feminino">
-                                <label for="feminino">Feminino</label>
-                        </div>
-                        <div class="gender-input">
-                            <input type="radio" id="masculino" name="sexo" value="macho">
-                            <label for="masculino">Masculino</label>
-                    </div>
-                        </div>
-                    </div>
-                    <br>
                     <div class="continue-button" text="center">
                         <button>Continuar</button>
                     </div>

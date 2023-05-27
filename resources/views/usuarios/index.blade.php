@@ -21,10 +21,36 @@
                                     @method('DELETE')
 
                                     <!-- <button type="submit" class="btn btn-danger">EXCLUIR</button> -->
-                                    <input type="submit" value="EXCLUIR">
+                                    
                                     </form>
-                                <a href="{{route('usuarios.show', $usuario->id)}}" role="button">Ver</a>
-                                <a href="{{route('usuarios.edit', $usuario->id)}}" role="button">Editar</a>
+                                
+
+
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <div class="col">
+                                        <input type="submit" value="EXCLUIR" class="btn btn-success">
+                                        </div>
+                                        <div class="col">
+                                        <a href="{{route('usuarios.show', $usuario->id)}}" role="button" class="btn btn-success">Ver</a>
+                                        </div>
+                                        <div class="col">
+                                        <a href="{{route('usuarios.show', $usuario->id)}}" role="button" class="btn btn-success">Ver</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
                             </td>
                         </tr>

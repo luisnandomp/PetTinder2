@@ -15,6 +15,7 @@ class AnimaisController extends Controller
 
     public function create()
     {
+        $usuario = Auth::user();
         $this->authorize('criar', Publicacao::class);
         return view ('animais.create');
     }
@@ -28,6 +29,7 @@ class AnimaisController extends Controller
             'cor' => 'required',
             'personalidade' => 'required|in:calmo,temperamental,estressado,timido',
             'comorbidade' => 'required|in:sim,nao,naosei',
+            'pet' => 'required|in:cachorro,gato',
             'genero' => 'required',
             'foto' => 'required|image|mimes:png,jpg,jpeg,gif',
             'apelido' => 'required',
@@ -40,6 +42,7 @@ class AnimaisController extends Controller
             'idade.required' => "Informe a idade",
             'cor.required' => "Informe a cor",
             'comorbidade.required' => 'Informe a comorbidade',
+            'pet.required' => 'Informe qual é o seu PET',
             'genero.required' => "Informe o gênero",
             'foto.required' => "Informe uma foto",
             'vacina.required' => "Informe a vacina",

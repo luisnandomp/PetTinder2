@@ -18,13 +18,18 @@ class Animal extends Model
         'cor',
         'personalidade',
         'comorbidade',
+        'pet',
         'genero',
         'apelido',
         'foto',
         'vacina',
         'castracao',
         'localidade',
-        'observacao',
+        'usuario_id'
     ];
 
+    public function usuario()
+    {
+        return $this->belongsTo(Usuario::class, 'usuario_id');
+    }
 }
