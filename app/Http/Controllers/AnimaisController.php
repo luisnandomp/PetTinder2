@@ -9,15 +9,16 @@ class AnimaisController extends Controller
 {
     public function index()
     {
+        $usuario = Auth::user();
+        $animais = $usuario->animais()->paginate();
         $animais = Animal::all();
         return view ('animais.index', compact('animais')); //(tirar as barras quando estiver a view pronta!)
     }
 
     public function create()
     {
-        $usuario = Auth::user();
-        $this->authorize('criar', Publicacao::class);
         return view ('animais.create');
+        $this->authorize('criar', Publicacao::class);
     }
 
     public function store(Request $requisicao)
@@ -78,14 +79,14 @@ class AnimaisController extends Controller
 
     public function edit(Animal $animal)
     {
-        $this->authorize('editar', $animal);
         return view('animais.edit', compact('animal'));
+        $this->authorize('editar', $animal);
     }
 
     public function update(Request $dados, Animal $animal)
     {
-        $this->authorize('editar', $animal);
         $animal->update($dados->all());
+        $this->authorize('editar', $animal);
 
         return redirect()->route('animais.showanimais.create', $animal->id);
     }

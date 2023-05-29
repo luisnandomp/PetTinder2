@@ -19,6 +19,6 @@ class UsuarioPolicy
 
     public function criar(Usuario $usuario)
     {
-        return Response::allow('saia');
+        return Response::allow();
     }
 }

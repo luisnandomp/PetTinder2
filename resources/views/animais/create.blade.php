@@ -113,13 +113,6 @@
                             </div>
                         </div>
 
-
-
-
-
-
-
-
                     <div class="gender-inputs">
                         <div class="gender-title">
                             <h6>Genero</h6>
@@ -204,6 +197,11 @@
                             @error('localidade')
                                 {{$message }}
                             @enderror
+                        </div>
+
+                        <div class="input-box">
+                            <label form="usuario_id" disabled >Usuario_id</label>
+                            <input disabled id="usuario_id" type="number" name="usuario_id" placeholder ="Digite a localidade" value="{{ User() }}">
                         </div>
 
                         <div class="continue-button" text="center">
