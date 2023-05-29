@@ -199,10 +199,10 @@
                             @enderror
                         </div>
 
-                        {{-- <div class="input-box">
-                            <label form="usuario_id" disabled >Usuario_id</label>
-                            <input disabled id="usuario_id" type="number" name="usuario_id" placeholder ="Digite a localidade" value="{{ User() }}">
-                        </div> --}}
+                        <div class="input-box">
+                            <label form="usuario_id"  >Usuario_id</label>
+                            <input  id="usuario_id" type="number" name="usuario_id" placeholder ="Digite a localidade" value="1">
+                        </div>
 
                         <div class="continue-button" text="center">
                             <button type="submit">Continuar</button>
