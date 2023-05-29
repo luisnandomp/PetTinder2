@@ -36,13 +36,13 @@
                             @enderror
                         </div>
 
-                        <div class="input-box">
+                        {{-- <div class="input-box">
                             <label form="foto" >Foto</label>
                             <input id="foto" type="file" name="foto" placeholder="Coloque uma foto"><!--required -->
                             @error('foto')
                                 {{$message }}
                             @enderror
-                        </div>
+                        </div> --}}
 
 
                         <p class="lead">Selecione um animal</p>
