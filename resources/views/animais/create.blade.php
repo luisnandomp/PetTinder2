@@ -199,10 +199,10 @@
                             @enderror
                         </div>
 
-                        <div class="input-box">
+                        {{-- <div class="input-box">
                             <label form="usuario_id"  >Usuario_id</label>
                             <input  id="usuario_id" type="number" name="usuario_id" placeholder ="Digite a localidade" value="1">
-                        </div>
+                        </div> --}}
 
                         <div class="continue-button" text="center">
                             <button type="submit">Continuar</button>
