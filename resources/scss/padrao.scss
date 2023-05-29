@@ -167,12 +167,14 @@ a {
 
 /*********************/
 .card-home{
-    background-color: #f8f8ab;
+    background-color: #fcfcfc;
     padding: 1%;
+    text-align: left;
 }
 
 card-texxt{
     font-size: 120px;
+    background-color:#808080;
 }
 
 .inicial{
@@ -183,6 +185,8 @@ card-texxt{
     align-items: right;
 }
 
+.text-ultima{
+    text-align: center;
 
-
+}
 

@@ -69,9 +69,8 @@
                             <img height="250px" src="/storage/{{ $publicacao->foto }}" class="card-img-top" alt="...">
 
                             <div class="card-home">
-                              <h5 class="card-title">Descrição: {{ $publicacao->animal->apelido }}</h5>
-                              <h5 class="card-text">Porte: {{ $publicacao->animal->porte }}</h5>
-                              <h5 class="card-text">Personalidade: {{ $publicacao->animal->personalidade }}</h5>
+                              <h5 class="card-title">{{ $publicacao->animal->apelido }}</h5>
+                              <h5 class="card-text"> {{ $publicacao->animal->descricao }}</h5>
                               <a href="{{route('animais.show', $publicacao->animal->id)}}" class="btn btn-primary" <i class="fas fa-align-center    "></i>Meu Perfil</a>
                             </div>
                           </div>
