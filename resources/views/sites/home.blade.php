@@ -58,7 +58,7 @@
         </div>
     </div>
         <div>
-            <h1 class="text-ultima">ÚLTIMAS PUBLICAÇÕES</h1>
+            <h1 class="text-ultima" >ÚLTIMAS PUBLICAÇÕES</h1>
         </div>
     <div>
         <div class="inicial">
@@ -70,8 +70,18 @@
 
                             <div class="card-home">
                               <h5 class="card-title">{{ $publicacao->animal->apelido }}</h5>
-                              <h5 class="card-text"> {{ $publicacao->animal->descricao }}</h5>
+                              </div>
+                                <div class="descricao">
+                                <div class="container text-center">
+                                <div class="row row-cols-auto">
+                                <div class="col">{{ $publicacao->animal->genero}}</div>
+                                <div class="col">{{ $publicacao->animal->porte}}</div>
+                                <div class="col">{{ $publicacao->animal->personalidade}}</div>
+                            </div>
+                            </div>
+                              <div class="botao">
                               <a href="{{route('animais.show', $publicacao->animal->id)}}" class="btn btn-primary" <i class="fas fa-align-center    "></i>Meu Perfil</a>
+                            </div>
                             </div>
                           </div>
                     </div>

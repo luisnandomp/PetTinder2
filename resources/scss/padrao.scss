@@ -168,13 +168,14 @@ a {
 /*********************/
 .card-home{
     background-color: #fcfcfc;
-    padding: 1%;
-    text-align: left;
+    text-align: center;
+    font-weight: 200;
 }
 
 card-texxt{
     font-size: 120px;
-    background-color:#808080;
+    background-color: #fcfcfc;
+
 }
 
 .inicial{
@@ -187,6 +188,33 @@ card-texxt{
 
 .text-ultima{
     text-align: center;
+    color: #839094;
 
 }
 
+.descricao{
+    color: #839094;
+    padding: 9px;
+    -webkit-box-sizing: border-box;
+}
+
+.botao{
+    text-align: center;
+}
+
+.card-img-top{
+    padding: 10px;
+    border: 1px solid #e9e9e9;
+    margin-bottom: 7px;
+    border-radius: 3%;
+}
+
+.card{
+    border-radius: 3%;
+}
+
+.pad_options{
+    float: left;
+    width: 100%;
+    margin-bottom: 7px;
+}
