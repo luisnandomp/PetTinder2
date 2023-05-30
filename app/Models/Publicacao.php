@@ -12,7 +12,7 @@ class Publicacao extends Model
     protected $table = 'publicacoes';
 
     protected $fillable = [
-        'foto',
+        // 'foto',
         'descricao',
         'id_animal',
         'created_at'

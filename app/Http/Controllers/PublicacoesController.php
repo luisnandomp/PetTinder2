@@ -69,25 +69,25 @@ class PublicacoesController extends Controller
     {
         $requisicao->validate([
             'descricao' => 'required',
-            'foto' => 'required|image|mimes:png,jpg,jpeg,gif',
+            // 'foto' => 'required|image|mimes:png,jpg,jpeg,gif',
             'id_animal' => 'required',
         ],[
             'descricao.required' => "Informe uma descrição",
-            'foto.required' => "Informe uma foto",
+            // 'foto.required' => "Informe uma foto",
             'id_animal.required' => "Informe um animal",
         ]);
 
         $dados = $requisicao->except('id_usuario', 'id_animal');
 
-        $dados['foto'] = '';
+        // $dados['foto'] = '';
 
-        if($requisicao->hasFile('foto')){
-            $arquivo = $requisicao->file('foto')->store('publicacoes', ['disk' => 'public']);
+        // if($requisicao->hasFile('foto')){
+        //     $arquivo = $requisicao->file('foto')->store('publicacoes', ['disk' => 'public']);
 
-            if($arquivo){
-                $dados['foto'] = $arquivo;
-            }
-        }
+        //     if($arquivo){
+        //         $dados['foto'] = $arquivo;
+        //     }
+        // }
 
         $publicacao = new Publicacao($dados);
 

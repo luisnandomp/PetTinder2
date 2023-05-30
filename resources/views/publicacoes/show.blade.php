@@ -8,11 +8,7 @@
                 <h1>Autor da Publicação: {{$publicacao->usuario->primeiro_nome}}</h1>
                 <li><strong>Descrição: </strong> {{$publicacao->descricao}} </li>
                 <li> <strong>foto:</strong>
-                    <img width="100px" src="/storage/{{$publicacao->foto}}" alt="">
-                </li>
-
-                <li> <strong>foto do Animal:</strong>
-                    <img width="100px" src="/storage/{{ $publicacao->animal->foto }}">
+                    <img width="100px" src="/storage/{{$publicacao->animal->foto}}" alt="">
                 </li>
 
           <button type="button" class="btn btn-info"><a href="{{route('publicacoes.index')}}">voltar para lista das publicações</a></button>
