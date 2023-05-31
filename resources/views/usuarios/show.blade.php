@@ -15,7 +15,6 @@
                 <div class="perfil">
                     <h2  aria-disabled="true"><strong> </strong> {{$usuario->primeiro_nome}}</h2>
                     <p class="mb-1"><strong>Sobrenome: </strong>{{$usuario->sobrenome}}</p>
-                    <p ><strong>Sexo: </strong>{{$usuario->sexo}}</p>
                     <p ><strong>E-mail: </strong>{{$usuario->email}}</p>
                     <p ><strong>Celular: </strong>{{$usuario->tel}}</p>
                 </div>
