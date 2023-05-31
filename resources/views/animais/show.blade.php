@@ -2,9 +2,6 @@
 
 
 @section('conteudo')
-
-<h1>Perfil de seus animais cadastrados</h1><br> <br>
-
             <div class="card mb-3 center">
                 <div class="row g-0">
                 <div class="col-md-4">

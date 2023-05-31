@@ -57,8 +57,8 @@
             </div>
         </div>
     </div>
-        <div>
-            <h1 class="text-ultima" >ÚLTIMAS PUBLICAÇÕES</h1>
+        <div class="text-ultima">
+            <p>ÚLTIMAS PUBLICAÇÕES</p>
         </div>
     <div>
         <div class="inicial">

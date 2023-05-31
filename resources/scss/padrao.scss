@@ -165,10 +165,13 @@ a {
     color: black;
 }
 
-/*********************/
+// Cards iniciais (últimas publicações)
+
 .card-home{
+   font-weight: 600;
     text-align: center;
-    font-weight: 20%;
+font-size: x-small;
+    color: rgb(0, 0, 0); text-shadow: rgb(172, 157, 157) 0.0em 0.1em 0.1em;
     
 }
 
@@ -187,8 +190,11 @@ card-texxt{
 }
 
 .text-ultima{
-    text-align: center;
-    color: #839094;
+    text-align: left;
+    color: rgb(0, 0, 0); text-shadow: rgb(172, 157, 157) 0.0em 0.1em 0.1em;
+    font-size: x-large;
+    background-color: rgb(255, 255, 255);
+    
 
 }
 
@@ -220,3 +226,5 @@ card-texxt{
 .card-title{
     text-align: center;
 }
+
+// Perfil do Animal
