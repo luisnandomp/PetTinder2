@@ -167,9 +167,9 @@ a {
 
 /*********************/
 .card-home{
-    background-color: #fcfcfc;
     text-align: center;
-    font-weight: 200;
+    font-weight: 20%;
+    
 }
 
 card-texxt{
@@ -192,12 +192,6 @@ card-texxt{
 
 }
 
-.descricao{
-    color: #839094;
-    padding: 9px;
-    -webkit-box-sizing: border-box;
-}
-
 .botao{
     text-align: center;
 }
@@ -217,4 +211,8 @@ card-texxt{
     float: left;
     width: 100%;
     margin-bottom: 7px;
+}
+
+.flex{
+    min-width: 50%;
 }

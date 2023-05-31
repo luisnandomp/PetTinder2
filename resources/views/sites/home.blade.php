@@ -74,9 +74,13 @@
                                 <div class="descricao">
                                 <div class="container text-center">
                                 <div class="row row-cols-auto">
-                                <div class="col">{{ $publicacao->animal->genero}}</div>
-                                <div class="col">{{ $publicacao->animal->porte}}</div>
-                                <div class="col">{{ $publicacao->animal->personalidade}}</div>
+                            
+                                <ul class="flex flex-wrap gap-2">
+                                <li class="badge badge-large bg-primary bg-opacity-10 text-primary">{{ $publicacao->animal->genero}}</li>
+                                <li class="badge badge-large bg-primary bg-opacity-10 text-primary">{{ $publicacao->animal->porte}}</li>
+                                <li class="badge badge-large bg-primary bg-opacity-10 text-primary">{{ $publicacao->animal->personalidade}}</li>
+                                </ul>
+                               
                             </div>
                             </div>
                               <div class="botao">
