@@ -56,7 +56,7 @@
                 </div>
             </div>
         </div>
-    </div>
+        </div>
         <div class="text-ultima">
             <p>ÚLTIMAS PUBLICAÇÕES</p>
         </div>
@@ -83,7 +83,7 @@
                                 </ul>
                                
                             </div>
-                            </div>
+                            </div class="tituloo">
                               <div class="botao-perfil">
                               <a href="{{route('animais.show', $publicacao->animal->id)}}">Meu Perfil</a>
                             </div>
