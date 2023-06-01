@@ -35,7 +35,7 @@
                                         <a href="{{route('usuarios.show', $usuario->id)}}" role="button" class="btn btn-success">Ver</a>
                                         </div>
                                         <div class="col">
-                                        <a href="{{route('usuarios.show', $usuario->id)}}" role="button" class="btn btn-success">Ver</a>
+                                        <a href="{{route('usuarios.edit', $usuario->id)}}" role="button" class="btn btn-success">Editar</a>
                                         </div>
                                     </div>
                                 </div>
