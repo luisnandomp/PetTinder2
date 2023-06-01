@@ -28,7 +28,7 @@ return new class extends Migration
             $table->string('vacina', 3);
             $table->string('castracao', 8);
             $table->string('localidade', 100);
-            // $table->bigInteger('usuario_id')->unsigned();
+            $table->bigInteger('usuario_id')->unsigned();
             $table->timestamps();
         });
     }
