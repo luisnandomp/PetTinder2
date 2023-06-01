@@ -176,10 +176,8 @@ a {
     
 }
 
-card-texxt{
-    font-size: 120px;
-    background-color: #fcfcfc;
-
+.tituloo{
+    text-align: center;
 }
 
 .inicial{
@@ -229,10 +227,12 @@ card-texxt{
     background-color: #FFA500;
     padding: 4px;
     text-align: center;
-    width: 60%;
+    width: 40%;
     font-size: 18px;
     border-radius: 10px;
     font-weight: 500;
+    margin-left: 30%;
+    margin-bottom: 2%;
 }
 
 
