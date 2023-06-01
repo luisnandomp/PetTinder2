@@ -67,6 +67,7 @@ class PublicacoesController extends Controller
     }
     public function store(Request $requisicao)
     {
+        $this->authorize('criar', Publicacao::class);
         $requisicao->validate([
             'descricao' => 'required',
             // 'foto' => 'required|image|mimes:png,jpg,jpeg,gif',

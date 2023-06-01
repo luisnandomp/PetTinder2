@@ -28,4 +28,9 @@ class Usuario extends Authenticatable
     {
         return $this->senha;
     }
+
+    public function animais()
+    {
+        return $this->hasMany(Animal::class);
+    }
 }

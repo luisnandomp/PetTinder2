@@ -37,8 +37,8 @@
                                             </div>
                                             </div>
                                     </form>
-                                
-                                        
+
+
 
                             </td>
                         </tr>
@@ -51,19 +51,13 @@
                 </div>
 
         </div>
-        <style>table, th, td {
-  border: 1px solid white;
-  border-collapse: collapse;
-}
-th, td {
-  background-color: #96D4D4;
-}
-
-
-
-
-
+        <style>
+        table, th, td {
+            border: 1px solid white;
+            border-collapse: collapse;
+         }
+        th, td {
+            background-color: #96D4D4;
+        }
 </style>
-
-
 @endsection

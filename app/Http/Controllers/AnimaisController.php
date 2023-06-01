@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Animal;
+use Illuminate\Support\Facades\Auth;
+
 
 class AnimaisController extends Controller
 {
     public function index()
     {
-        $usuario = Auth::user();
+        $usuario = Auth::User();
         $animais = $usuario->animais()->paginate();
         $animais = Animal::all();
         return view ('animais.index', compact('animais')); //(tirar as barras quando estiver a view pronta!)
@@ -17,12 +19,15 @@ class AnimaisController extends Controller
 
     public function create()
     {
+        $this->authorize('criar', Animal::class);
+
         return view ('animais.create');
-        $this->authorize('criar', Publicacao::class);
     }
 
     public function store(Request $requisicao)
     {
+        $this->authorize('criar', Animal::class);
+
         $requisicao->validate([
             'raca' => 'required',
             'porte' => 'required|in:pequeno,medio,grande',
@@ -67,6 +72,8 @@ class AnimaisController extends Controller
 
         $animal = new Animal($dados);
 
+        $animal->usuario()->associate(Auth::user());
+
         $animal->save();
 
         return redirect()->route('animais.show', compact('animal'));
@@ -79,14 +86,14 @@ class AnimaisController extends Controller
 
     public function edit(Animal $animal)
     {
-        return view('animais.edit', compact('animal'));
         $this->authorize('editar', $animal);
+        return view('animais.edit', compact('animal'));
     }
 
     public function update(Request $dados, Animal $animal)
     {
-        $animal->update($dados->all());
         $this->authorize('editar', $animal);
+        $animal->update($dados->all());
 
         return redirect()->route('animais.show', $animal->id);
     }
