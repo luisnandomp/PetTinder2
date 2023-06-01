@@ -163,7 +163,7 @@ footer{
 
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 // Cards iniciais (últimas publicações)
@@ -184,7 +184,7 @@ card-texxt{
 
 .inicial{
     height: 0%;
-    min-width: 20rem;
+    min-height: 20rem;
 }
 
 .teste{
@@ -224,6 +224,17 @@ card-texxt{
 .flex{
     min-width: 50%;
 }
+
+.botao-perfil{
+    background-color: #FFA500;
+    padding: 4px;
+    text-align: center;
+    width: 60%;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
 
 
 // Perfil do Animal

@@ -64,7 +64,8 @@
         <div class="inicial">
             <div class="row g-3 justify-content-center my-3 p-4">
                 @foreach ($publicacoes as $publicacao)
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        
                         <div class="card shadow-sm">
                             <img height="250px" src="/storage/{{ $publicacao->animal->foto }}" class="card-img-top" alt="...">
 
@@ -83,12 +84,12 @@
                                
                             </div>
                             </div>
-                              <div class="botao">
-                              <a href="{{route('animais.show', $publicacao->animal->id)}}" class="btn btn-primary" <i class="fas fa-align-center    "></i>Meu Perfil</a>
+                              <div class="botao-perfil">
+                              <a href="{{route('animais.show', $publicacao->animal->id)}}">Meu Perfil</a>
                             </div>
                             </div>
                           </div>
-                    </div>
+                    </div> 
                 @endforeach
             </div>
         </div>
