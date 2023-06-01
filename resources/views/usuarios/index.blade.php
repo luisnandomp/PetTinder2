@@ -21,9 +21,9 @@
                                     @method('DELETE')
 
                                     <!-- <button type="submit" class="btn btn-danger">EXCLUIR</button> -->
-                                    
+
                                     </form>
-                                
+
 
 
                                 <div class="container text-center">
@@ -32,7 +32,7 @@
                                         <input type="submit" value="EXCLUIR" class="btn btn-success">
                                         </div>
                                         <div class="col">
-                                        <a href="{{route('usuarios.show', $usuario->id)}}" role="button" class="btn btn-success">Ver</a>
+                                        <a href="{{route('usuarios.edit', $usuario->id)}}" role="button" class="btn btn-success">Editar</a>
                                         </div>
                                         <div class="col">
                                         <a href="{{route('usuarios.show', $usuario->id)}}" role="button" class="btn btn-success">Ver</a>
@@ -64,7 +64,7 @@
             table, th, td {
                 border: 1px solid white;
                 border-collapse: collapse;
-                }       
+                }
             th, td {
                  background-color: #96D4D4;
                 }
