@@ -6,33 +6,39 @@
      @csrf
     @method('PUT')
 
-    <div>
-        <label>Nome</label>
-         <input type="string" name="primeiro_nome" value="{{ $usuario->primeiro_nome }}">
-    </div>
+<div class="row g-3">
+  <div class="col">
+    <label>Nome</label>
+    <input type="text" class="form-control" value="{{ $usuario->primeiro_nome }}">
+  
 
-    <div>
-        <label for="">sobrenome</label>
-        <input type="string" name="sobrenome"value="{{ $usuario->sobrenome }}">
-    </div>
+  <div class="col">
+    <label>Sobrenome</label>
+    <input type="text" class="form-control" value="{{ $usuario->sobrenome }}">
+  </div>
 
-    <div>
-        <label for="">email</label>
-        <input type="string" name="email" value="{{ $usuario->email }}">
-    </div>
-    <div>
-        <label for="">Celular</label>
-        <input type="tel" name="tel" value="{{ $usuario->tel }}">
-    </div>
-    <div>
-        <label for="">Senha</label>
-        <input type="password" name="senha" value="">
-    </div>
-    <div>
-        <label for="">confirmsenha</label>
-        <input type="password" name="confirmsenha" value="">
-    </div>
+  <div class="col">
+    <label>Email</label>
+    <input type="text" class="form-control" value="{{ $usuario->email }}">
+  </div>
+
+  <div class="col">
+    <label>Celular</label>
+    <input type="text" class="form-control" value="{{ $usuario->tel }}">
+  </div>
+
+  <div class="col">
+    <label>Senha</label>
+    <input type="password" class="form-control" value="{{ $usuario->senha }}">
+  </div>
+
+  <div class="col">
+    <label>Confirmar a Senha</label>
+    <input type="password" class="form-control" value="{{ $usuario->senha }}">
+  </div>
+
+</div>
+</div>   
         <button type="submit">Atualizar Usuário</button>
-    </div>
 </form>
 @endsection
