@@ -3,7 +3,7 @@
 @section('conteudo')
 <div class="editar">
         <form action="{{ route('publicacoes.update', $publicacao->id) }}" method="POST" >
-            <h1 aling="center" class="titulo">Edite aqui o Seu lindo e cheiroso Usuáriozinho {{ $publicacao->id }}</h1>
+            <h1 aling="center" class="titulo">Edite a publicação do seu animal {{ $publicacao->animal->apelido }}</h1>
 
             @csrf
             @method('PUT')
