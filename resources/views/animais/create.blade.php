@@ -199,10 +199,10 @@
                             @enderror
                         </div>
 
-                        <div class="input-box">
+                        {{-- <div class="input-box">
                             <label  form="usuario_id">Usuario_id</label>
                             <input  id="usuario_id" name="usuario_id" placeholder="Digite seu ID de usuario" value="{{ Auth::User()->id }}">
-                        </div>
+                        </div> --}}
 
                         <div class="continue-button" text="center">
                             <button type="submit">Continuar</button>

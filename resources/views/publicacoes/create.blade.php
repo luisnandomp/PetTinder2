@@ -53,8 +53,7 @@
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="id_animal" id="id_animal" value="{{$animal->id}}" checked>
                                         <label class="form-check-label" for="flexRadioDefault2">
-                                            {{$animal->apelido}}
-                                            {{$animal->idade}}
+                                            <p>{{$animal->apelido}}</p>
                                         </label>
                                     </div>
                                 </div>
