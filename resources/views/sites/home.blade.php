@@ -66,7 +66,7 @@
                 @foreach ($publicacoes as $publicacao)
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                         
-                        <div class="card shadow-sm">
+                        <div class="card shadow-sm h-100">
                             <img height="250px" src="/storage/{{ $publicacao->animal->foto }}" class="card-img-top" alt="...">
 
                             <div class="card-home">
