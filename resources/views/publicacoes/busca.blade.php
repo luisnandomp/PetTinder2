@@ -67,6 +67,11 @@
                         <input type="submit" class="btn btn-primary" value="Pesquisar" class="btn">
                     </div>
 
+                    <br>
+                    
+                    <a href="{{ route('animais.create') }}"><button type="button"
+                        class="btn btn-success">Cadastre um Animal Novo</button></a>
+
                     @error('vacina')
                         {{ $message }}
                     @enderror
@@ -76,23 +81,37 @@
         
     </form>
 
-    <div class="row g-3 justify-content-center my-3 p-4">
-        <a href="{{route('animais.create')}}" class="btn btn-primary teste">Cadastre um Animal Novo</a>
-        @foreach ($publicacoes as $publicacao)
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                <div class="card shadow-sm">
-                    <img height="250px" src="/storage/{{ $publicacao->foto }}" class="card-img-top" alt="...">
+    <div class="inicial">
+            <div class="row g-3 justify-content-center my-3 p-4">
+                @foreach ($publicacoes as $publicacao)
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        
+                        <div class="card shadow-sm h-100">
+                            <img height="250px" src="/storage/{{ $publicacao->animal->foto }}" class="card-img-top" alt="...">
 
-                    <div class="card-body">
-                      <h5 class="card-title">{{ $publicacao->animal->apelido }}</h5>
-                      <p class="card-text">{{ $publicacao->usuario->primeiro_nome }}</p>
-                      <p class="card-text">{{ $publicacao->animal->porte }}</p>
-                      <a href="{{route('animais.show', $publicacao->animal->id)}}" class="btn btn-primary">Meu Perfil</a>
-                    </div>
-                  </div>
+                            <div class="card-home">
+                              <h5 class="card-title">{{ $publicacao->animal->apelido }}</h5>
+                              </div>
+                                <div class="descricao">
+                                <div class="container text-center">
+                                <div class="row row-cols-auto">
+                            
+                                <ul class="flex flex-wrap gap-2">
+                                <li class="badge badge-large bg-primary bg-opacity-10 text-primary">{{ $publicacao->animal->genero}}</li>
+                                <li class="badge badge-large bg-primary bg-opacity-10 text-primary">{{ $publicacao->animal->porte}}</li>
+                                <li class="badge badge-large bg-primary bg-opacity-10 text-primary">{{ $publicacao->animal->personalidade}}</li>
+                                </ul>
+                               
+                            </div>
+                            </div class="tituloo">
+                              <div class="botao-perfil">
+                              <a href="{{route('animais.show', $publicacao->animal->id)}}">Meu Perfil</a>
+                            </div>
+                            </div>
+                          </div>
+                    </div> 
+                @endforeach
             </div>
-        @endforeach
-    </div>
 
     {{ $publicacoes->links() }}
 @endsection
