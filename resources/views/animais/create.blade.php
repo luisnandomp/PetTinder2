@@ -202,14 +202,32 @@
                             <input  id="usuario_id" name="usuario_id" placeholder="Digite seu ID de usuario" value="{{ Auth::User()->id }}">
                         </div> --}}
 
-                        <div class="continue-button" text="center">
-                            <button type="submit">Continuar</button>
-                        </div>
+                        
+
+
+
+                        <a class="botaozao"> <button type="button"
+                        class="btn">Continuar</button></a>
 
 
                 </form>
             </div>
         </div>
+          
+        <style>
+            .btn{
+                border-radius:10px;
+                background-color:#FF8C00;
 
+            }
+
+            .btn:hover{
+                background-color: #FFA500;
+            }
+
+            .botaozao{
+                text-items:center;
+            }
+        </style>
     </body>
 </html>
