@@ -2,13 +2,14 @@
 
 
 @section('conteudo')
+<div class="estrutura-perfil">
 <div class="card mb-3 center">
     <div class="row g-0">
         <div class="col-md-4">
             <strong></strong><img width="100px" src="/storage/{{ $animal->foto }}" alt="" class="imagem-perfil">
         </div>
         <div class="col-md-8">
-            <div class="card-body">
+            <div class="card-perfil">
                 <h5 class="perfil-titulo" class="fa fa-align-center" aria-hidden="true">{{$animal->apelido }}</h5>
                 <p class="card-text">
 
@@ -41,7 +42,7 @@
                             </li>
                         </div>
                     
-                        <div class="col-12 col-sm-12 col-md-6"">
+                        <div class="col-12 col-sm-12 col-md-6">
                             <li class="list-group-item d-flex justify-content-between align-items-start">
                                 <div class="ms-2 me-auto">
                                     <div class="fw-bold">Porte</div>
@@ -117,8 +118,35 @@
             </div>
         </div>
     </div>
-                        <button type="button" class="btn btn-success"><a href="{{route('animais.index')}}">voltar para lista de Animais</a></button>
-                        <button type="button" class="btn btn-success"><a href="{{route('animais.create')}}">Cadastrar outro animal</a></button>
+                    <button type="button" class="quero-adotar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Quero Adotar
+                    </button>
+
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Quer adotar</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- Botões -->
+                <div class="container text-center">
+                    <div class="row row-cols-2">
+                        <div class="col"><button type="button" class="botao-animal"><a href="{{route('animais.index')}}">voltar para lista de Animais</a></button></div>
+                        <div class="col"><button type="button" class="botao-animal"><a href="{{route('animais.create')}}">Cadastrar outro animal</a></button></div>
+                        </div>
+                    </div>
+    </div>
 </div>
 
                                             <style>
