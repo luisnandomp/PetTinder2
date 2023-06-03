@@ -27,7 +27,7 @@
                        <h2 class="titulo">Cadastre o Seu Pet</h2>
                     <div class="input-group">
                         <div class="input-box">
-                            <label form="raca" >Raça  *</label>
+                            <label form="raca" class="raca" >Raça  *</label>
                             <input id="raca" type="text" name="raca" placeholder="Raça do pet" value="{{ old('raca') }}"> <!--required -->
                             @error('raca')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -226,7 +226,12 @@
             }
 
             .botaozao{
-                text-items:center;
+                text-align: center;
+            }
+
+
+            .raca{
+                font-size:10px;
             }
         </style>
     </body>
