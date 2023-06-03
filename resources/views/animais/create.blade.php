@@ -29,15 +29,15 @@
                        <h2 class="titulo">Cadastre o Seu Pet</h2>
                     <div class="input-group">
                         <div class="input-box">
-                            <label form="raca" >Raça </label>
+                            <label form="raca" >Raça  *</label>
                             <input id="raca" type="text" name="raca" placeholder="Raça do pet" value="{{ old('raca') }}"> <!--required -->
                             @error('raca')
-                                {{$message }}
+                                <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
 
                         <div class="input-box">
-                        <label form="porte" >Porte</label>
+                        <label form="porte" >Porte  *</label>
                             <select name="porte" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                                 <option selected>Escolha um Porte</option>
                                 <option value="grande">Grande</option>
@@ -45,28 +45,28 @@
                                 <option value="pequeno">Pequeno</option>
                             </select>
                             @error('porte')
-                                {{$message }}
+                                <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
 
                         <div class="input-box">
-                            <label form="idade">Idade</label>
+                            <label form="idade">Idade  *</label>
                             <input id="idade" type="number" name="idade" placeholder="Digite a idade" value="{{ old('idade') }}"><!--required -->
                             @error('idade')
-                                {{$message }}
+                                <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
 
                         <div class="input-box">
-                            <label form="cor" >Cor</label>
+                            <label form="cor" >Cor  *</label>
                             <input id="cor" type="text" name="cor" placeholder ="Digite a Cor" value="{{ old('cor') }}"><!--required -->
                             @error('cor')
-                                {{$message }}
+                                <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
 
                         <div class="input-box">
-                            <label form="Personalidade" >Personalidade</label>
+                            <label form="Personalidade" >Personalidade  *</label>
                             <select name="personalidade" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                                 <option selected>Escolha uma Personalidade que defina seu PET</option>
                                 <option value="calmo">Calmo</option>
@@ -75,13 +75,13 @@
                                 <option value="timido">Timido</option>
                             </select>
                             @error('personalidade')
-                                {{$message }}
+                                <div class="alert alert-danger">{{$message}}</div>
                             @enderror
                         </div>
 
                         <div class="input-group">
                             <div class="input-box">
-                                <label form="comorbidade" >Comorbidade</label>
+                                <label form="comorbidade" >Comorbidade  *</label>
                                 <select name="comorbidade" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                                     <option selected>Seu PET tem alguma comorbidade?</option>
                                     <option value="sim">Sim</option>
@@ -90,13 +90,13 @@
                                 </select>
                             </div>
                             @error('comorbidade')
-                                {{$message }}
+                                <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
 
                         <div class="gender-inputs">
                             <div class="gender-title">
-                                <h6>Qual é o seu PET?</h6>
+                                <h6>Qual é o seu PET?  *</h6>
                             </div>
                             <div class="gender-group">
                                 <div class="gender-input">
@@ -115,7 +115,7 @@
 
                     <div class="gender-inputs">
                         <div class="gender-title">
-                            <h6>Genero</h6>
+                            <h6>Genero  *</h6>
                         </div>
                         <div class="gender-group">
                             <div class="gender-input">
@@ -129,25 +129,25 @@
                             </div>
                         </div>
                         @error('genero')
-                                {{$message }}
+                            <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
 
 
                         <div class="input-box">
-                            <label form="apelido" >Apelido</label>
+                            <label form="apelido" >Apelido  *</label>
                             <input id="apelido" type="text" name="apelido" placeholder ="Digite o apelido" value="{{ old('apelido') }}"><!--required -->
                             @error('apelido')
-                                {{$message }}
+                                <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
 
 
                         <div class="input-box">
-                            <label form="foto" >Foto</label>
+                            <label form="foto" >Foto  *</label>
                             <input id="foto" type="file" name="foto" placeholder="Coloque uma foto">
                             @error('foto')
-                                {{$message }}
+                                <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                     </div>
@@ -155,7 +155,7 @@
                     <div class="input-group">
                         <div class="gender-inputs">
                             <div class="gender-title">
-                                <h6>Vacinado?</h6>
+                                <h6>Vacinado?  *</h6>
                             </div>
                             <div class="gender-group">
                                 <div class="gender-input">
@@ -168,13 +168,13 @@
                                 </div>
                             </div>
                             @error('vacina')
-                                {{$message }}
+                                <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
 
                         <div class="gender-inputs">
                             <div class="gender-title">
-                                <h6>Castração</h6>
+                                <h6>Castração  *</h6>
                             </div>
                             <div class="gender-group">
                                 <div class="gender-input">
@@ -195,14 +195,14 @@
                             <label form="localidade" >Localidade</label>
                             <input id="localidade" type="text" name="localidade" placeholder ="Digite a localidade" value="{{ old('localidade') }}"><!--required -->
                             @error('localidade')
-                                {{$message }}
+                                <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
 
-                        <div class="input-box">
+                        {{-- <div class="input-box">
                             <label  form="usuario_id">Usuario_id</label>
                             <input  id="usuario_id" name="usuario_id" placeholder="Digite seu ID de usuario" value="{{ Auth::User()->id }}">
-                        </div>
+                        </div> --}}
 
                         <div class="continue-button" text="center">
                             <button type="submit">Continuar</button>
