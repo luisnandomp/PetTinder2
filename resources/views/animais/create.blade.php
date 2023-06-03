@@ -11,7 +11,7 @@
     <body>
         <div class="contaider1">
 
-                <img src="{{ asset('imagens/cadastroanimal.png')}}" class="form-image">
+                <img src="{{ asset('imagens/amigo.png')}}" class="form-image">
 
             <div class="form">
                 <form action="#">
@@ -19,9 +19,7 @@
                         <div class="title">
                             <h2>Cadastre o Seu Pet</h2>
                         </div>
-                        <div class="login-button">
-                            <button><a href="{{Route('animais.create')}}">Entrar</a></button>
-                        </div>
+                        
                     </div>
                 </form>
                 <form action="{{route('animais.store')}}" method="POST" enctype="multipart/form-data">
