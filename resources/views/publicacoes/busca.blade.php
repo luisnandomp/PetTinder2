@@ -61,11 +61,16 @@
                         <option value='' selected>Vacina</option>
                         <option value="sim">Sim</option>
                         <option value="nao">Não</option>
+
+                        <div >
+                        <input type="submit" class="btn btn-primary" value="Pesquisar" class="btn">
+
+                        
+                    </div>
                     </select>
 
-                    <div >
-                        <input type="submit" class="btn btn-primary" value="Pesquisar" class="btn">
-                    </div>
+                 
+                    
 
                     <br>
                     

@@ -17,11 +17,9 @@
                 <form action="#">
                     <div class="form-header">
                         <div class="title">
-                            <h1>Divulgue um animal </h1>
+                            <h1 class="titulocadastro">Divulgue um animal </h1>
                         </div>
-                        <div class="login-button">
-                            <button><a href="{{Route('login')}}">Entrar</a></button>
-                        </div>
+                        
                     </div>
                 </form>
                 <form action="{{route('publicacoes.store')}}" method="POST" enctype="multipart/form-data">
@@ -60,18 +58,6 @@
                             @endforeach
                         </div>
 
-
-
-                      <!--  <div class="input-box">
-                                <label form="id_animal">Animal</label>
-                                <input id="id_animal" type="number" name="id_animal" placeholder="Escolha um Animal">
-                            @error('id_animal')
-                            {{$message }}
-                            @enderror
-                            </div>
-                    -->
-
-
                     <br>
                     <div  text="center" class="login-button">
                         <button>Continuar</button>
@@ -82,6 +68,14 @@
         <style>
             .dogfofis{
                 height: 50;
+            }
+
+            .titulocadastro{
+                font-size: 40px;
+                font-family: 'Fira Sans', sem serifa;
+                font-weight: 300;
+                letter-spacing: .05em;
+                
             }
         </style>
     </body>

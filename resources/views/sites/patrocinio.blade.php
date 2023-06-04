@@ -19,11 +19,11 @@
     <h3 >ASSOSIAÇÃO LAR FELIZ GUARARAPES: </h3>
 
     <br>
-    <img src="{{ asset('imagens/parceria.jpeg')}}" class="imagem" mb-3>
+    <img src="{{ asset('imagens/parceiros.jpeg')}}" class="imagem" mb-3>
     <br>
    
 
-    <h2 class="conte">Associação lar feliz de Guararapes é uma organização sem fins lucrativos que exercem um trabalho 100% voluntario.
+    <h2 class="conte">Associação lar feliz de Guararapes é uma organização sem fins lucrativos que exercem um trabalho 100% voluntário.
     Com o objeitvo de garantir um lar para animais que necessitam, assim ajudando a diminuir uma porcentagem alta que existe em nosso municípios de animais sem abrigo.</h2>
     
     <h1 class="subtitulo">Gostaria de se juntar a nos?</h1>

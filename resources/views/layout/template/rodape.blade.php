@@ -20,7 +20,7 @@
 
             <!-- Grid column -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+              
               <p>
                 <a class="text-white">Este projeto foi feito especialmente para você, que está em busca de um "Match" com seu futuro novo melhor amigo</a>
               </p>
