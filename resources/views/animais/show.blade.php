@@ -118,9 +118,22 @@
             </div>
         </div>
     </div>
-                    <button type="button" class="quero-adotar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Quero Adotar
-                    </button>
+                   <div>
+                        <button onclick="acao()"  type="button" class="quero-adotar"  data-bs-target="#staticBackdrop"  >Quero Adotar</button>
+
+                        <div class="modal">
+                            <h1>modal</h1>
+                        </div>
+
+                    <script scr="script.js"></script>
+
+                   </div>
+
+
+
+
+                    
+                    <script scr="script.js"></script>
 
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -149,17 +162,33 @@
     </div>
 </div>
 
-                                            <style>
-                                                .imagem {
-                                                    height: 60%;
-                                                    width: 80%;
+         <style>
+                .imagem {
+                     height: 60%;
+                     width: 80%;
 
-                                                }
+                }
 
-                                                .card-text {
-                                                    padding-right: 25px;
-                                                }
-                                            </style>
+                .card-text {
+                     padding-right: 25px;
+                 }
+
+                .modal{
+                    width:500px;
+                    height:500px;
+                    background-color:	#000000;
+                    position:absolute;
+                    top:50%;
+                    left:50%;
+                    transform:translate(-50%,-50%);
+                    cursor: pointer;
+                    display:none;
+                }
+
+
+
+
+        </style>
  @endsection
 
                                            
