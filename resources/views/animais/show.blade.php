@@ -6,7 +6,7 @@
 <div class="card mb-3 center">
     <div class="row g-0">
         <div class="col-md-4">
-            <strong></strong><img width="100px" src="/storage/{{ $animal->foto }}" alt="" class="imagem-perfil">
+            <strong></strong><img width="100px" src="/storage/{{ $animal->foto }}" alt="" class="imagem-perfil" style="border-radius: 10px">
         </div>
         <div class="col-md-8">
             <div class="card-perfil">
@@ -23,7 +23,7 @@
                                 </div>
                             </li>
                         </div>
-                    
+
                         <div class="col-12 col-sm-12 col-md-6">
                             <li class="list-group-item d-flex justify-content-between align-items-start">
                                 <div class="ms-2 me-auto">
@@ -32,7 +32,7 @@
                                 </div>
                             </li>
                         </div>
-                    
+
                         <div class="col-12 col-sm-12 col-md-6">
                             <li class="list-group-item d-flex justify-content-between align-items-start">
                                 <div class="ms-2 me-auto">
@@ -41,7 +41,7 @@
                                 </div>
                             </li>
                         </div>
-                    
+
                         <div class="col-12 col-sm-12 col-md-6">
                             <li class="list-group-item d-flex justify-content-between align-items-start">
                                 <div class="ms-2 me-auto">
@@ -50,7 +50,7 @@
                                 </div>
                             </li>
                         </div>
-                    
+
                         <div class="col-12 col-sm-12 col-md-6">
                             <li class="list-group-item d-flex justify-content-between align-items-start">
                                 <div class="ms-2 me-auto">
@@ -59,7 +59,7 @@
                                 </div>
                             </li>
                         </div>
-                    
+
                         <div class="col-12 col-sm-12 col-md-6">
                             <li class="list-group-item d-flex justify-content-between align-items-start">
                                 <div class="ms-2 me-auto">
@@ -68,7 +68,7 @@
                                 </div>
                             </li>
                         </div>
-                    
+
                         <div class="col-12 col-sm-12 col-md-6">
                             <li class="list-group-item d-flex justify-content-between align-items-start">
                                 <div class="ms-2 me-auto">
@@ -77,7 +77,7 @@
                                 </div>
                             </li>
                         </div>
-                    
+
                         <div class="col-12 col-sm-12 col-md-6">
                             <li class="list-group-item d-flex justify-content-between align-items-start">
                                 <div class="ms-2 me-auto">
@@ -86,7 +86,7 @@
                                 </div>
                             </li>
                         </div>
-                    
+
                         <div class="col-12 col-sm-12 col-md-6">
                             <li class="list-group-item d-flex justify-content-between align-items-start">
                                 <div class="ms-2 me-auto">
@@ -95,7 +95,7 @@
                                 </div>
                             </li>
                         </div>
-                    
+
                         <div class="col-12 col-sm-12 col-md-6">
                             <li class="list-group-item d-flex justify-content-between align-items-start">
                                 <div class="ms-2 me-auto">
@@ -104,7 +104,7 @@
                                 </div>
                             </li>
                         </div>
-                    
+
                         <div class="col-12 col-sm-12 col-md-6">
                             <li class="list-group-item d-flex justify-content-between align-items-start">
                                 <div class="ms-2 me-auto">
@@ -132,7 +132,7 @@
 
 
 
-                    
+
                     <script scr="script.js"></script>
 
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -191,5 +191,5 @@
         </style>
  @endsection
 
-                                           
-                            
+
+
