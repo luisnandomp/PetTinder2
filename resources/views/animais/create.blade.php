@@ -19,7 +19,7 @@
                         <div class="title">
                             <h2>Cadastre o Seu Pet</h2>
                         </div>
-                        
+
                     </div>
                 </form>
                 <form action="{{route('animais.store')}}" method="POST" enctype="multipart/form-data">
@@ -202,18 +202,18 @@
                             <input  id="usuario_id" name="usuario_id" placeholder="Digite seu ID de usuario" value="{{ Auth::User()->id }}">
                         </div> --}}
 
-                        
 
 
 
-                        <a class="botaozao"> <button type="button"
+
+                        <a class="botaozao"> <button type="submit"
                         class="btn">Continuar</button></a>
 
 
                 </form>
             </div>
         </div>
-          
+
         <style>
             .btn{
                 border-radius:10px;
