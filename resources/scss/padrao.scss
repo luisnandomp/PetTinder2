@@ -302,3 +302,31 @@ a {
 .card-perfil{
     margin-left: 40%;
 }
+
+    // Editar animais
+.campo-animal{
+    text-align: left;
+    font-size: 120%;
+    margin-right: 95%;
+    padding: 1%;
+    font-weight: 500;
+}
+
+.titulo-edit{
+    color: rgb(0, 0, 0); text-shadow: rgb(172, 157, 157) 0.0em 0.1em 0.1em;
+    margin-bottom: 40px;
+}
+
+.edit-animal{
+    color: white;
+    background-color: #FFA500;
+    padding: 4px;
+    text-align: center;
+    width: 20%;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border-color: white;
+    margin-top: 15px;
+}

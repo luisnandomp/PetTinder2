@@ -6,46 +6,50 @@
 <div class="editar">
 
         <form action="{{ route('animais.update', $animal->id) }}" method="POST" class="editar">
-            <h1 aling="center">Edite aqui o Seu lindo e cheiroso Animalzinho {{ $animal->id }}</h1>
+            <h1 aling="center" class="titulo-edit">{{ $animal->apelido }}</h1>
 
             @csrf
             @method('PUT')
-
-            <div class="input-group">
-                <div class="input-box">
-                    <label form="raca" >Raça </label>
-                    <input id="raca" type="text" name="raca" value="{{ $animal->raca }}"> <!--required -->
-                </div>
-
-                <div class="input-box">
-                    <label form="porte" >Porte </label>
-                    <input id="porte" type="text" name="porte" value="{{ $animal->porte }}"><!--required -->
-                </div>
-
-                <div class="input-box">
-                    <label form="idade">Idade</label>
-                    <input id="idade" type="number" name="idade" value="{{ $animal->idade }}"><!--required -->
-                </div>
-
-                <div class="input-box">
-                    <label form="cor" >Cor</label>
-                    <input id="cor" type="text" name="cor" value="{{ $animal->cor }}"><!--required -->
-                </div>
-
-                <div class="input-box">
-                    <label form="personalidade" >Personalidade</label>
-                    <input id="personalidade" type="text" name="personalidade" value="{{ $animal->personalidade }}"><!--required -->
-                </div>
-
-                <div class="input-box">
-                    <label form="comorbidade" >Comorbidade</label>
-                    <input id="comorbidade" type="text" name="comorbidade" value="{{ $animal->comorbidade }}"><!--required -->
-                </div>
+            <div class="row g-4">
+            <div class="col">
+                <label class="campo-animal">Apelido</label>
+                <input type="text" class="form-control" value="{{ $animal->apelido }}">
+            </div>
+        
+            <div class="col">
+                <label class="campo-animal">Raça</label>
+                <input type="text" class="form-control" value="{{ $animal->raca }}">
             </div>
 
-                <div class="gender-inputs">
+            <div class="col-edicao">
+                <label class="campo-animal">Porte</label>
+                <input type="text" class="form-control" value="{{ $animal->porte }}">
+            </div>
+
+            <div class="col">
+                <label class="campo-animal">Idade</label>
+                <input type="text" class="form-control" value="{{ $animal->idade }}">
+            
+
+            <div class="col">
+                <label class="campo-animal">Cor</label>
+                <input type="text" class="form-control" value="{{ $animal->cor }}">
+            </div>
+
+            <div class="col">
+                <label class="campo-animal">Personalidade</label>
+                <input type="text" class="form-control" value="{{ $animal->personalidade }}">
+            
+
+            <div class="col">
+                <label class="campo-animal">Comorbidade</label>
+                <input type="text" class="form-control" value="{{ $animal->comorbidade }}">
+            </div>
+        
+            
+                <div class="col">
                      <div class="gender-title">
-                        <h6>Qual é o seu PET?</h6>
+                        <h6 class="campo-animal">Espécie</h6>
                     </div>
                     <div class="gender-group">
                         <div class="gender-input">
@@ -58,29 +62,27 @@
                         </div>
                     </div>
                 </div>
+                </div>
 
 
             <div class="gender-inputs">
                 <div class="gender-title">
-                    <h6>Genero</h6>
+                    <h6 class="campo-animal">Gênero</h6>
                 </div>
                 <div class="gender-group">
                 <div class="gender-input">
                         <input type="radio" id="feminino" name="genero" value="feminino" {{ $animal->genero == 'feminino' ? 'checked' : '' }}>
-                        <label for="feminino">Feminino</label>
+                        <label for="feminino">Fêmia</label>
                 </div>
 
                 <div class="gender-input">
                     <input type="radio" id="masculino" name="genero" value="masculino" {{ $animal->genero == 'masculino' ? 'checked' : '' }}>
-                    <label for="masculino">Masculino</label>
+                    <label for="masculino">Macho</label>
             </div>
                 </div>
             </div>
 
-                <div class="input-box">
-                    <label form="apelido" >Apelido</label>
-                    <input id="apelido" type="text" name="apelido" value="{{ $animal->apelido }}"><!--required -->
-                </div>
+            
 
 
                 <div class="input-box">
@@ -95,15 +97,14 @@
                     <input id="foto" type="file" name="foto" value="{{ $animal->foto }}"><!--required -->
                 </div> --}}
 
-                <div class="input-box">
-                    <label form="vacina" >Vacina </label>
-                    <input id="vacina" type="text" name="vacina" value="{{ $animal->vacina }}"><!--required -->
-                </div>
+                <div class="col">
+                <label >Vacina</label>
+                <input type="text" class="form-control" value="{{ $animal->vacina }}">
+            </div>
 
-                <div class="gender-inputs">
-
+                <div class="col">
                     <div class="gender-title">
-                        <h6>Castração</h6>
+                        <h6 class="campo-animal">Castração</h6>
                     </div>
 
                     <div class="gender-group">
@@ -117,15 +118,16 @@
                         <label for="nao">Não</label>
                 </div>
 
-                <div class="input-box">
-                    <label form="localidade" >Localidade</label>
-                    <input id="localidade" type="text" name="localidade" value="{{ $animal->localidade }}"><!--required -->
-                </div>
+                <div class="col">
+                <label class="campo-animal">Localização</label>
+                <input type="text" class="form-control" value="{{ $animal->localidade }}">
+            </div>
             <div>
-              <button type="submit">Atualizar Animal</button>
+              <button type="submit" class="edit-animal">Atualizar Animal</button>
             </div>
           </form>
 </div>
+                </div>
 
 
 
