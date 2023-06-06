@@ -113,6 +113,17 @@
                                 </div>
                             </li>
                         </div>
+
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Dono
+                                    </div>
+                                    <p class="descricao-perfil">{{$animal->usuario->primeiro_nome}}</p>
+                                </div>
+                            </li>
+                        </div>
+
                     </div>
                 </div>
             </div>
