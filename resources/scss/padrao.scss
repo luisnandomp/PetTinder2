@@ -244,11 +244,14 @@ a {
     color: rgb(0, 0, 0); text-shadow: rgb(172, 157, 157) 0.0em 0.1em 0.1em;
     font-size: xx-large;
     margin-bottom: 10%;
+    margin-top: 10px;
 }
 
 .imagem-perfil{
-    width: 160%;
+    width: 170%;
     height: 100%;
+    margin-top: 15px;
+    margin-left: 20px
 }
 
 .descricao-perfil{
@@ -282,7 +285,7 @@ a {
     font-size: 18px;
     border-radius: 10px;
     font-weight: 500;
-    margin-left: 69%;
+    margin-left: 75%;
     margin-bottom: 50px;
     border-color: white;
 }
@@ -290,7 +293,7 @@ a {
 .botao-animal{
     color: white;
     background-color: #FFA500;
-    padding: 9px;
+    padding: 4px;
     text-align: center;
     width: 90%;
     font-size: 18px;

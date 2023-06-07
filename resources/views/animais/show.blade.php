@@ -2,13 +2,6 @@
 
 
 @section('conteudo')
-
-<div class="container text-center">
-    <div class="row row-cols-2">
-            <div class="col"><button type="button" class="botao-animal"><a href="{{route('animais.index')}}">voltar para lista de Animais</a></button></div>
-            <div class="col"><button type="button" class="botao-animal"><a href="{{route('animais.create')}}">Cadastrar outro animal</a></button></div>
-        </div>
-    </div>
 <div class="estrutura-perfil">
 <div class="card mb-3 center">
     <div class="row g-0">
@@ -124,7 +117,7 @@
                         <div class="col-12 col-sm-12 col-md-6">
                             <li class="list-group-item d-flex justify-content-between align-items-start">
                                 <div class="ms-2 me-auto">
-                                    <div class="fw-bold">Dono
+                                    <div class="fw-bold">Responsável
                                     </div>
                                     <p class="descricao-perfil">{{$animal->usuario->primeiro_nome}}</p>
                                 </div>
@@ -169,6 +162,12 @@
                             </div>
                         </div>
                         </div>
+    <div class="container text-center">
+    <div class="row row-cols-2">
+            <div class="col"><button type="button" class="botao-animal"><a href="{{route('animais.index')}}">voltar para lista de Animais</a></button></div>
+            <div class="col"><button type="button" class="botao-animal"><a href="{{route('animais.create')}}">Cadastrar outro animal</a></button></div>
+        </div>
+    </div>
     </div>
 </div>
 
