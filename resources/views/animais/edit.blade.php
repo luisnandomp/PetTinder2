@@ -5,7 +5,7 @@
 @vite(['resources/scss/publicacao.scss'])
 <div class="editar">
 
-        <form action="{{ route('animais.update', $animal->id) }}" method="POST" class="editar">
+        <form action="{{ route('animais.update', $animal->id) }}" method="POST" class="editar" enctype="multipart/form-data">
             <h1 aling="center" class="titulo-edit">{{ $animal->apelido }}</h1>
 
             @csrf
