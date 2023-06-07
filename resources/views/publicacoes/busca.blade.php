@@ -31,6 +31,19 @@
                     @enderror
                 </div>
 
+                <!-- testando -->
+                <div class="col-4">
+                    <select name="pet" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option value='' selected>Ambos</option>
+                        <option value="cachorro">Cachorro</option>
+                        <option value="gato">Gato</option>
+                    </select>
+
+                    @error('pet')
+                        {{ $message }}
+                    @enderror
+                </div>
+
                 <div class="col-4">
                     <select name="castracao" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                         <option value='' selected>Castrado</option>
@@ -65,15 +78,15 @@
                         <div >
                         <input type="submit" class="btn btn-primary" value="Pesquisar" class="btn">
 
-                        
+
                     </div>
                     </select>
 
-                 
-                    
+
+
 
                     <br>
-                    
+
                     <a href="{{ route('animais.create') }}"><button type="button"
                         class="btn btn-success">Cadastre um Animal Novo</button></a>
 
@@ -83,14 +96,14 @@
                 </div>
             </div>
         </div>
-        
+
     </form>
 
     <div class="inicial">
             <div class="row g-3 justify-content-center my-3 p-4">
                 @foreach ($publicacoes as $publicacao)
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                        
+
                         <div class="card shadow-sm h-100">
                             <img height="250px" src="/storage/{{ $publicacao->animal->foto }}" class="card-img-top" alt="...">
 
@@ -100,13 +113,13 @@
                                 <div class="descricao">
                                 <div class="container text-center">
                                 <div class="row row-cols-auto">
-                            
+
                                 <ul class="flex flex-wrap gap-2">
                                 <li class="badge badge-large bg-primary bg-opacity-10 text-primary">{{ $publicacao->animal->genero}}</li>
                                 <li class="badge badge-large bg-primary bg-opacity-10 text-primary">{{ $publicacao->animal->porte}}</li>
                                 <li class="badge badge-large bg-primary bg-opacity-10 text-primary">{{ $publicacao->animal->personalidade}}</li>
                                 </ul>
-                               
+
                             </div>
                             </div class="tituloo">
                               <div class="botao-perfil">
@@ -114,7 +127,7 @@
                             </div>
                             </div>
                           </div>
-                    </div> 
+                    </div>
                 @endforeach
             </div>
 

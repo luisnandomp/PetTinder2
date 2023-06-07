@@ -13,7 +13,7 @@ class AnimaisController extends Controller
     {
         $usuario = Auth::User();
         $animais = $usuario->animais()->paginate();
-        $animais = Animal::all();
+        // $animais = Animal::all();
         return view ('animais.index', compact('animais')); //(tirar as barras quando estiver a view pronta!)
     }
 
