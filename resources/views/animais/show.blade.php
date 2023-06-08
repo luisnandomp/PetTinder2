@@ -124,6 +124,16 @@
                             </li>
                         </div>
 
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Sobre o Pet
+                                    </div>
+                                    <p class="descricao-perfil">{{$animal->descricao}}</p>
+                                </div>
+                            </li>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -162,9 +172,9 @@
                             </div>
                         </div>
                         </div>
-    <div class="container text-center">
+     
     <div class="row row-cols-2">
-            <div class="col"><button type="button" class="botao-animal"><a href="{{route('animais.index')}}">voltar para lista de Animais</a></button></div>
+            <div class="col"><button type="button" class="botao-animal"><a href="{{route('animais.index')}}">Voltar para lista de Animais</a></button></div>
             <div class="col"><button type="button" class="botao-animal"><a href="{{route('animais.create')}}">Cadastrar outro animal</a></button></div>
         </div>
     </div>

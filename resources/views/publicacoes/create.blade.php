@@ -27,7 +27,7 @@
                     <div class="input-group">
                         <div class="input-box">
                             <label form="descricao" >Descrição</label>
-                            <textarea id="descricao" type="text" name="descricao" placeholder="Digite uma descrição">{{ old('descricao') }}</textarea><!--required -->
+                            <textarea id="descricao" type="text" name="descricao" placeholder="Descreva o seu Animal">{{ old('descricao') }}</textarea><!--required -->
 
                             @error('descricao')
                                 {{$message }}

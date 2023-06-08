@@ -32,4 +32,13 @@ class Animal extends Model
     {
         return $this->belongsTo(Usuario::class, 'usuario_id');
     }
+
+    public function getGeneroAttribute($value)
+    {
+        if($value == 'masculino'){
+            return 'Macho';
+        }else if ($value == 'feminino'){
+            return 'Fêmea';
+        }
+    }
 }

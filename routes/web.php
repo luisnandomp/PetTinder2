@@ -42,7 +42,7 @@ Route::delete('Usuarios/{usuario}',[UsuariosController::class, 'destroy'])->name
 Route::middleware(['web'])->group(function () {
 
     // -------------------- Filtro de animais -----------------------------------------
-    Route::any('/publicacao/busca', [PublicacoesController::class, 'buscar'])->name('publicacoes.buscar'); // tela onde vai ser o filtro
+    Route::any('/publicacoes/busca', [PublicacoesController::class, 'buscar'])->name('publicacoes.buscar'); // tela onde vai ser o filtro
     Route::get('/entrar', [AuthController::class, 'entrar'])->name('login'); //tela de login do usuário
     Route::post('/entrar', [AuthController::class, 'login_store'])->name('login_store'); //tela de login do usuário
     Route::get('/sair', [AuthController::class, 'logout'])->name('sair');
@@ -56,7 +56,7 @@ Route::middleware(['web'])->group(function () {
     Route::get('/patrocinio', [SiteController::class, 'patrocinio'])->name('sites.patrocinio'); //tela de patrocinios
     Route::get('/contato', [SiteController::class, 'contato'])->name('sites.contato');// tela de contato
     Route::get('/animais/{animal}', [AnimaisController::class, 'show'])->name('animais.show'); //tela onde mostrará o perfil de cada animal unicamente
-
+    Route::get('/publicacoes/{publicacao}', [SiteController::class, 'publicacao'])->name('sites.publicacao');
 });
 
 

@@ -33,4 +33,9 @@ class Usuario extends Authenticatable
     {
         return $this->hasMany(Animal::class);
     }
+
+    public function getNomeAttribute()
+    {
+        return $this->primeiro_nome . ' ' . $this->sobrenome;
+    }
 }
