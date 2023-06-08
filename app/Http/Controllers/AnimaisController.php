@@ -13,7 +13,7 @@ class AnimaisController extends Controller
     {
         $usuario = Auth::User();
         $animais = $usuario->animais()->paginate();
-        $animais = Animal::all();
+        // $animais = Animal::all();
         return view ('animais.index', compact('animais')); //(tirar as barras quando estiver a view pronta!)
     }
 
@@ -92,10 +92,23 @@ class AnimaisController extends Controller
         return view('animais.edit', compact('animal'));
     }
 
-    public function update(Request $dados, Animal $animal)
+    public function update(Request $requisicao, Animal $animal)
     {
         $this->authorize('editar', $animal);
-        $animal->update($dados->all());
+
+        $dados = $requisicao->all();
+        $dados['foto'] = '';
+
+        if($requisicao->hasFile('foto')){
+            $arquivo = $requisicao->file('foto')->store('animais', ['disk' => 'public']);
+
+            if($arquivo){
+                $dados['foto'] = $arquivo;
+
+            }
+
+        }
+        $animal->update($dados);
 
         return redirect()->route('animais.show', $animal->id);
     }

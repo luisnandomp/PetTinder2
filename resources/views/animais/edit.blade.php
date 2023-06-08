@@ -5,7 +5,7 @@
 @vite(['resources/scss/publicacao.scss'])
 <div class="editar">
 
-        <form action="{{ route('animais.update', $animal->id) }}" method="POST" class="editar">
+        <form action="{{ route('animais.update', $animal->id) }}" method="POST" class="editar" enctype="multipart/form-data">
             <h1 aling="center" class="titulo-edit">{{ $animal->apelido }}</h1>
 
             @csrf
@@ -15,7 +15,7 @@
                 <label class="campo-animal">Apelido</label>
                 <input type="text" class="form-control" value="{{ $animal->apelido }}">
             </div>
-        
+
             <div class="col">
                 <label class="campo-animal">Raça</label>
                 <input type="text" class="form-control" value="{{ $animal->raca }}">
@@ -29,7 +29,7 @@
             <div class="col">
                 <label class="campo-animal">Idade</label>
                 <input type="text" class="form-control" value="{{ $animal->idade }}">
-            
+
 
             <div class="col">
                 <label class="campo-animal">Cor</label>
@@ -39,14 +39,14 @@
             <div class="col">
                 <label class="campo-animal">Personalidade</label>
                 <input type="text" class="form-control" value="{{ $animal->personalidade }}">
-            
+
 
             <div class="col">
                 <label class="campo-animal">Comorbidade</label>
                 <input type="text" class="form-control" value="{{ $animal->comorbidade }}">
             </div>
-        
-            
+
+
                 <div class="col">
                      <div class="gender-title">
                         <h6 class="campo-animal">Espécie</h6>
@@ -82,14 +82,14 @@
                 </div>
             </div>
 
-            
+
 
 
                 <div class="input-box">
                     <label for="">Foto(s): </label>
                     <img width="75px" height="75px" src="/storage/{{ $animal->foto }}" alt=""> <br>
-                    <label for="">Adicionar Foto</label> <br>
-                  <input type="file" name=" foto" value="{{ $animal->foto }}">
+                    <label for="">Trocar a foto Foto</label> <br>
+                    <input id="foto" type="file" name=" foto">
                 </div>
 
                 {{-- <div class="input-box">

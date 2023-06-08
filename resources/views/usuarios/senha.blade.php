@@ -30,7 +30,7 @@
                         <div class="input-box">
                             <label form="senha" >Senha</label>
                             <input id="senha" class="form-control" type="password" name="senha" placeholder="Digite a senha" required>
-                        
+
                         </div>
 
                     </div>
@@ -38,15 +38,15 @@
                     <div class="continue-button" text="center">
                         <input type="submit" value="Entrar">
                     </div>
-                    <br>
-                    <div class="continue-button" text="center">
-                        <button><a href="{{Route('usuarios.create')}}"> Cadastrar-se  </a> </button>
-                    </div>
-                    <br>
-                    <div class="continue-button" text="center">
-                        <button><a href="{{Route('layout.padrao')}}"> Voltar  </a> </button>
-                    </div>
                 </form>
+                <br>
+                <div class="continue-button" text="center">
+                    <button><a href="{{Route('usuarios.create')}}"> Cadastrar-se  </a> </button>
+                </div>
+                <br>
+                <div class="continue-button" text="center">
+                    <button><a href="{{Route('layout.padrao')}}">Voltar</a></button>
+                </div>
             </div>
         </div>
 

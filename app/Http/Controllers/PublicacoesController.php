@@ -37,6 +37,12 @@ class PublicacoesController extends Controller
                 return $query->where('genero', $sexo);
             });
         })
+        /*testando*/
+        ->when($request->pet, function($query, $pet) {
+            return $query->whereHas('animal', function($query) use ($pet){
+                return $query->where('pet', $pet);
+            });
+        })
 
         ->when($request->castracao, function($query, $castracao) {
             return $query->whereHas('animal', function($query) use ($castracao){
