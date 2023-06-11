@@ -139,40 +139,6 @@
             </div>
         </div>
     </div>
-                   <div>
-                        <button onclick="acao()"  type="button" class="quero-adotar"  data-bs-target="#staticBackdrop"  >Quero Adotar</button>
-
-                        <div class="modal">
-                            <h1>modal</h1>
-                        </div>
-
-                    <script scr="script.js"></script>
-
-                   </div>
-
-
-
-
-
-                    <script scr="script.js"></script>
-
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Quer adotar</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                ...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-     
     <div class="row row-cols-2">
             <div class="col"><button type="button" class="botao-animal"><a href="{{route('animais.index')}}">Voltar para lista de Animais</a></button></div>
             <div class="col"><button type="button" class="botao-animal"><a href="{{route('animais.create')}}">Cadastrar outro animal</a></button></div>
