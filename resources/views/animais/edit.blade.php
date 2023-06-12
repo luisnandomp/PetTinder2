@@ -10,80 +10,55 @@
 
             @csrf
             @method('PUT')
-            <div class="row g-4">
-            <div class="col">
-                <label class="campo-animal">Apelido</label>
-                <input type="text" class="form-control" value="{{ $animal->apelido }}">
-            </div>
 
-            <div class="col">
-                <label class="campo-animal">Raça</label>
-                <input type="text" class="form-control" value="{{ $animal->raca }}">
-            </div>
-
-            <div class="col-edicao">
-                <label class="campo-animal">Porte</label>
-                <input type="text" class="form-control" value="{{ $animal->porte }}">
-            </div>
-
-            <div class="col">
-                <label class="campo-animal">Idade</label>
-                <input type="text" class="form-control" value="{{ $animal->idade }}">
-
-
-            <div class="col">
-                <label class="campo-animal">Cor</label>
-                <input type="text" class="form-control" value="{{ $animal->cor }}">
-            </div>
-
-            <div class="col">
-                <label class="campo-animal">Personalidade</label>
-                <input type="text" class="form-control" value="{{ $animal->personalidade }}">
-
-
-            <div class="col">
-                <label class="campo-animal">Comorbidade</label>
-                <input type="text" class="form-control" value="{{ $animal->comorbidade }}">
-            </div>
-
-
+        <div class="container text-center">
+            <div class="row row-cols-2">
                 <div class="col">
-                     <div class="gender-title">
-                        <h6 class="campo-animal">Espécie</h6>
-                    </div>
-                    <div class="gender-group">
-                        <div class="gender-input">
-                            <input class="select" type="radio" id="cachorro" name="pet" value="cachorro">
-                            <label for="cachorro">Cachorro</label>
-                        </div>
-                        <div class="gender-input">
-                            <input class="select" type="radio" id="gato" name="pet" value="gato">
-                            <label for="gato">Gato</label>
-                        </div>
-                    </div>
+                    <label class="campo-animal">Apelido</label>
+                    <input type="text" class="form-control" value="{{ $animal->apelido }}">
+                 </div>
+                <div class="col">
+                    <label class="campo-animal">Raça</label>
+                    <input type="text" class="form-control" value="{{ $animal->raca }}">
                 </div>
+                <div class="col">
+                    <label class="campo-animal">Porte</label>
+                    <input type="text" class="form-control" value="{{ $animal->porte }}">
                 </div>
+                <div class="col">
+                     <label class="campo-animal">Idade</label>
+                    <input type="text" class="form-control" value="{{ $animal->idade }}">
+                </div>
+                <div class="col">
+                    <label class="campo-animal">Cor</label>
+                    <input type="text" class="form-control" value="{{ $animal->cor }}">
+                 </div>
+                <div class="col">
+                    <label class="campo-animal">Personalidade</label>
+                    <input type="text" class="form-control" value="{{ $animal->personalidade }}">
+                </div>
+                <div class="col">
+                    <label class="campo-animal">Comorbidade</label>
+                    <input type="text" class="form-control" value="{{ $animal->comorbidade }}">
+                 </div>
+                 <div class="col">
+                    <label class="campo-animal">Espécie</label>
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="cachorro" name="pet" value="cachorro">
+                    <option selected>Cachorro</option>
+                    <option selected>Gato</option>
+                    </select>
+                 </div>
+                 <div class="col">
+                    <label class="campo-animal">Gênero</label>
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="cachorro" name="pet" value="cachorro">
+                    <option selected>Fêmia</option>
+                    <option selected>Macho</option>
+                    </select>
+                 </div>
 
 
-            <div class="gender-inputs">
-                <div class="gender-title">
-                    <h6 class="campo-animal">Gênero</h6>
-                </div>
-                <div class="gender-group">
-                <div class="gender-input">
-                        <input type="radio" id="feminino" name="genero" value="feminino" {{ $animal->genero == 'feminino' ? 'checked' : '' }}>
-                        <label for="feminino">Fêmia</label>
-                </div>
-
-                <div class="gender-input">
-                    <input type="radio" id="masculino" name="genero" value="masculino" {{ $animal->genero == 'masculino' ? 'checked' : '' }}>
-                    <label for="masculino">Macho</label>
             </div>
-                </div>
-            </div>
-
-
-
+         </div>
 
                 <div class="input-box">
                     <label for="">Foto(s): </label>
@@ -128,7 +103,6 @@
           </form>
 </div>
                 </div>
-
 
 
 @endsection
