@@ -236,6 +236,28 @@ a {
 }
 
 //Informações da Descrição do Pet
+.card-descricao{
+    height: 30%;
+    border-radius: 3px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.card-usuario{
+    border-radius: 3px;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+//card responsável
+.responsavel{
+    font-size: 20px;
+    color: grey;
+}
+
+.informacoes{
+    font-size: 20px;
+    font-weight: bold;
+}
 
 .sobre-pet{
     font-size: x-large;

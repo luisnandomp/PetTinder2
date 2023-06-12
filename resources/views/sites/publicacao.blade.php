@@ -3,9 +3,9 @@
 
 @section('conteudo')
 <div class="row">
-  <div class="col-sm-6 mb-3 mb-sm-0">
+  <div class="col-sm-6 mb-3 mb-sm-0" >
     <div class="card">
-      <div class="card-body">
+      <div class="card-descricao">
         <h5 class="card-title">Sobre o Pet</h5>
         <p class="sobre-pet">{{ $publicacao->descricao }}</p>
       </div>
@@ -13,11 +13,11 @@
   </div>
   <div class="col-sm-6">
     <div class="card">
-      <div class="card-body">
+      <div class="card-usuario">
         <h5 class="card-title">Quer Adotar?</h5>
-        <p class="">Para adotar esse pet ou saber mais sobre ele, entre em contato com o Responsável:</p>
-        <p> <img width="40px" src="{{ Vite::asset('resources/images/email.png') }}" alt=""> {{ $publicacao->usuario->email }}</p>
-        <p> <img width="40px" src="{{ Vite::asset('resources/images/whatsapp.png') }}" alt=""> {{ $publicacao->usuario->tel }}</p>
+        <p class="responsavel">Para adotar esse pet ou saber mais sobre ele, entre em contato com o Responsável:</p>
+        <p class="informacoes"> <img width="30px" src=" {{ Vite::asset('resources/images/email.png') }}" alt=""> {{ $publicacao->usuario->email }}</p>
+        <p class="informacoes"> <img width="30px" src=" {{ Vite::asset('resources/images/whatsapp.png') }}" alt=""> {{ $publicacao->usuario->tel }}</p>
     </div>
     </div>
   </div>
@@ -39,7 +39,6 @@
                                 <li class="list-group-item d-flex justify-content-between align-items-start">
                                     <div class="ms-2 me-auto">
                                         <div class="d-flex align-items-center">
-                                            <img width="20px" src="{{ Vite::asset('resources/images/pets.png') }}" alt="">
                                             <p class="ms-1 mb-0 fw-bold">Espécie</p>
                                         </div>
 
@@ -150,6 +149,7 @@
     </div>
 </div>
 </div>
+
 
 <style>
     .imagem {
