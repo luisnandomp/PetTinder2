@@ -2,26 +2,26 @@
 
 
 @section('conteudo')
-<div class="row">
-  <div class="col-sm-6 mb-3 mb-sm-0" >
-    <div class="card">
-      <div class="card-descricao">
-        <h5 class="card-title">Sobre o Pet</h5>
-        <p class="sobre-pet">{{ $publicacao->descricao }}</p>
-      </div>
+<div class="col-sm-6">
+        <div class="card">
+            <div class="card-usuario">
+                <h5 class="card-title">Quer Adotar?</h5>
+                <p class="responsavel">Para adotar esse pet ou saber mais sobre ele, entre em contato com o Responsável:</p>
+                <p class="informacoes">
+                    <a class="link-responsavel"href="mailto: {{ $publicacao->usuario->email }} ">
+                        <img width="30px" src=" {{ Vite::asset('resources/images/email.png') }}" alt="">
+                        {{ $publicacao->usuario->email }}
+                    </a>
+                </p>
+                <p class="informacoes">
+                    <a class="link-responsavel" href="https://web.whatsapp.com/send?phone= {{ $publicacao->usuario->tel }}">
+                    <img width="30px" src=" {{ Vite::asset('resources/images/whatsapp.png') }}" alt="">
+                    {{ $publicacao->usuario->tel }}
+                    </a>
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-usuario">
-        <h5 class="card-title">Quer Adotar?</h5>
-        <p class="responsavel">Para adotar esse pet ou saber mais sobre ele, entre em contato com o Responsável:</p>
-        <p class="informacoes"> <img width="30px" src=" {{ Vite::asset('resources/images/email.png') }}" alt=""> {{ $publicacao->usuario->email }}</p>
-        <p class="informacoes"> <img width="30px" src=" {{ Vite::asset('resources/images/whatsapp.png') }}" alt=""> {{ $publicacao->usuario->tel }}</p>
-    </div>
-    </div>
-  </div>
-</div>
 <div class="estrutura-perfil">
     <div class="card mb-3 center">
         <div class="row g-0">
@@ -141,15 +141,25 @@
                 </div>
             </div>
         </div>
-        <div>
-        <div class="row row-cols-2">
-            <div class="col"><button type="button" class="botao-animal"><a href="{{route('animais.index')}}">Voltar para lista de Animais</a></button></div>
-            <div class="col"><button type="button" class="botao-animal"><a href="{{route('animais.create')}}">Cadastrar outro animal</a></button></div>
+        <div class="row">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+            <div class="card-descricao">
+                <h5 class="card-title">Sobre o Pet</h5>
+                <p class="sobre-pet">{{ $publicacao->descricao }}</p>
+            </div>
         </div>
     </div>
 </div>
-</div>
 
+        <div>
+            <div class="row row-cols-2">
+                <div class="col"><button type="button" class="botao-animal"><a href="{{route('animais.index')}}">Voltar para lista de Animais</a></button></div>
+                <div class="col"><button type="button" class="botao-animal"><a href="{{route('animais.create')}}">Cadastrar outro animal</a></button></div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <style>
     .imagem {
