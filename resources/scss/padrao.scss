@@ -236,6 +236,11 @@ a {
 }
 
 //Informações da Descrição do Pet
+
+.descricao-card{
+    margin-left: 10px;
+}
+
 .card-descricao{
     height: 30%;
     border-radius: 3px;
@@ -249,9 +254,16 @@ a {
     margin-top: 20px;
 }
 //card responsável
+.card-rpsnv{
+    margin-left: 20px;
+}
 .responsavel{
     font-size: 20px;
     color: grey;
+}
+
+.link-responsavel{
+    color:rgb(39, 39, 39)
 }
 
 .informacoes{

@@ -38,9 +38,9 @@
                         <label form="porte" >Porte  *</label>
                             <select name="porte" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                                 <option selected>Escolha um Porte</option>
-                                <option value="grande">Grande</option>
-                                <option value="medio">Médio</option>
-                                <option value="pequeno">Pequeno</option>
+                                <option value="Grande">Grande</option>
+                                <option value="Médio">Médio</option>
+                                <option value="Pequeno">Pequeno</option>
                             </select>
                             @error('porte')
                                 <div class="alert alert-danger">{{ $message }}</div>
