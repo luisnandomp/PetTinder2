@@ -23,18 +23,19 @@
                                     <!-- <button type="submit" class="btn btn-danger">EXCLUIR</button> -->
                                     <input type="submit" value="EXCLUIR">
                                     </form>
-                                <a href="{{route('publicacoes.show', $publicacao->id)}}" role="button">Ver</a>
 
-                                @can('editar', $publicacao)
+                                    {{-- ESSA LINHA ESTÁ DANDO PROBLEMA NÃO SEI O PORQUE AINDA
+                                         <a href="{{ route('publicacoes.show', $publicacao->id) }}" role="button">Ver</a> --}}
+                                    @can('editar', $publicacao)
                                     <a href="{{route('publicacoes.edit', $publicacao->id)}}" role="button">Editar</a>
-                                @endcan
+                                    @endcan
                             </td>
                         </tr>
                     @endforeach
                 </table>
             </div> <br>
                 <div>
-                    <button type="button"><a href="{{route('layout.padrao')}}">Voltar para o incio</a></button>
+                    <button type="button" class="btn btn-success"><a href="{{route('layout.padrao')}}">Voltar para o incio</a></button>
                     <button type="button" class="btn btn-success"><a href="{{route('publicacoes.create')}}">Cadastrar um novo Aninaml</a></button>
                 </div>
 

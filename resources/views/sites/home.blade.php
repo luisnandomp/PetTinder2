@@ -5,7 +5,7 @@
     <div class="acoes-usuario my-3 row">
         <div class="col">
             <div class="d-grid gap-2">
-                <a href="{{ route('publicacoes.buscar') }}" class="btn btn-primary" type="submit">QUERO ADOTAR</a>
+                <a href="{{ route('publicacoes.buscar')}}" class="btn btn-primary" type="submit">QUERO ADOTAR</a>
             </div>
         </div>
         @auth
@@ -65,7 +65,7 @@
             <div class="row g-3 justify-content-center my-3 p-4">
                 @foreach ($publicacoes as $publicacao)
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                        
+
                         <div class="card shadow-sm h-100">
                             <img height="250px" src="/storage/{{ $publicacao->animal->foto }}" class="card-img-top" alt="...">
 
@@ -75,13 +75,13 @@
                                 <div class="descricao">
                                 <div class="container text-center">
                                 <div class="row row-cols-auto">
-                            
+
                                 <ul class="flex flex-wrap gap-2">
                                 <li class="badge badge-large bg-primary bg-opacity-10 text-primary">{{ $publicacao->animal->genero}}</li>
                                 <li class="badge badge-large bg-primary bg-opacity-10 text-primary">{{ $publicacao->animal->porte}}</li>
                                 <li class="badge badge-large bg-primary bg-opacity-10 text-primary">{{ $publicacao->animal->personalidade}}</li>
                                 </ul>
-                               
+
                             </div>
                             </div class="tituloo">
                               <div class="botao-perfil">
@@ -89,7 +89,7 @@
                             </div>
                             </div>
                           </div>
-                    </div> 
+                    </div>
                 @endforeach
             </div>
         </div>

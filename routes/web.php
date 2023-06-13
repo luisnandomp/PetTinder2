@@ -21,7 +21,7 @@ Route::delete('Usuarios/{usuario}',[UsuariosController::class, 'destroy'])->name
     Route::get('/publicacao/lista', [PublicacoesController::class, 'index'])->name('publicacoes.index'); // tela onde vai mostrar todas as publicações
     Route::get('/publicacao/novo', [PublicacoesController::class, 'create'])->name('publicacoes.create');//tela para cadastrar uma publicação
     Route::post('/publicacoes', [PublicacoesController::class, 'store'])->name('publicacoes.store');
-    Route::get('/publicacoes/{publicacao}', [PublicacoesController::class, 'show'])->name('publicacoes.show'); //tela de mostrar cada publicação unicamente
+    Route::any('/publicacoes/{publicacao}', [PublicacoesController::class, 'show'])->name('publicacoes.show'); //tela de mostrar cada publicação unicamente
     Route::put('/publicacoes/{publicacao}/update', [PublicacoesController::class, 'update'])->name('publicacoes.update');
     Route::get('/publicacoes/{publicacao}/editar', [PublicacoesController::class, 'edit'])->name('publicacoes.edit'); //tela onde iremos editar cada publicação
     Route::delete('publicacoes/{publicacao}',[PublicacoesController::class, 'destroy'])->name('publicacoes.destroy');
@@ -42,7 +42,7 @@ Route::delete('Usuarios/{usuario}',[UsuariosController::class, 'destroy'])->name
 Route::middleware(['web'])->group(function () {
 
     // -------------------- Filtro de animais -----------------------------------------
-    Route::any('/publicacoes/busca', [PublicacoesController::class, 'buscar'])->name('publicacoes.buscar'); // tela onde vai ser o filtro
+    Route::any('/publicacao/busca', [PublicacoesController::class, 'buscar'])->name('publicacoes.buscar'); // tela onde vai ser o filtro
     Route::get('/entrar', [AuthController::class, 'entrar'])->name('login'); //tela de login do usuário
     Route::post('/entrar', [AuthController::class, 'login_store'])->name('login_store'); //tela de login do usuário
     Route::get('/sair', [AuthController::class, 'logout'])->name('sair');

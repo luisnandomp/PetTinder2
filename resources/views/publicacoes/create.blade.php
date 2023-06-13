@@ -19,7 +19,7 @@
                         <div class="title">
                             <h1 class="titulocadastro">Divulgue um animal </h1>
                         </div>
-                        
+
                     </div>
                 </form>
                 <form action="{{route('publicacoes.store')}}" method="POST" enctype="multipart/form-data">
@@ -59,8 +59,8 @@
                         </div>
 
                     <br>
-                    <div  text="center" class="login-button">
-                        <button>Continuar</button>
+                    <div text="center" class="login-button">
+                        <button type="submit">Continuar</button>
                     </div>
                 </form>
             </div>
@@ -75,7 +75,7 @@
                 font-family: 'Fira Sans', sem serifa;
                 font-weight: 300;
                 letter-spacing: .05em;
-                
+
             }
         </style>
     </body>

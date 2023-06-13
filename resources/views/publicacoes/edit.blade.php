@@ -3,7 +3,7 @@
 @section('conteudo')
 <div class="editar">
         <form action="{{ route('publicacoes.update', $publicacao->id) }}" method="POST" >
-            <h1 aling="center" class="titulo">Edite a publicação do seu animal {{ $publicacao->animal->apelido }}</h1>
+            <h1 aling="center" class="titulo">Edite a sua publicação: {{ $publicacao->animal->apelido }}</h1>
 
             @csrf
             @method('PUT')
@@ -22,11 +22,17 @@
 
 
             <div class="mb-3" class="form-label">
-              <button type="submit">Atualizar Usuário</button>
+              <button type="submit" id="1">Atualizar sua Publicação</button>
             </div>
           </form>
 
 </div>
 
+<style>
+    #exampleInputEmail1{
+        width: 98%;
+        margin: 0 auto;
+    }
+</style>
 
 @endsection

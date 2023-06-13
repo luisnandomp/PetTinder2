@@ -14,7 +14,7 @@ class PublicacoesController extends Controller
         $usuario = Auth::user();
         $publicacoes = $usuario->publicacoes()->paginate();
 
-        return view ('publicacoes.index', compact('publicacoes'));
+        return view('publicacoes.index', compact('publicacoes'));
     }
 
     public function buscar(Request $request)
@@ -32,11 +32,13 @@ class PublicacoesController extends Controller
                 return $query->where('porte', $porte);
             });
         })
+
         ->when($request->sexo, function($query, $sexo) {
             return $query->whereHas('animal', function($query) use ($sexo){
                 return $query->where('genero', $sexo);
             });
         })
+
         /*testando*/
         ->when($request->pet, function($query, $pet) {
             return $query->whereHas('animal', function($query) use ($pet){
@@ -65,6 +67,7 @@ class PublicacoesController extends Controller
         ->paginate();
         return view('publicacoes.busca', compact('publicacoes'));
     }
+
     public function create(Animal $animal)
     {
         $this->authorize('criar', Publicacao::class);
