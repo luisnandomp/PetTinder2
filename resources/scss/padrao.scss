@@ -343,10 +343,11 @@ a {
 }
 .campo-animal{
     text-align: left;
-    font-size: 120%;
+    font-size: 23px;
     margin-right: 95%;
     padding: 1%;
     font-weight: 500;
+    color: rgb(48, 48, 48);
 }
 
 .titulo-edit{
@@ -366,4 +367,9 @@ a {
     margin-bottom: 10px;
     border-color: white;
     margin-top: 15px;
+}
+
+.editar-animal{
+    background-color: rgb(255, 255, 143);
+
 }
