@@ -22,27 +22,40 @@
                         <div class="row">
 
                             <div class="col">
-                                <a type="button" class="btn btn-primary" href="{{ route('publicacoes.create') }}">Fazer uma
+                                <a type="button" class="btn btn-success" href="{{ route('publicacoes.create') }}">Fazer uma
                                     Divulgação</a></button>
                             </div>
                             <div class="col">
-                                <a class="btn btn-primary" href="{{ route('animais.index') }}">Veja seus animais
-                                    cadastrados</a>
+
+                            <button type="button" class="btn btn-success"><a
+                            href="{{ route('animais.create') }}">Cadastrar um novo Animal</a></button>
+                            </div>
+
+                            <div class="col">
+                                
+                            <button type="button" class="btn btn-success"><a
+                             href="{{ route('layout.padrao') }}">Voltar para o incio</a>
                             </div>
                         </div>
                     </div>
 
 
                 </div>
+    
+                <br>
+                    
 
-                <div class="tabela">
-                    <h1 align="center">Lista de Animais</h1><br> <br>
+                </div>
+            </div>
+        </div>
+        <div class="tabela">
+                    <h1 align="center">Animais que você cadastrou</h1><br> <br>
 
                     <div>
                         <table border="0" width="98%">
-                            <th>ID</th>
+                            <th></th>
                             <th>Apelido</th>
-                            <th>Raca</th>
+                            <th>Raça</th>
                             <th>Idade</th>
                             <th>Ações</th>
                             @foreach ($usuario->animais as $animal)
@@ -80,22 +93,21 @@
                                 </tr>
                             @endforeach
                         </table>
-                    </div> <br>
-                    <div>
-                        <button type="button" class="btn btn-success"><a href="{{ route('layout.padrao') }}">Voltar para o
-                                incio</a></button>
-                        <button type="button" class="btn btn-success"><a
-                                href="{{ route('publicacoes.create') }}">Cadastrar um novo Aninaml</a></button>
                     </div>
-
-                </div>
-            </div>
-        </div>
     </div>
 
+    
+   
     <style>
         .email {
             width: 35px;
+        }
+        table, th, td {
+            border: 1px solid white;
+            border-collapse: collapse;
+         }
+        th, td {
+            background-color: #a5e0e6	;
         }
     </style>
 @endsection
