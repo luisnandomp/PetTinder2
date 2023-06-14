@@ -173,7 +173,7 @@ a {
     text-align: center;
     font-size: x-small;
     color: rgb(0, 0, 0); text-shadow: rgb(172, 157, 157) 0.0em 0.1em 0.1em;
-    
+
 }
 
 .tituloo{
@@ -194,7 +194,7 @@ a {
     color: rgb(0, 0, 0); text-shadow: rgb(172, 157, 157) 0.0em 0.1em 0.1em;
     font-size: x-large;
     background-color: rgb(255, 255, 255);
-    
+
 
 }
 
@@ -384,4 +384,10 @@ a {
 .editar-animal{
     background-color: rgb(255, 255, 143);
 
+}
+
+.card-publi{
+    & .descricao{
+        min-height: 10rem;
+    }
 }
