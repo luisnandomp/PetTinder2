@@ -75,11 +75,11 @@
                         <option value="sim">Sim</option>
                         <option value="nao">Não</option>
 
-                        <div >
-                        <input type="submit" class="btn btn-primary" value="Pesquisar" class="btn">
+                        <div>
+                            <input type="submit" class="btn btn-primary" value="Pesquisar" class="btn">
 
 
-                    </div>
+                        </div>
                     </select>
 
 
@@ -87,8 +87,8 @@
 
                     <br>
 
-                    <a href="{{ route('animais.create') }}"><button type="button"
-                        class="btn btn-success">Cadastre um Animal Novo</button></a>
+                    <a href="{{ route('animais.create') }}"><button type="button" class="btn btn-success">Cadastre um
+                            Animal Novo</button></a>
 
                     @error('vacina')
                         {{ $message }}
@@ -100,36 +100,45 @@
     </form>
 
     <div class="inicial">
-            <div class="row g-3 justify-content-center my-3 p-4">
-                @foreach ($publicacoes as $publicacao)
+        <div class="row g-3 justify-content-center my-3 p-4">
+            @foreach ($publicacoes as $publicacao)
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3">
 
-                        <div class="card shadow-sm h-100">
-                            <img height="250px" src="/storage/{{ $publicacao->animal->foto }}" class="card-img-top" alt="...">
+                    <div class="card shadow-sm h-100">
+                        <img height="250px" src="/storage/{{ $publicacao->animal->foto }}" class="card-img-top"
+                            alt="...">
 
-                            <div class="card-home">
-                              <h5 class="card-title">{{ $publicacao->animal->apelido }}</h5>
-                              </div>
-                                <div class="descricao">
-                                <div class="container text-center">
+                        <div class="card-home">
+                            <h5 class="card-title">{{ $publicacao->animal->apelido }}</h5>
+                        </div>
+                        <div class="descricao">
+                            <div class="container text-center">
                                 <div class="row row-cols-auto">
 
-                                <ul class="flex flex-wrap gap-2">
-                                <li class="badge badge-large bg-primary bg-opacity-10 text-primary">{{ $publicacao->animal->genero}}</li>
-                                <li class="badge badge-large bg-primary bg-opacity-10 text-primary">{{ $publicacao->animal->porte}}</li>
-                                <li class="badge badge-large bg-primary bg-opacity-10 text-primary">{{ $publicacao->animal->personalidade}}</li>
-                                </ul>
+                                    <ul class="flex flex-wrap gap-2">
+                                        <li class="badge badge-large bg-primary bg-opacity-10 text-primary">
+                                            {{ $publicacao->animal->genero }}</li>
+                                        <li class="badge badge-large bg-primary bg-opacity-10 text-primary">
+                                            {{ $publicacao->animal->porte }}</li>
+                                        <li class="badge badge-large bg-primary bg-opacity-10 text-primary">
+                                            {{ $publicacao->animal->personalidade }}</li>
+                                    </ul>
 
-                            </div>
+                                </div>
                             </div class="tituloo">
-                              <div class="botao-perfil">
-                              <a href="{{route('animais.show', $publicacao->animal->id)}}">Meu Perfil</a>
+                            <div class="botao-perfil">
+                                <a href="{{ route('animais.show', $publicacao->animal->id) }}">Meu Perfil</a>
                             </div>
-                            </div>
-                          </div>
+                        </div>
                     </div>
-                @endforeach
-            </div>
+                </div>
+            @endforeach
 
-    {{ $publicacoes->links() }}
+            <div class="col-12">
+                <div class="d-flex justify-content-center">
+                    {{ $publicacoes->links() }}
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

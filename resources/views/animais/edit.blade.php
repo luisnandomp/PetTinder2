@@ -19,15 +19,16 @@
                 <label class="campo-animal">Raça</label>
                 <input type="text" class="form-control" value="{{ $animal->raca }}">
             </div>
+
             <div class="col">
                 <label class="campo-animal">Porte</label>
-                <select class="form-select form-select-sm" aria-label=".form-select-sm example" value="{{ $animal->porte }}">
-                    <option value="{{ $animal->porte }}">{{ $animal->porte }}</option>
-                    <option value="Grande">Grande</option>
-                    <option value="Médio">Médio</option>
-                    <option value="Pequeno">Pequeno</option>
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <option {{ $animal->porte == 'grande' ? 'selected' : '' }} value="grande">Grande</option>
+                    <option {{ $animal->porte == 'medio' ? 'selected' : '' }} value="medio">Médio</option>
+                    <option {{ $animal->porte == 'pequeno' ? 'selected' : '' }} value="pequeno">Pequeno</option>
                 </select>
             </div>
+
             <div class="col">
                 <label class="campo-animal">Idade</label>
                 <input type="text" class="form-control" value="{{ $animal->idade }}">
