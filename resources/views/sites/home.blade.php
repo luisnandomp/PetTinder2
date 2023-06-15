@@ -59,11 +59,11 @@
             </div>
         </div>
         <div class="text-ultima p-3 text-center">
-            <p class="display-4 mb-0">ÚLTIMAS PUBLICAÇÕES</p>
+            <p>ÚLTIMAS PUBLICAÇÕES</p>
         </div>
         <div>
             <div class="inicial">
-                <div class="row g-3 justify-content-center my-3 p-4">
+                <div class="row g-3 justify-content-center my-3 ">
                     @foreach ($publicacoes as $publicacao)
                         <div class="col-12 col-md-6 col-lg-4 col-xl-3">
 

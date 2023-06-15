@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class SiteController extends Controller
 {
     public function padrao(){
-        $publicacoes = Publicacao::latest()->limit(5)->get();
+        $publicacoes = Publicacao::latest()->limit(4)->get();
         return view('sites.home', compact('publicacoes'));
     }
 
