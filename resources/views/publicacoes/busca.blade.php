@@ -75,20 +75,22 @@
                         <option value="sim">Sim</option>
                         <option value="nao">Não</option>
 
-                        <div>
-                            <input type="submit" class="btn btn-primary" value="Pesquisar" class="btn">
-
-
-                        </div>
+                        
+                
                     </select>
-
+</div>
 
 
 
                     <br>
+                    <div>
+                            <input type="submit" class="btn btn-primary" value="Pesquisar" class="btn">
 
+                        </div>
+                        
                     <a href="{{ route('animais.create') }}"><button type="button" class="btn btn-success">Cadastre um
                             Animal Novo</button></a>
+</div>
 
                     @error('vacina')
                         {{ $message }}
