@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="tabela">
-                    <h1 align="center">Animais que você cadastrou</h1><br> <br>
+                    <h1 align="center" class="tituloo">Animais que você cadastrou</h1><br> <br>
 
                     <div>
                         <table border="0" width="98%">
@@ -108,6 +108,10 @@
          }
         th, td {
             background-color: #a5e0e6	;
+        }
+
+        .tituloo{
+            color: rgb(257 142 45); text-shadow: rgb(70, 60, 60) 0.0em 0.1em 0.1em;
         }
     </style>
 @endsection
