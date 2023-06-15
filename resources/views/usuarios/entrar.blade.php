@@ -31,9 +31,7 @@
                             <label form="senha" >Senha</label>
                             <input id="senha" class="form-control" type="password" name="senha" placeholder="Digite a senha" required>
 
-                            <a href="">
-                                <label href="{{Route('layout.padrao')}}" >Esqueci minha senha.</label>
-                            </a>
+                            
                         </div>
 
                     </div>
