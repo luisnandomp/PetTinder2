@@ -92,7 +92,7 @@
 
                                     <div class="py-2">
                                         <div class="botao-perfil">
-                                            <a href="{{ route('sites.publicacao', $publicacao->id) }}">Ver +</a>
+                                            <a href="{{ route('sites.publicacao', $publicacao->id) }}">Ver Perfil</a>
                                         </div>
                                     </div>
                                 </div>

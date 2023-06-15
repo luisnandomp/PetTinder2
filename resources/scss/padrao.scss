@@ -53,6 +53,7 @@ body{
 
 .text-center{
     font-size: 25PX;
+    margin-top: 10px;
 }
 
 .navbar-brand {
@@ -191,11 +192,9 @@ a {
 
 .text-ultima{
     text-align: left;
-    color: rgb(0, 0, 0); text-shadow: rgb(172, 157, 157) 0.0em 0.1em 0.1em;
+    color: rgb(255 142 45); text-shadow: rgb(64, 60, 60) 0.0em 0.1em 0.1em;
     font-size: x-large;
     background-color: rgb(255, 255, 255);
-
-
 }
 
 .botao{
@@ -391,3 +390,9 @@ a {
         min-height: 10rem;
     }
 }
+
+.img-edit{
+    border-radius: 20px;
+}
+
+

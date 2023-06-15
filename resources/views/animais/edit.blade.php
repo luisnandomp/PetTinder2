@@ -9,6 +9,17 @@
     @csrf
     @method('PUT')
 
+    <div class="input-box">
+        <img width="20%" height="20%" src="/storage/{{ $animal->foto }}" alt="" class="img-edit"> <br>
+        <input id="foto" type="file" name=" foto">
+    </div>
+
+    {{-- <div class="input-box">
+                    <label form="foto" class="escolha">Foto </label>
+                    <input id="foto" type="file" name="foto" value="{{ $animal->foto }}"><!--required -->
+    </div> --}}
+    <div>
+
     <div class="container text-center">
         <div class="row row-cols-2">
             <div class="col">
@@ -39,47 +50,47 @@
             </div>
             <div class="col">
                 <label class="campo-animal">Personalidade</label>
-                <select class="form-select form-select-sm" aria-label=".form-select-sm example" value="{{ $animal->personalidade }}">
-                    <option selected>Calmo</option>
-                    <option selected>Temperamental</option>
-                    <option selected>Estressado</option>
-                    <option selected>Tímido</option>
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <option {{ $animal->personalidade == 'calmo' ? 'selected' : '' }} value="calmo">Calmo</option>
+                    <option {{ $animal->personalidade == 'temperamental' ? 'selected' : '' }} value="temperamental">Temperamental</option>
+                    <option {{ $animal->personalidade == 'estressado' ? 'selected' : '' }} value="estressado">Estressado</option>
+                    <option {{ $animal->personalidade == 'timido' ? 'selected' : '' }} value="timido">Tímido</option>
                 </select>
             </div>
             <div class="col">
                 <label class="campo-animal">Comorbidade</label>
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example" value="{{ $animal->comorbidade }}">
-                    <option selected>Sim</option>
-                    <option selected>Não</option>
-                    <option selected>Não sei</option>
+                    <option {{ $animal->comorbidade == 'sim' ? 'selected' : '' }} value="sim">Sim</option>
+                    <option {{ $animal->comorbidade == 'nao' ? 'selected' : '' }} value="nao">Não</option>
+                    <option {{ $animal->comorbidade == 'nao sei' ? 'selected' : '' }} value="nao sei">Não sei</option>
                 </select>
             </div>
             <div class="col">
                 <label class="campo-animal">Espécie</label>
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                    <option selected>Cachorro</option>
-                    <option selected>Gato</option>
+                    <option {{ $animal->pet == 'cachorro' ? 'selected' : '' }} value="cachorro">Cachorro</option>
+                    <option {{ $animal->pet == 'gato' ? 'selected' : '' }} value="gato">Gato</option>
                 </select>
             </div>
             <div class="col">
                 <label class="campo-animal">Gênero</label>
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                    <option selected>Fêmia</option>
-                    <option selected>Macho</option>
+                    <option {{ $animal->genero == 'feminino' ? 'selected' : '' }} value="feminino">Fêmia</option>
+                    <option {{ $animal->genero == 'masculino' ? 'selected' : '' }} value="masculino">Macho</option>
                 </select>
             </div>
             <div class="col">
                 <label class="campo-animal">Vacina</label>
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                    <option selected>Sim</option>
-                    <option selected>Não</option>
+                    <option {{ $animal->vacina == 'sim' ? 'selected' : '' }} value="sim">Sim</option>
+                    <option {{ $animal->vacina == 'nao' ? 'selected' : '' }} value="nao">Não</option>
                 </select>
             </div>
             <div class="col">
                 <label class="campo-animal">Castração</label>
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                    <option selected>Sim</option>
-                    <option selected>Não</option>
+                    <option {{ $animal->castracao == 'sim' ? 'selected' : '' }} value="sim">Sim</option>
+                    <option {{ $animal->castracao == 'nao' ? 'selected' : '' }} value="nao">Não</option>
                 </select>
             </div>
             <div class="col">
@@ -88,19 +99,6 @@
             </div>
         </div>
     </div>
-
-    <div class="input-box">
-        <label for="">Foto(s): </label>
-        <img width="75px" height="75px" src="/storage/{{ $animal->foto }}" alt=""> <br>
-        <label for="">Trocar a foto Foto</label> <br>
-        <input id="foto" type="file" name=" foto">
-    </div>
-
-    {{-- <div class="input-box">
-                    <label form="foto" >Foto </label>
-                    <input id="foto" type="file" name="foto" value="{{ $animal->foto }}"><!--required -->
-    </div> --}}
-    <div>
         <button type="submit" class="edit-animal">Atualizar Animal</button>
     </div>
 </form>
