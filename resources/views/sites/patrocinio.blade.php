@@ -26,11 +26,11 @@
     <h2 class="conte">Associação lar feliz de Guararapes é uma organização sem fins lucrativos que exercem um trabalho 100% voluntário.
     Com o objeitvo de garantir um lar para animais que necessitam, assim ajudando a diminuir uma porcentagem alta que existe em nosso municípios de animais sem abrigo.</h2>
     
-    <h1 class="subtitulo">Gostaria de se juntar a nos?</h1>
+    <h1 class="subtitulo">Gostaria de se juntar a nós?</h1>
     <h2 class="conte2">Entre em contato conosco pelas nossas redes sociais:                             
-        <div class="medias-sociais">
-            <a href="https://www.facebook.com/profile.php?id=100091902143208"> <i class="fa fa-facebook"></i></a>
-            <a href="https://www.instagram.com/pett_inder/"> <i class="fa fa-instagram"></i></a>
+        <div>
+            <a class="link-responsavel" href="https://www.facebook.com/profile.php?id=100091902143208"> <i class="fa fa-facebook"></i></a>
+            <a class="link-responsavel" href="https://www.instagram.com/pett_inder/"> <i class="fa fa-instagram"></i></a>
          </div>
     </2>
 </div>
