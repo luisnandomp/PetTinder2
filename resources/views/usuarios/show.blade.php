@@ -36,6 +36,11 @@
                             <button type="button" class="btn btn-success"><a
                              href="{{ route('layout.padrao') }}">Voltar para o incio</a>
                             </div>
+                            
+                            <div class="col">   
+                            <button type="button" class="btn btn-success">
+                            <a href="{{route('usuarios.edit', $usuario->id)}}">Editar</a>
+                            </div>
                         </div>
                     </div>
 

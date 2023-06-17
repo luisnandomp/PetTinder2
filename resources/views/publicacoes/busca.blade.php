@@ -129,7 +129,7 @@
                                 </div>
                             </div class="tituloo">
                             <div class="botao-perfil">
-                                <a href="{{ route('animais.show', $publicacao->animal->id) }}">Meu Perfil</a>
+                                <a href="{{ route('publicacoes.show', $publicacao->id) }}">Meu Perfil</a>
                             </div>
                         </div>
                     </div>
