@@ -56,10 +56,11 @@ class UsuariosController extends Controller
     public function update(Request $dados, Usuario $usuario)
     {
         $this->authorize('editar', $usuario);
-        $dados = $dados->all();
-        $dados['senha'] = Hash::make($dados['senha']);
+        // $dados = $dados->all();
+        // $dados['senha'] = Hash::make($dados['senha']);
 
-        $usuario = Usuario::create($dados);
+        // $usuario = Usuario::create($dados);
+        $usuario->update($dados->all());
 
         return redirect()->route('usuarios.show', $usuario->id);
     }
