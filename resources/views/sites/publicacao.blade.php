@@ -24,7 +24,7 @@
                                                 <p class="ms-1 mb-0 fw-bold">Espécie</p>
                                             </div>
 
-                                            <p class="descricao-perfil">{{ $publicacao->animal->pet }}</p>
+                                            <p class="descricao-perfil text-capitalize">{{ $publicacao->animal->pet }}</p>
                                         </div>
                                     </li>
                                 </div>
@@ -33,7 +33,7 @@
                                     <li class="list-group-item d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
                                             <div class="fw-bold">Raça</div>
-                                            <p class="descricao-perfil">{{ $publicacao->animal->raca }}</p>
+                                            <p class="descricao-perfil text-capitalize">{{ $publicacao->animal->raca }}</p>
                                         </div>
                                     </li>
                                 </div>
@@ -42,7 +42,7 @@
                                     <li class="list-group-item d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
                                             <div class="fw-bold">Sexo</div>
-                                            <p class="descricao-perfil">{{ $publicacao->animal->genero }}</p>
+                                            <p class="descricao-perfil text-capitalize">{{ $publicacao->animal->genero }}</p>
                                         </div>
                                     </li>
                                 </div>
@@ -51,7 +51,7 @@
                                     <li class="list-group-item d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
                                             <div class="fw-bold">Porte</div>
-                                            <p class="descricao-perfil">{{ $publicacao->animal->porte }}</p>
+                                            <p class="descricao-perfil text-capitalize">{{ $publicacao->animal->porte }}</p>
                                         </div>
                                     </li>
                                 </div>
@@ -60,7 +60,7 @@
                                     <li class="list-group-item d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
                                             <div class="fw-bold">Idade</div>
-                                            <p class="descricao-perfil">{{ $publicacao->animal->idade }}</p>
+                                            <p class="descricao-perfil text-capitalize">{{ $publicacao->animal->idade }}</p>
                                         </div>
                                     </li>
                                 </div>
@@ -69,7 +69,7 @@
                                     <li class="list-group-item d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
                                             <div class="fw-bold">Cor</div>
-                                            <p class="descricao-perfil"> {{ $publicacao->animal->cor }}</p>
+                                            <p class="descricao-perfil text-capitalize"> {{ $publicacao->animal->cor }}</p>
                                         </div>
                                     </li>
                                 </div>
@@ -78,7 +78,7 @@
                                     <li class="list-group-item d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
                                             <div class="fw-bold">Personalidade</div>
-                                            <p class="descricao-perfil">{{ $publicacao->animal->personalidade }}</p>
+                                            <p class="descricao-perfil text-capitalize">{{ $publicacao->animal->personalidade }}</p>
                                         </div>
                                     </li>
                                 </div>
@@ -87,7 +87,7 @@
                                     <li class="list-group-item d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
                                             <div class="fw-bold">Comorbidade</div>
-                                            <p class="descricao-perfil">{{ $publicacao->animal->comorbidade }}</p>
+                                            <p class="descricao-perfil text-capitalize">{{ $publicacao->animal->comorbidade }}</p>
                                         </div>
                                     </li>
                                 </div>
@@ -96,7 +96,7 @@
                                     <li class="list-group-item d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
                                             <div class="fw-bold">Vacina</div>
-                                            <p class="descricao-perfil">{{ $publicacao->animal->vacina }}</p>
+                                            <p class="descricao-perfil text-capitalize">{{ $publicacao->animal->vacina }}</p>
                                         </div>
                                     </li>
                                 </div>
@@ -105,7 +105,7 @@
                                     <li class="list-group-item d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
                                             <div class="fw-bold">Castração</div>
-                                            <p class="descricao-perfil">{{ $publicacao->animal->castracao }}</p>
+                                            <p class="descricao-perfil text-capitalize">{{ $publicacao->animal->castracao }}</p>
                                         </div>
                                     </li>
                                 </div>
@@ -114,38 +114,37 @@
                                     <li class="list-group-item d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
                                             <div class="fw-bold">Localização</div>
-                                            <p class="descricao-perfil">{{ $publicacao->animal->localidade }}</p>
+                                            <p class="descricao-perfil text-capitalize">{{ $publicacao->animal->localidade }}</p>
                                         </div>
                                     </li>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-12">
-                                <div>
-                                    <h5 class="card-title">Sobre o Pet</h5>
-                                    <p class="sobre-pet">{{ $publicacao->descricao }}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row g-3">
+            
+    <div class="col-12 p-3">
+        <div class="sobre-animal">
+            <h5 class="sobre-pet">Sobre o Pet</h5>
+            <p class="pet-sobre">{{ $publicacao->descricao }}</p>
+        </div>
+    </div>
+
+        <div class="row g-3">
                 <div class="col-12 p-3">
                     <div class="card">
                         <div class="card-usuario">
                             <h5 class="card-title">Quer Adotar?</h5>
                             <p class="responsavel">Para adotar esse pet ou saber mais sobre ele, entre em contato com o Responsável:</p>
                             <p class="informacoes">
-                                <a class="link-responsavel"href="mailto: {{ $publicacao->usuario->email }} ">
+                                <a class="link-responsavel" target="__blank" href="mailto: {{ $publicacao->usuario->email }} ">
                                     <img width="30px" src=" {{ Vite::asset('resources/images/email.png') }}" alt="">
                                     {{ $publicacao->usuario->email }}
                                 </a>
                             </p>
                             <p class="informacoes">
-                                <a class="link-responsavel" href="https://web.whatsapp.com/send?phone= {{ $publicacao->usuario->tel }}">
+                                <a class="link-responsavel" target="__blank" href="https://web.whatsapp.com/send?phone= {{ $publicacao->usuario->tel }}">
                                 <img width="30px" src=" {{ Vite::asset('resources/images/whatsapp.png') }}" alt="">
                                 {{ $publicacao->usuario->tel }}
                                 </a>
