@@ -67,6 +67,7 @@
                         <button type="submit">Continuar</button>
                         <button><a href="{{ route('layout.padrao') }}">Voltar para o incio</a></button>
                     </div>
+
                 </div>
                 <div class="login-button">
 

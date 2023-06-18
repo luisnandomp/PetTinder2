@@ -28,7 +28,7 @@
                             <div class="col">
 
                             <button type="button" class="btn btn-success"><a
-                            href="{{ route('animais.create') }}">Cadastrar um novo Animal</a></button>
+                            href="{{ route('animais.create') }}">Cadastrar  Animal</a></button>
                             </div>
 
                             <div class="col">

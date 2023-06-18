@@ -16,7 +16,7 @@
     
   
     
-    <h3 >ASSOSIAÇÃO LAR FELIZ GUARARAPES: </h3>
+    <h3 >ASSOCIAÇÃO LAR FELIZ GUARARAPES: </h3>
 
     <br>
     <img src="{{ asset('imagens/parceiros.jpeg')}}" class="imagem" mb-3>
