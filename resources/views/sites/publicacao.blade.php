@@ -139,13 +139,13 @@
                             <h5 class="card-title">Quer Adotar?</h5>
                             <p class="responsavel">Para adotar esse pet ou saber mais sobre ele, entre em contato com o Responsável:</p>
                             <p class="informacoes">
-                                <a class="link-responsavel"href="mailto: {{ $publicacao->usuario->email }} ">
+                                <a class="link-responsavel" target="__blank" href="mailto: {{ $publicacao->usuario->email }} ">
                                     <img width="30px" src=" {{ Vite::asset('resources/images/email.png') }}" alt="">
                                     {{ $publicacao->usuario->email }}
                                 </a>
                             </p>
                             <p class="informacoes">
-                                <a class="link-responsavel" href="https://web.whatsapp.com/send?phone= {{ $publicacao->usuario->tel }}">
+                                <a class="link-responsavel" target="__blank" href="https://web.whatsapp.com/send?phone= {{ $publicacao->usuario->tel }}">
                                 <img width="30px" src=" {{ Vite::asset('resources/images/whatsapp.png') }}" alt="">
                                 {{ $publicacao->usuario->tel }}
                                 </a>
