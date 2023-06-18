@@ -31,7 +31,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">O QUE DEVE SER FEITO AO ADOTAR?</h5>
+                                <h5 class="cardd-title">O QUE DEVE SER FEITO AO ADOTAR?</h5>
                                 <p class="card-texxt">Ao adotar um animal de estimação, é fundamental proporcionar um
                                     ambiente amoroso e seguro para que ele possa viver uma vida feliz e saudável.</p>
                             </div>
@@ -48,8 +48,8 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">GARANTA UM COMPANHEIRO EM TODOS OS MOMENTOS</h5>
-                                <p class="card-text"> A convivência com animais também pode incentivar a socialização e
+                                <h5 class="cardd-title">GARANTA UM COMPANHEIRO EM TODOS OS MOMENTOS</h5>
+                                <p class="card-textt"> A convivência com animais também pode incentivar a socialização e
                                     participação em atividades comunitárias, tornando as pessoas mais ativas e engajadas.
                                 </p>
                             </div>
