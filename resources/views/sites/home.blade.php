@@ -18,7 +18,7 @@
         </div>
 
         <div class="banner mb-3">
-            <img src="imagens/Banner colorido e divertido para campanha de adoção de animais.png" class="d-block w-100"
+            <img src="imagens/BANNER.png" class="d-block w-100"
                 alt="20">
         </div>
 
