@@ -75,8 +75,8 @@
             <div class="col">
                 <label class="campo-animal">Gênero</label>
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                    <option {{ $animal->genero == 'feminino' ? 'selected' : '' }} value="feminino">Fêmia</option>
-                    <option {{ $animal->genero == 'masculino' ? 'selected' : '' }} value="masculino">Macho</option>
+                    <option {{ $animal->genero == 'femea' ? 'selected' : '' }} value="feminino">Fêmia</option>
+                    <option {{ $animal->genero == 'macho' ? 'selected' : '' }} value="masculino">Macho</option>
                 </select>
             </div>
             <div class="col">

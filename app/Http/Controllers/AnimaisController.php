@@ -36,7 +36,7 @@ class AnimaisController extends Controller
             'personalidade' => 'required|in:calmo,temperamental,estressado,timido',
             'comorbidade' => 'required|in:sim,nao,naosei',
             'pet' => 'required|in:cachorro,gato',
-            'genero' => 'required',
+            'genero' => 'required|in:femea,macho',
             'foto' => 'required|image|mimes:png,jpg,jpeg,gif',
             'apelido' => 'required',
             'vacina' => 'required|in:sim,nao',
