@@ -127,13 +127,13 @@
                         </div>
                         <div class="gender-group">
                             <div class="gender-input">
-                                <input class="select" type="radio" id="feminino" name="genero" value="feminino">
+                                <input class="select" type="radio" id="feminino" name="genero" value="femea">
                                 <label for="feminino">Feminino</label>
                             </div>
 
                             <div class="gender-input">
                                 <input class="select" type="radio" id="masculino" name="genero"
-                                    value="masculino">
+                                    value="macho">
                                 <label for="masculino">Masculino</label>
                             </div>
                         </div>
