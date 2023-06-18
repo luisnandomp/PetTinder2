@@ -14,6 +14,7 @@ body{
     justify-content: center;
     align-items: center;
     background:  #f39a01;
+    margin-top: 5%;
 }
 
 .contaider{
@@ -42,7 +43,7 @@ body{
 }
 
 .form-image img{
-    width: 30.5rem;
+    width: 106%;
 }
 
 .form {
@@ -74,6 +75,7 @@ body{
     padding:0.4rem 1rem  ;
     border-radius:5px ;
     cursor: pointer;
+    color: white;
 
 }
 
@@ -268,3 +270,21 @@ textarea{
 .quadrado{
     flex-direction: row;
 }
+
+// .btn-continuar-animal{
+//     border: none;
+//     background-color: #ffe457;
+//     padding:0.4rem 1rem  ;
+//     border-radius:5px ;
+//     cursor: pointer;
+//     color: white;
+// }
+
+// .btn-voltar-animal{
+//     border: none;
+//     background-color: #ffe457;
+//     padding:0.4rem 1rem  ;
+//     border-radius:5px ;
+//     cursor: pointer;
+//     color: white;
+// }

@@ -26,7 +26,7 @@
                 <label class="campo-animal">Apelido</label>
                 <input type="text" class="form-control" value="{{ $animal->apelido }}">
             </div>
-            <div class="col">
+             <div class="col">
                 <label class="campo-animal">Raça</label>
                 <input type="text" class="form-control" value="{{ $animal->raca }}">
             </div>

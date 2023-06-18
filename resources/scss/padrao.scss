@@ -196,7 +196,7 @@ a {
     font-size: x-large;
     background-color: rgb(255, 254, 251);
     border-radius: 10px;
-    font-family: cursive;
+    font-family: monospace;
     font-size: 40px;
 }
 
@@ -238,7 +238,24 @@ a {
 }
 
 //Informações da Descrição do Pet
+.sobre-animal{
+    text-align: left;
+}
 
+.sobre-pet{
+    font-size: 80%;
+    color: rgb(121, 110, 110);
+}
+
+.pet-sobre{
+    font-size: x-large;
+    text-align: left;
+    color:gray;
+}
+
+.descricao-do-pet{
+    border-radius: 10px;
+}
 .descricao-card{
     margin-left: 10px;
 }
@@ -344,14 +361,19 @@ a {
     font-weight: 600;
     margin-bottom: 10px;
     border-color: white;
-    margin-top: 10%;
 }
 
 .card-perfil{
     margin-left: 40%;
+    background-color: #f5f5f5;
+    margin-right: 8px;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-top: 15px;
+    height: 100%;
 }
 
-    // Editar animais
+// Editar animais
 .campos-edicao{
    margin-left: 5%;
 }
@@ -398,4 +420,41 @@ a {
     border-radius: 20px;
 }
 
+//edição usuário
 
+.campo-usuario{
+    text-align: left;
+    font-size: 23px;
+    margin-right: 95%;
+    padding: 1%;
+    font-weight: 500;
+    color: rgb(48, 48, 48);
+}
+
+.edit-usuario{
+    color: white;
+    background-color: #FFA500;
+    padding: 4px;
+    text-align: center;
+    width: 20%;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-bottom: 2%;
+    border-color: white;
+    margin-top: 15px;
+    margin-left: 40%;
+    margin-top: 3%;
+}
+
+.edit-descricao-usuario{
+    text-align: center;
+    font-size: x-30px;
+    margin-bottom: 3%;
+    color: #565656;
+}
+
+.editar-usuario{
+    background-color: rgb(255, 255, 143);
+    height: 20%;
+}
