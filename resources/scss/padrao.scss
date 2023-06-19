@@ -226,6 +226,7 @@ a {
 
 .card{
     border-radius: 3%;
+    height: 92.2%;
 }
 
 .pad_options{
@@ -470,4 +471,18 @@ a {
 .editar-usuario{
     background-color: rgb(255, 255, 143);
     height: 20%;
+}
+
+.botao-animal-show{
+    color: white;
+    background-color: #FFA500;
+    padding: 5px;
+    text-align: center;
+    width: 90%;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border-color: white;
+    margin-top: 8%;
 }

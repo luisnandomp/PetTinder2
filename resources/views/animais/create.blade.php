@@ -128,13 +128,13 @@
                         <div class="gender-group">
                             <div class="gender-input">
                                 <input class="select" type="radio" id="feminino" name="genero" value="femea">
-                                <label for="feminino">Feminino</label>
+                                <label for="feminino">Fêmea</label>
                             </div>
 
                             <div class="gender-input">
                                 <input class="select" type="radio" id="masculino" name="genero"
                                     value="macho">
-                                <label for="masculino">Masculino</label>
+                                <label for="masculino">Macho</label>
                             </div>
                         </div>
                         @error('genero')
