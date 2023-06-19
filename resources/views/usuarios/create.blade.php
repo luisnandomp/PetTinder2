@@ -22,7 +22,7 @@
                         <h1>Cadastre-se </h1>
                     </div>
                     <div class="login-button">
-                        <button><a href="{{ Route('login') }}">Entrar</a></button>
+                        <button><a href="{{ Route('login_store') }}">Entrar</a></button>
                     </div>
                 </div>
             </form>

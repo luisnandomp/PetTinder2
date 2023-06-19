@@ -18,8 +18,7 @@
         </div>
 
         <div class="banner mb-3">
-            <img src="imagens/BANNER.png" class="d-block w-100"
-                alt="20">
+            <img src="imagens/BANNER.png" class="d-block w-100" alt="20">
         </div>
 
         <div class="card-informativo row">
@@ -63,12 +62,14 @@
         </div>
         <div>
             <div class="inicial">
+
+
                 <div class="row g-3 justify-content-center my-3 ">
                     @foreach ($publicacoes as $publicacao)
                         <div class="col-12 col-md-6 col-lg-4 col-xl-3">
 
                             <div class="card card-publi shadow-sm h-100">
-                                <img height="250px" src="/storage/{{$publicacao->animal->foto}}" class="card-img-top"
+                                <img height="250px" src="/storage/{{ $publicacao->animal->foto }}" class="card-img-top"
                                     alt="...">
 
                                 <div class="card-home">
@@ -98,7 +99,6 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach
                 </div>
             </div>
         </div>
