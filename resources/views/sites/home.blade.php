@@ -62,8 +62,6 @@
         </div>
         <div>
             <div class="inicial">
-
-
                 <div class="row g-3 justify-content-center my-3 ">
                     @foreach ($publicacoes as $publicacao)
                         <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -99,6 +97,7 @@
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                 </div>
             </div>
         </div>
