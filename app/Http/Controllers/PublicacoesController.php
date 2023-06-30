@@ -21,7 +21,7 @@ class PublicacoesController extends Controller
     {
         $request->validate([
             'porte' => 'nullable|in:pequeno,medio,grande',
-            'sexo' => 'nullable|in:masculino,feminino',
+            'sexo' => 'nullable|in:macho,femea',
             'castracao' => 'nullable|in:sim,nao',
             'comorbidade' => 'nullable|in:sim,nao',
             'vacina' => 'nullable|in:sim,nao'

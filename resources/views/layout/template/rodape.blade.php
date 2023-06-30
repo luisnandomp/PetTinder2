@@ -20,7 +20,7 @@
 
             <!-- Grid column -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-              
+
               <p>
                 <a class="text-white">Este projeto foi feito especialmente para você, que está em busca de um "Match" com seu futuro novo melhor amigo</a>
               </p>
@@ -30,7 +30,7 @@
 
             <hr class="w-100 clearfix d-md-none" />
 
-            
+
 
             <!-- Grid column -->
             <hr class="w-100 clearfix d-md-none" />
@@ -60,7 +60,7 @@
             <div class="col-md-7 col-lg-8 text-center text-md-start">
               <!-- Copyright -->
               <div class="p-3">
-                
+
                 <a class="text-white" href="https://mdbootstrap.com/"
                    >PetTinder.com</a
                   >
@@ -76,7 +76,7 @@
                  class="btn btn-outline-light btn-floating m-1"
                  class="text-white"
                  role="button"
-                 href="https://www.facebook.com/profile.php?id=100091902143208"><i class="fa fa-facebook"></i
+                 href="https://www.facebook.com/profile.php?id=100091902143208" target="__blank"><i class="fa fa-facebook"></i
                 ></a>
 
 
@@ -86,7 +86,7 @@
                  class="btn btn-outline-light btn-floating m-1"
                  class="text-white"
                  role="button"
-                 href="https://www.instagram.com/pett_inder/"
+                 href="https://www.instagram.com/pett_inder/" target="__blank"
                  ><i class="fa fa-instagram"></i
                 ></a>
             </div>

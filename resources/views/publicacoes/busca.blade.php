@@ -22,8 +22,8 @@
                 <div class="col-4">
                     <select name="sexo" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                         <option value='' selected>Todos os sexos</option>
-                        <option value="masculino">Macho</option>
-                        <option value="feminino">Femea</option>
+                        <option value="macho">Macho</option>
+                        <option value="femea">Femea</option>
                     </select>
 
                     @error('sexo')
@@ -75,8 +75,8 @@
                         <option value="sim">Sim</option>
                         <option value="nao">Não</option>
 
-                        
-                
+
+
                     </select>
 </div>
 
@@ -87,7 +87,7 @@
                             <input type="submit" class="btn btn-primary" value="Pesquisar" class="btn">
 
                         </div>
-                        
+
                     <a href="{{ route('animais.create') }}"><button type="button" class="btn btn-success">Cadastre um
                             Animal Novo</button></a>
 </div>
